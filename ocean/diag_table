@@ -1,4 +1,4 @@
-MOM4p1_CORE_IAF_v20120531_0849_noRestore_runoff_fix
+01deg_jra55v13_ryf9091_spinup1
 1 1 1 0 0 0
 #output files
 "ocean",           12,  "months", 1, "days", "time",
@@ -19,10 +19,10 @@ MOM4p1_CORE_IAF_v20120531_0849_noRestore_runoff_fix
 #==========================================================================
 # Prognostic fields:
 # 3d fields
-"ocean_model","geolon_t","geolon_t", "ocean","all",.false.,"none",2
-"ocean_model","geolat_t","geolat_t", "ocean","all",.false.,"none",2
-"ocean_model","geolon_c","geolon_c", "ocean","all",.false.,"none",2
-"ocean_model","geolat_c","geolat_c", "ocean","all",.false.,"none",2
+#"ocean_model","geolon_t","geolon_t", "ocean","all",.false.,"none",2
+#"ocean_model","geolat_t","geolat_t", "ocean","all",.false.,"none",2
+#"ocean_model","geolon_c","geolon_c", "ocean","all",.false.,"none",2
+#"ocean_model","geolat_c","geolat_c", "ocean","all",.false.,"none",2
 "ocean_model","temp","temp",         "ocean","all",.true.,"none",2
 "ocean_model","salt","salt",         "ocean","all",.true.,"none",2
 #"ocean_model","age_global","age_global","ocean","all",.true.,"none",2
