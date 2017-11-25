@@ -19,26 +19,26 @@ submodels:
       model: mom
       exe: fms_ACCESS-OM_5dd8e902.x
       input: mom_01deg
-      timestep: 300
+      timestep: 450
       ncpus: 4358
 
     - name: ice
       model: cice5
       exe: cice_auscom_3600x2700_1200p_c612c0dd.exe
       input: cice_01deg
-      timestep: 300
+      timestep: 450
       ncpus: 1200
 
     - name: coupler
       model: oasis
       input: oasis_jra55_to_01deg
-      timestep: 300
+      timestep: 450
       ncpus: 0
 
 calendar:
     runtime:
         years: 0
-        months: 2
+        months: 3
         days: 0
 
     start:
@@ -62,4 +62,4 @@ ipm: 2.0.5
 qsub_flags: -lother=hyperthread -W umask=027
 platform:
     nodesize: 28
-# postscript: sync_output_to_gdata.sh
+postscript: sync_output_to_gdata.sh
