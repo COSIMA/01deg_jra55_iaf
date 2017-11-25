@@ -351,7 +351,7 @@
     runoff_salinity = 0.0
     salt_correction_scale = 0.0
     salt_restore_as_salt_flux = .true.
-    salt_restore_tscale = 60.0
+    salt_restore_tscale = 10.0
     salt_restore_under_ice = .true.
     temp_restore_tscale = -10.0
     use_full_patm_for_sea_level = .false.
