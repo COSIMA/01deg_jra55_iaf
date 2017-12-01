@@ -344,7 +344,7 @@
     do_bitwise_exact_sum = .false.
     do_flux_correction = .false.
     land_model_heat_fluxes = .false.
-    max_delta_salinity_restore = 0.5
+    max_delta_salinity_restore = -0.5
     max_ice_thickness = 0.0
     read_restore_mask = .false.
     restore_mask_gfdl = .false.
