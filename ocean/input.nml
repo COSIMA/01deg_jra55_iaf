@@ -350,6 +350,7 @@
     read_restore_mask = .false.
     restore_mask_gfdl = .false.
     runoff_salinity = 0.0
+    runoffspread = .true.
     salt_correction_scale = 0.0
     salt_restore_as_salt_flux = .true.
     salt_restore_tscale = 10.0
