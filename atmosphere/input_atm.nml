@@ -12,7 +12,7 @@
     chk_a2i_fields = .false.
     chk_i2a_fields = .false.
     num_runoff_caps = 3
-    runoff_caps =       0.03, 0.003, 0.003,  0.0
+    runoff_caps =       0.03, 0.001, 0.003,  0.0
     runoff_caps_is =       0,  3470,   180,  0
     runoff_caps_ie = 1000000,  3530,   240, -1
     runoff_caps_js =       0,  2270,  2670,  0
