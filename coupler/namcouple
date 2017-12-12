@@ -141,7 +141,7 @@ P  0  P  0
 # 
 LOCTRANS MAPPING SCRIPR
 INSTANT
-rmp_jrat_to_cict_CONSERV.nc dst
+rmp_jra55_cice_smooth.nc dst
 CONSERV LR SCALAR LATLON 10 FRACNNEI FIRST
 ##########
 # Field 06 : runoff. Runoff is passed on the destination grid.
@@ -161,7 +161,7 @@ P  0  P  0
 #
 LOCTRANS MAPPING SCRIPR
 INSTANT
-rmp_jrat_to_cict_CONSERV.nc dst
+rmp_jra55_cice_smooth.nc dst
 CONSERV LR SCALAR LATLON 10 FRACNNEI FIRST
 ##########
 # Field 08 : 2m air humidity
@@ -172,7 +172,7 @@ P  0  P  0
 #
 LOCTRANS MAPPING SCRIPR
 INSTANT
-rmp_jrat_to_cict_CONSERV.nc dst
+rmp_jra55_cice_smooth.nc dst
 CONSERV LR SCALAR LATLON 10 FRACNNEI FIRST
 ##########
 # Field 09 : 10m wind (u)
@@ -182,7 +182,7 @@ uwnd_ai uwnd_i 56 10800 2 a2i.nc EXPORTED
 P  0  P  0
 #
 MAPPING SCRIPR
-rmp_jrat_to_cict_DISTWGT.nc dst
+rmp_jra55_cice_smooth.nc dst
 DISTWGT LR VECTOR LATLON 10 4 vwnd_ai
 ##########
 # Field 10 : 10m wind (v)
@@ -192,7 +192,7 @@ vwnd_ai vwnd_i 56 10800 2 a2i.nc EXPORTED
 P  0  P  0
 #
 MAPPING SCRIPR
-rmp_jrat_to_cict_DISTWGT.nc dst
+rmp_jra55_cice_smooth.nc dst
 DISTWGT LR VECTOR LATLON 10 4 uwnd_ai
 ############################################################################
 #
