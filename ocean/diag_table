@@ -2,8 +2,8 @@ ACCESS-OM2-01
 1 1 1 0 0 0
 
 #output files
-"ocean_month",      10,  "days", 1, "days", "time",
-"ocean",            10,  "days", 1, "days", "time",
+"ocean_month",      1,  "days", 1, "days", "time",
+"ocean",            1,  "days", 1, "days", "time",
 "ocean_grid",      -1,  "months", 1, "days", "time",
 #"ocean_scalar",     1,  "months", 1, "days", "time",
 "ocean_scalar",     1,  "days", 1, "days", "time",
@@ -54,13 +54,19 @@ ACCESS-OM2-01
 "ocean_model","sea_level","sea_level",             "ocean_month","all",.true.,"none",2
 "ocean_model","eta_t","eta_t",                     "ocean_month","all",.true.,"none",2
 "ocean_model","sea_level_sq","sea_levelsq",        "ocean_month","all",.true.,"none",2
+"ocean_model","surface_temp","surface_temp",     "ocean_month","all",.true.,"none",2
+"ocean_model","surface_salt","surface_salt",     "ocean_month","all",.true.,"none",2
 "ocean_model","mld","mld",                         "ocean_month","all",.true.,"none",2
 "ocean_model","pme_river","pme_river",             "ocean_month","all",.true.,"none",2
+"ocean_model","pme_net","pme_net",                     "ocean_month","all",.true.,"none",2
 "ocean_model","river","river",             "ocean_month","all",.true.,"none",2
 "ocean_model","runoff","runoff",             "ocean_month","all",.true.,"none",2
-"ocean_model","ice_calving","ice_calving",             "ocean_month","all",.true.,"none",2
 "ocean_model","evap","evap",             "ocean_month","all",.true.,"none",2
 "ocean_model","melt","melt",             "ocean_month","all",.true.,"none",2
+"ocean_model","fprec","fprec",                     "ocean_month","all",.true.,"none",2
+"ocean_model","lprec","lprec",                     "ocean_month","all",.true.,"none",2
+"ocean_model","wfimelt","wfimelt",                     "ocean_month","all",.true.,"none",2
+"ocean_model","wfiform","wfiform",                     "ocean_month","all",.true.,"none",2
 "ocean_model","sfc_salt_flux_restore","sfc_salt_flux_restore","ocean_month","all",.true.,"none",2
 "ocean_model","sfc_salt_flux_ice","sfc_salt_flux_ice","ocean_month","all",.true.,"none",2
 "ocean_model","sfc_salt_flux_coupler","sfc_salt_flux_coupler","ocean_month","all",.true.,"none",2
