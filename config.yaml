@@ -1,7 +1,7 @@
 # PBS configuration
 queue: normal
 project: x77
-walltime: 1:00:00
+walltime: 5:00:00
 jobname: 01deg_jra55_ryf
 ncpus: 5600
 
@@ -39,7 +39,7 @@ calendar:
     runtime:
         years: 0
         months: 0
-        days: 3
+        days: 27
 
     start:
         year: 1
