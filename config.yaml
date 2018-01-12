@@ -17,7 +17,7 @@ submodels:
 
     - name: ocean
       model: mom
-      exe: fms_ACCESS-OM_282c6f63.x
+      exe: fms_ACCESS-OM_2d76b70c.x
       input: mom_01deg
       timestep: 240
       ncpus: 4358
@@ -39,7 +39,7 @@ calendar:
     runtime:
         years: 0
         months: 0
-        days: 2
+        days: 3
 
     start:
         year: 1

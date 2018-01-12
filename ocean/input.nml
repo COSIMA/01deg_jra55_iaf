@@ -345,6 +345,7 @@
     calvingspread = .false.
     do_bitwise_exact_sum = .false.
     do_flux_correction = .false.
+    ocean_ice_salt_limit = 0.006
     land_model_heat_fluxes = .false.
     max_delta_salinity_restore = 0.5
     max_ice_thickness = 0.0
