@@ -24,11 +24,11 @@
   , diag_file      = 'ice_diag.d'
   , print_global   = .false.
   , print_points   = .true.
-  , latpnt(1)      =  90.
-  , lonpnt(1)      =   0.
-  , latpnt(2)      = -65.
-  , lonpnt(2)      = -45.
-  , dbug           = .false.
+  , latpnt(1)      =  66.75
+  , lonpnt(1)      =  72.5
+  , latpnt(2)      =  68.0
+  , lonpnt(2)      =  74.0
+  , dbug           = .true.
   , histfreq       = 'd','m','x','x','x'
   , histfreq_n     = 1, 1, 1, 1, 1
   , hist_avg       = .true.
