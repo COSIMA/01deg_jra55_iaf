@@ -5,8 +5,7 @@ ACCESS-OM2-01
 "ocean_month",      1,  "months", 1, "days", "time",
 "ocean",            2,  "months", 1, "days", "time",
 "ocean_grid",      -1,  "months", 1, "days", "time",
-#"ocean_scalar",     1,  "months", 1, "days", "time",
-"ocean_scalar",     1,  "days", 1, "days", "time",
+"ocean_scalar",     1,  "months", 1, "days", "time",
 
 # Save ocean grid data once and for all
 "ocean_model","geolon_t","geolon_t", "ocean_grid","all",.false.,"none",2
