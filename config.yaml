@@ -63,5 +63,6 @@ qsub_flags: -lother=hyperthread -W umask=027
 # for normalbw
 # platform:
 #    nodesize: 28
-
+mpi:
+    module: openmpi/1.10.2
 postscript: sync_output_to_gdata.sh
