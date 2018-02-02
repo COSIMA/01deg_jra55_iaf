@@ -3,7 +3,7 @@ queue: normal
 project: x77
 walltime: 5:00:00
 jobname: 01deg_jra55_ryf
-ncpus: 5600
+# ncpus: 5600 # best to omit this so payu will work it out: https://github.com/marshallward/payu/issues/97
 
 shortpath: /short/v45
 
@@ -19,20 +19,20 @@ submodels:
       model: mom
       exe: fms_ACCESS-OM_2d76b70c.x
       input: mom_01deg
-      timestep: 450
+      timestep: 300
       ncpus: 4358
 
     - name: ice
       model: cice5
       exe: cice_auscom_3600x2700_1200p_ae5c5ebc.exe
       input: cice_01deg
-      timestep: 450
+      timestep: 300
       ncpus: 1200
 
     - name: coupler
       model: oasis
       input: oasis_jra55_to_01deg
-      timestep: 450
+      timestep: 300
       ncpus: 0
 
 calendar:
