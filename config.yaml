@@ -12,19 +12,19 @@ model: access-om2
 submodels:
     - name: atmosphere
       model: matm
-      exe: matm_jra55_1c14e875.exe
+      exe: matm_jra55_2c6add9f.exe
       ncpus: 1
 
     - name: ocean
       model: mom
-      exe: fms_ACCESS-OM_b45aa729.x
+      exe: fms_ACCESS-OM_2d76b70c.x
       input: mom_01deg
       timestep: 240
       ncpus: 4358
 
     - name: ice
       model: cice5
-      exe: cice_auscom_3600x2700_1200p_2a15dd72.exe
+      exe: cice_auscom_3600x2700_1200p_ae5c5ebc.exe
       input: cice_01deg
       timestep: 240
       ncpus: 1200
