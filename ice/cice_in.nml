@@ -29,8 +29,8 @@
   , latpnt(2)      =  68.0
   , lonpnt(2)      =  74.0
   , dbug           = .false.
-  , histfreq       = 'd','m','x','x','x'
-  , histfreq_n     = 1, 1, 1, 1, 1
+  , histfreq       = 'd','m','h','x','x'
+  , histfreq_n     = 1, 1, 3, 1, 1
   , hist_avg       = .true.
   , history_dir    = './OUTPUT/'
   , history_file   = 'iceh'
@@ -195,10 +195,10 @@
   , f_VGRDb        = .false.
   , f_bounds       = .false.
   , f_sice         = 'x' 
-  , f_hi           = 'md'
+  , f_hi           = 'mdh'
   , f_hs           = 'm' 
   , f_Tsfc         = 'm' 
-  , f_aice         = 'md' 
+  , f_aice         = 'mdh' 
   , f_uvel         = 'md' 
   , f_vvel         = 'md' 
   , f_fswdn        = 'x' 
