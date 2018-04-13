@@ -19,20 +19,20 @@ submodels:
       model: mom
       exe: fms_ACCESS-OM_2d76b70c.x
       input: mom_01deg
-      timestep: 400
+      timestep: 240
       ncpus: 4358
 
     - name: ice
       model: cice5
       exe: cice_auscom_3600x2700_1200p_ae5c5ebc.exe
       input: cice_01deg
-      timestep: 400
+      timestep: 240
       ncpus: 1200
 
     - name: coupler
       model: oasis
       input: oasis_jra55_to_01deg
-      timestep: 400
+      timestep: 240
       ncpus: 0
 
 calendar:
@@ -48,10 +48,10 @@ calendar:
 
 # Collation
 collate: true
-collate_walltime: 10:00:00
+collate_walltime: 48:00:00
 collate_mem: 128GB
 collate_ncpus: 4
-collate_queue: express
+collate_queue: normal
 collate_flags: -n4 -z -m -r
 
 # Misc
