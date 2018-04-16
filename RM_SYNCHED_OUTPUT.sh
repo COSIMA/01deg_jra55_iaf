@@ -8,6 +8,4 @@
 
 source sync_output_to_gdata.sh # to define GDATADIR and cd archive
 
-#rsync --remove-source-files --ignore-existing --exclude "*.nc.*" -vrltoD --safe-links output* ${GDATADIR}
-rsync --remove-source-files --exclude "*.nc.*" -vrltoD --safe-links output1?? ${GDATADIR}
-#rsync --dry-run --remove-source-files --exclude "*.nc.*" -vrltoD --safe-links output00* ${GDATADIR}
+rsync --remove-source-files --exclude "*.nc.*" --exclude "*ocean_*_3hourly*" --exclude "*iceh_03h*" -vrltoD --safe-links output1?? ${GDATADIR}
