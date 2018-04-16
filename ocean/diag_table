@@ -11,10 +11,10 @@ ACCESS-OM2-01
 "ocean",            1,  "months", 1, "days", "time",
 "ocean_grid",      -1,  "months", 1, "days", "time",
 "ocean_scalar",     1,  "months", 1, "days", "time",
-"ocean_temp_3hourly",    3,  "hours",  1, "days", "time",
-"ocean_salt_3hourly",    3,  "hours",  1, "days", "time",
-"ocean_pot_rho_2_3hourly",    3,  "hours",  1, "days", "time",
-"ocean_speed_3hourly",    3,  "hours",  1, "days", "time",
+# "ocean_temp_3hourly",    3,  "hours",  1, "days", "time",
+# "ocean_salt_3hourly",    3,  "hours",  1, "days", "time",
+# "ocean_pot_rho_2_3hourly",    3,  "hours",  1, "days", "time",
+# "ocean_speed_3hourly",    3,  "hours",  1, "days", "time",
 
 # Save ocean grid data once and for all
 "ocean_model","geolon_t","geolon_t", "ocean_grid","all",.false.,"none",2
@@ -134,7 +134,7 @@ ACCESS-OM2-01
 "ocean_model","total_ocean_sens_heat","total_ocean_sens_heat"                ,"ocean_scalar","all",.true.,"none",2
 
 # 3-hourly output
-"ocean_model","temp","temp",            "ocean_temp_3hourly","all",.true.,"none",2
-"ocean_model","salt","salt",            "ocean_salt_3hourly","all",.true.,"none",2
-"ocean_model","pot_rho_2","pot_rho_2",  "ocean_pot_rho_2_3hourly","all",.true.,"none",2
-"ocean_model","speed","speed",          "ocean_speed_3hourly","all",.true.,"none",2
+# "ocean_model","temp","temp",            "ocean_temp_3hourly","all",.true.,"none",2
+# "ocean_model","salt","salt",            "ocean_salt_3hourly","all",.true.,"none",2
+# "ocean_model","pot_rho_2","pot_rho_2",  "ocean_pot_rho_2_3hourly","all",.true.,"none",2
+# "ocean_model","speed","speed",          "ocean_speed_3hourly","all",.true.,"none",2

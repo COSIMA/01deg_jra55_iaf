@@ -48,10 +48,10 @@ calendar:
 
 # Collation
 collate: true
-collate_walltime: 48:00:00
+collate_walltime: 10:00:00
 collate_mem: 128GB
 collate_ncpus: 4
-collate_queue: normal
+collate_queue: express
 collate_flags: -n4 -z -m -r
 
 # Misc
