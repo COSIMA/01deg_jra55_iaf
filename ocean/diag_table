@@ -58,6 +58,8 @@ ACCESS-OM2-01
 "ocean_model","diff_cbt_t","diff_cbt_t",    "ocean","all",.true.,"none",2
 "ocean_model","buoyfreq2_wt","buoyfreq2_wt",    "ocean","all",.true.,"none",2
 "ocean_model","speed","speed",    "ocean","all",.true.,"none",2
+"ocean_model","uhrho_et","uhrho_et",    "ocean","all",.true.,"none",2
+"ocean_model","vhrho_nt","vhrho_nt",    "ocean","all",.true.,"none",2
 
 # 2d fields - monthly output
 "ocean_model","sea_level","sea_level",             "ocean_month","all",.true.,"none",2
