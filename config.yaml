@@ -1,50 +1,33 @@
 # PBS configuration
 queue: normal
-project: v45
+project: x77
 walltime: 5:00:00
 jobname: 01deg_jra55_ryf
 ncpus: 5600
 
-shortpath: /short/v45
+shortpath: /short/x77
 
 # Model configuration
 model: access-om2
+input: common_01deg_jra55
 submodels:
     - name: atmosphere
-      model: matm
-      exe: matm_jra55_2c6add9f.exe
+      model: yatm
+      exe: yatm_9940934e.exe
+      input: yatm_01deg
       ncpus: 1
 
     - name: ocean
       model: mom
-      exe: fms_ACCESS-OM_282c6f63.x
+      exe: fms_ACCESS-OM_0c633dbe.x
       input: mom_01deg
-      timestep: 300
       ncpus: 4358
 
     - name: ice
       model: cice5
-      exe: cice_auscom_3600x2700_1200p_c612c0dd.exe
+      exe: cice_auscom_3600x2700_1200p_274b9619.exe
       input: cice_01deg
-      timestep: 300
       ncpus: 1200
-
-    - name: coupler
-      model: oasis
-      input: oasis_jra55_to_01deg
-      timestep: 300
-      ncpus: 0
-
-calendar:
-    runtime:
-        years: 0
-        months: 2
-        days: 0
-
-    start:
-        year: 1
-        month: 1
-        days: 1
 
 # Collation
 collate: true
@@ -57,7 +40,7 @@ collate_flags: -n4 -z -m -r
 # Misc
 runlog: False
 stacksize: unlimited
-mpirun: --mca orte_base_help_aggregate 0 --mca btl_openib_eager_limit 4096 --mca btl_openib_max_send_size 8192 --mca mtl mxm
+mpirun: --mca orte_base_help_aggregate 0 --mca pml cm
 ipm: 2.0.5
 qsub_flags: -lother=hyperthread -W umask=027
 # for normalbw

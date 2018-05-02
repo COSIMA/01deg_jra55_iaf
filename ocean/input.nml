@@ -3,7 +3,7 @@
     chk_i2o_fields = .false.
     chk_o2i_fields = .false.
     do_ice_once = .false.
-    dt_cpl = 600
+    dt_cpl = 300
     fixmeltt = .false.
     frazil_factor = 1.0
     iceform_adj_salt = .false.
@@ -30,7 +30,7 @@
 /
 
 &fms_nml
-    clock_grain = 'COMPONENT'
+    clock_grain = 'LOOP'
     domains_stack_size = 115200
 /
 
@@ -217,7 +217,7 @@
     barotropic_split = 80
     cmip_units = .true.
     debug = .false.
-    dt_ocean = 150
+    dt_ocean = 300
     io_layout = 10, 15
     layout = 80, 75
     surface_height_split = 1
@@ -399,15 +399,6 @@
 /
 
 &ocean_solo_nml
-    calendar = 'NOLEAP'
-    date_init = 1, 1, 1, 0, 0, 0
-    days = 30
-    dt_cpld = 600
-    hours = 0
-    minutes = 0
-    months = 0
-    seconds = 0
-    years = 0
 /
 
 &ocean_sponges_eta_nml
