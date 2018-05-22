@@ -40,7 +40,7 @@ collate_flags: -n4 -z -m -r
 # Misc
 runlog: False
 stacksize: unlimited
-mpirun: --mca orte_base_help_aggregate 0 --mca pml cm
+mpirun: --mca orte_base_help_aggregate 0 --mca pml yalla
 ipm: 2.0.5
 qsub_flags: -lother=hyperthread -W umask=027
 # for normalbw
