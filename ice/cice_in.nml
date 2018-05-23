@@ -48,7 +48,7 @@
 /
 
 &domain_nml
-    nprocs = 1440
+    nprocs = 2000
   , processor_shape   = 'square-ice'
   , distribution_type = 'cartesian'
   , distribution_wght = 'latitude'
