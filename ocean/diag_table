@@ -17,11 +17,11 @@ ACCESS-OM2-01
 # "ocean_speed_3hourly",    3,  "hours",  1, "days", "time",
 
 # Adele's diags for Ruth, June 2018 -- 3D daily output of uhrho_et, vhrho_nt, temp, salt and rho_dzt, south of 55S -- just need 2 years of RYF
-"southern_ocean_daily_temp",  24,  "hours", 1, "days", "time",
-"southern_ocean_daily_salt",  24,  "hours", 1, "days", "time",
-"southern_ocean_daily_uhrho_et",  24,  "hours", 1, "days", "time",
-"southern_ocean_daily_vhrho_nt",  24,  "hours", 1, "days", "time",
-"southern_ocean_daily_rho_dzt",  24,  "hours", 1, "days", "time",
+# "southern_ocean_daily_temp",  24,  "hours", 1, "days", "time",
+# "southern_ocean_daily_salt",  24,  "hours", 1, "days", "time",
+# "southern_ocean_daily_uhrho_et",  24,  "hours", 1, "days", "time",
+# "southern_ocean_daily_vhrho_nt",  24,  "hours", 1, "days", "time",
+# "southern_ocean_daily_rho_dzt",  24,  "hours", 1, "days", "time",
 
 # Save ocean grid data once and for all
 "ocean_model","geolon_t","geolon_t", "ocean_grid","all",.false.,"none",2
@@ -151,9 +151,9 @@ ACCESS-OM2-01
 # "ocean_model","speed","speed",          "ocean_speed_3hourly","all",.true.,"none",2
 
 # Adele's diags for Ruth, June 2018 -- 3D daily output of uhrho_et, vhrho_nt, temp, salt and rho_dzt, south of 55S -- just need 2 years of RYF
-"ocean_model","temp","temp","southern_ocean_daily_temp","all",.true.,"-280,80,-80,-55,-1,-1",2
-"ocean_model","salt","salt","southern_ocean_daily_salt","all",.true.,"-280,80,-80,-55,-1,-1",2
-"ocean_model","uhrho_et","uhrho_et","southern_ocean_daily_uhrho_et","all",.true.,"-280,80,-80,-55,-1,-1",2
-"ocean_model","vhrho_nt","vhrho_nt","southern_ocean_daily_vhrho_nt","all",.true.,"-280,80,-80,-55,-1,-1",2
-"ocean_model","rho_dzt","rho_dzt","southern_ocean_daily_rho_dzt","all",.true.,"-280,80,-80,-55,-1,-1",2
+# "ocean_model","temp","temp","southern_ocean_daily_temp","all",.true.,"-280,80,-80,-55,-1,-1",2
+# "ocean_model","salt","salt","southern_ocean_daily_salt","all",.true.,"-280,80,-80,-55,-1,-1",2
+# "ocean_model","uhrho_et","uhrho_et","southern_ocean_daily_uhrho_et","all",.true.,"-280,80,-80,-55,-1,-1",2
+# "ocean_model","vhrho_nt","vhrho_nt","southern_ocean_daily_vhrho_nt","all",.true.,"-280,80,-80,-55,-1,-1",2
+# "ocean_model","rho_dzt","rho_dzt","southern_ocean_daily_rho_dzt","all",.true.,"-280,80,-80,-55,-1,-1",2
 
