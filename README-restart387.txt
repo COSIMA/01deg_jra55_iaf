@@ -9,5 +9,11 @@ as discussed here:
 https://github.com/OceansAus/access-om2/issues/99
 
 Similarly, restart387/ice/iced.0036-01-01-00000.nc-old is the original CICE restart 
-and restart387/ice/iced.0036-01-01-00000.nc has been modified by https://github.com/aekiss/notebooks/blob/master/fix-restarts.ipynb
+and restart387/ice/iced.0036-01-01-00000.nc has been modified by 
+https://github.com/aekiss/notebooks/blob/master/fix-restarts.ipynb
 to set iceumask to false in the new land points.
+
+Similarly, restart387/ice/kmt.nc-old is the original CICE restart
+and restart387/ice/kmt.nc has been modified by 
+https://github.com/aekiss/notebooks/blob/master/fix-restarts.ipynb
+to set kmt to false in the new land points.
