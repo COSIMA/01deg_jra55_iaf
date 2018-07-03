@@ -17,3 +17,15 @@ From run 399 (Dec year 36) onwards
 was made consistent with this new topog.nc, fixed with fix-restarts.ipynb
 https://github.com/aekiss/notebooks/blob/b166a007807516ff737749fb931b93e688d62b8f/fix-restarts.ipynb
 with the previous ocean_mask renamed ocean_mask_12_10_17_yenesei.nc
+
+/short/v45/aek156/access-om2/archive/01deg_jra55_ryf/restart387/ice/kmt.nc-old 
+is the original CICE restart, and 
+/short/v45/aek156/access-om2/archive/01deg_jra55_ryf/restart387/ice/kmt.nc 
+has been modified by
+https://github.com/aekiss/notebooks/blob/master/fix-restarts.ipynb
+to set kmt to false in the new land points.
+
+After run 413, did
+mv /short/v45/aek156/access-om2/input/cice_01deg/kmt.nc /short/v45/aek156/access-om2/input/cice_01deg/kmt_12_10_17_yenesei.nc
+cp /short/v45/aek156/access-om2/archive/01deg_jra55_ryf/restart413/ice/kmt.nc /short/v45/aek156/access-om2/input/cice_01deg/kmt.nc
+so that kmt.nc in the inputs dir is the same as in the restarts.
