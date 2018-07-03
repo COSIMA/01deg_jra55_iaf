@@ -3,7 +3,7 @@
     chk_i2o_fields = .false.
     chk_o2i_fields = .false.
     do_ice_once = .false.
-    dt_cpl = 600
+    dt_cpl = 300
     fixmeltt = .false.
     frazil_factor = 1.0
     iceform_adj_salt = .false.
@@ -401,15 +401,6 @@
 /
 
 &ocean_solo_nml
-    calendar = 'NOLEAP'
-    date_init = 1, 1, 1, 0, 0, 0
-    days = 30
-    dt_cpld = 600
-    hours = 0
-    minutes = 0
-    months = 0
-    seconds = 0
-    years = 0
 /
 
 &ocean_sponges_eta_nml
