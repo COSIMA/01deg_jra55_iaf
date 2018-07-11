@@ -1,7 +1,7 @@
 # PBS configuration
 queue: normal
 project: x77
-walltime: 1:00:00
+walltime: 5:00:00
 jobname: 01deg_jra55_ryf
 ncpus: 6368
 shortpath: /short/v45
@@ -13,19 +13,19 @@ input: /short/public/access-om2/input_38570c62/common_01deg_jra55
 submodels:
     - name: atmosphere
       model: yatm
-      exe: /short/public/access-om2/bin/yatm_7c3a8c04.exe
+      exe: /short/v45/aek156/CHUCKABLE/OceansAus/access-om2-yatm/access-om2/bin/yatm_b0ca92a.exe
       input: /short/public/access-om2/input_38570c62/yatm_01deg
       ncpus: 1
 
     - name: ocean
       model: mom
-      exe: /short/public/access-om2/bin/fms_ACCESS-OM_99168b44.x
+      exe: /short/v45/aek156/CHUCKABLE/OceansAus/access-om2-yatm/access-om2/bin/fms_ACCESS-OM_141b850_libaccessom2_b0ca92a.x
       input: /short/public/access-om2/input_38570c62/mom_01deg
       ncpus: 4358
 
     - name: ice
       model: cice5
-      exe: /short/v45/aek156/CHUCKABLE/OceansAus/access-om2-yatm/access-om2/bin/cice_auscom_3600x2700_2000p_2807361.exe
+      exe: /short/v45/aek156/CHUCKABLE/OceansAus/access-om2-yatm/access-om2/bin/cice_auscom_3600x2700_2000p_0981e59_libaccessom2_b0ca92a.exe
       input: /short/public/access-om2/input_38570c62/cice_01deg
       ncpus: 2000
 
