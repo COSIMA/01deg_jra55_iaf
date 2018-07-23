@@ -13,19 +13,19 @@ input: /short/public/access-om2/input_38570c62/common_01deg_jra55
 submodels:
     - name: atmosphere
       model: yatm
-      exe: /short/v45/aek156/CHUCKABLE/OceansAus/access-om2-yatm/access-om2/bin/yatm_af01d11.exe
+      exe: /short/v45/aek156/CHUCKABLE/OceansAus/access-om2-yatm/access-om2/bin/yatm_84acdb8.exe
       input: /short/public/access-om2/input_38570c62/yatm_01deg
       ncpus: 1
 
     - name: ocean
       model: mom
-      exe: /short/v45/aek156/CHUCKABLE/OceansAus/access-om2-yatm/access-om2/bin/fms_ACCESS-OM_cf63322_libaccessom2_af01d11.x
+      exe: /short/v45/aek156/CHUCKABLE/OceansAus/access-om2-yatm/access-om2/bin/fms_ACCESS-OM_bae32b6_libaccessom2_84acdb8.x
       input: /short/public/access-om2/input_38570c62/mom_01deg
       ncpus: 4358
 
     - name: ice
       model: cice5
-      exe: /short/v45/aek156/CHUCKABLE/OceansAus/access-om2-yatm/access-om2/bin/cice_auscom_3600x2700_2000p_0981e59_libaccessom2_af01d11.exe
+      exe: /short/v45/aek156/CHUCKABLE/OceansAus/access-om2-yatm/access-om2/bin/cice_auscom_3600x2700_2000p_a3391cb_libaccessom2_84acdb8.exe
       input: /short/public/access-om2/input_38570c62/cice_01deg
       ncpus: 2000
 
@@ -53,5 +53,5 @@ qsub_flags: -lother=hyperthread -W umask=027
 # platform:
 #    nodesize: 28
 mpi:
-    module: openmpi/1.10.2
+    module: openmpi/1.10.7
 postscript: sync_output_to_gdata.sh
