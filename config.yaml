@@ -1,7 +1,7 @@
 # PBS configuration
 queue: normal
 project: x77
-walltime: 5:00:00
+walltime: 2:00:00
 jobname: 01deg_jra55_ryf
 ncpus: 6368
 shortpath: /short/v45
@@ -47,8 +47,10 @@ stacksize: unlimited
 # mpirun: -mca coll ^fca --mca pml yalla -x MXM_LOG_FILE=$PBS_JOBFS/mxm.log
 # mpirun: --mca orte_base_help_aggregate 0 --mca pml yalla
 # mpirun: --mca pml yalla -x MXM_LOG_FILE=$PBS_JOBFS/mxm.log
-# Ben Menadue suggestion, email 2018-07-25 -- TODO - remove --mca btl_base_verbose 100 for production runs
+# Ben Menadue suggestion, email 2018-07-25
 mpirun: --mca pml yalla -x MXM_LOG_FILE=$PBS_JOBFS/mxm.log --mca btl_base_verbose 100
+# Ben Menadue suggestion, email 2018-07-26
+mpirun: --mca pml yalla -x MXM_LOG_FILE=$PBS_O_WORKDIR/$PBS_JOBID.mxm.log -x MXM_LOG_LEVEL=REQ -mca pml_base_verbose 100 -mca pml_yalla_verbose 100
 # ipm: 2.0.5
 qsub_flags: -lother=hyperthread -W umask=027
 # for normalbw
