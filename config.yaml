@@ -13,19 +13,22 @@ input: /short/public/access-om2/input_38570c62/common_01deg_jra55
 submodels:
     - name: atmosphere
       model: yatm
-      exe: /short/v45/aek156/CHUCKABLE/OceansAus/access-om2-yatm/access-om2/bin/yatm_84acdb8.exe
+#      exe: /short/v45/aek156/CHUCKABLE/OceansAus/access-om2-yatm/access-om2/bin/yatm_84acdb8.exe
+      exe: /short/v45/aek156/access-om2/control/01deg_jra55_ryf/env-wrapper-yatm.sh
       input: /short/public/access-om2/input_38570c62/yatm_01deg
       ncpus: 1
 
     - name: ocean
       model: mom
-      exe: /short/v45/aek156/CHUCKABLE/OceansAus/access-om2-yatm/access-om2/bin/fms_ACCESS-OM_bae32b6_libaccessom2_84acdb8.x
+#      exe: /short/v45/aek156/CHUCKABLE/OceansAus/access-om2-yatm/access-om2/bin/fms_ACCESS-OM_bae32b6_libaccessom2_84acdb8.x
+      exe: /short/v45/aek156/access-om2/control/01deg_jra55_ryf/env-wrapper-mom.sh
       input: /short/public/access-om2/input_38570c62/mom_01deg
       ncpus: 4358
 
     - name: ice
       model: cice5
-      exe: /short/v45/aek156/CHUCKABLE/OceansAus/access-om2-yatm/access-om2/bin/cice_auscom_3600x2700_2000p_a3391cb_libaccessom2_84acdb8.exe
+#      exe: /short/v45/aek156/CHUCKABLE/OceansAus/access-om2-yatm/access-om2/bin/cice_auscom_3600x2700_2000p_a3391cb_libaccessom2_84acdb8.exe
+      exe: /short/v45/aek156/access-om2/control/01deg_jra55_ryf/env-wrapper-cice5.sh
       input: /short/public/access-om2/input_38570c62/cice_01deg
       ncpus: 2000
 
