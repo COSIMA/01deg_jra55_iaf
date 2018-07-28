@@ -1,5 +1,5 @@
 #!/bin/bash
-log=$(pwd)/archive/env-wrapper_logs/${PBS_JOBID}
+log=/short/v45/aek156/access-om2/control/01deg_jra55_ryf/archive/env-wrapper_logs/${PBS_JOBID}
 mkdir -p ${log}
 world_rank=$(printf "%05d\n" ${OMPI_COMM_WORLD_RANK})
 local_rank=$(printf "%05d\n" ${OMPI_COMM_WORLD_LOCAL_RANK})
