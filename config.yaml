@@ -1,9 +1,9 @@
 # PBS configuration
 queue: normal
 project: x77
-walltime: 2:00:00
+walltime: 5:00:00
 jobname: 01deg_jra55_ryf
-ncpus: 3184
+ncpus: 5360
 shortpath: /short/v45
 
 # Model configuration
@@ -23,7 +23,7 @@ submodels:
 #      exe: /short/v45/aek156/CHUCKABLE/OceansAus/access-om2-yatm/access-om2/bin/fms_ACCESS-OM_bae32b6_libaccessom2_84acdb8.x
       exe: /short/v45/aek156/access-om2/control/01deg_jra55_ryf/env-wrapper-mom.sh
       input: /short/public/access-om2/input_38570c62/mom_01deg
-      ncpus: 2179
+      ncpus: 4358
 
     - name: ice
       model: cice5
