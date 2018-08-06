@@ -52,7 +52,12 @@ stacksize: unlimited
 # Ben Menadue suggestion, email 2018-04-18
 # mpirun: -mca coll ^fca --mca pml yalla -x MXM_LOG_FILE=$PBS_JOBFS/mxm.log
 # mpirun: --mca orte_base_help_aggregate 0 --mca pml yalla
-mpirun: --mca pml yalla -x MXM_LOG_FILE=$PBS_JOBFS/mxm.log
+#mpirun: --mca pml yalla -x MXM_LOG_FILE=$PBS_JOBFS/mxm.log
+mpirun:
+        - -mca orte_base_help_aggregate 0
+        - -mca orte_output_filename log
+        - -mca pml yalla 
+        - -x MXM_LOG_FILE=$PBS_JOBFS/mxm.log
 # Ben Menadue suggestion, email 2018-07-25
 # mpirun: --mca pml yalla -x MXM_LOG_FILE=$PBS_JOBFS/mxm.log --mca btl_base_verbose 100
 # Ben Menadue suggestion, email 2018-07-26
