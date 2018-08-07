@@ -1,7 +1,7 @@
 # PBS configuration
 queue: normal
 project: x77
-walltime: 1:00:00
+walltime: 3:00:00
 jobname: 01deg_jra55_ryf
 ncpus: 6368
 shortpath: /short/v45
@@ -13,25 +13,28 @@ input: /short/public/access-om2/input_38570c62/common_01deg_jra55
 submodels:
     - name: atmosphere
       model: yatm
-      exe: /short/v45/aek156/CHUCKABLE/OceansAus/access-om2-yatm/access-om2/bin/yatm_af01d11.exe
+#      exe: /short/v45/aek156/CHUCKABLE/OceansAus/access-om2-yatm/access-om2/bin/yatm_af01d11.exe
 #      exe: /short/v45/aek156/CHUCKABLE/OceansAus/access-om2-yatm/access-om2/bin/yatm_84acdb8.exe
 #      exe: /short/v45/aek156/access-om2/control/01deg_jra55_ryf/env-wrapper-yatm.sh
+      exe: /short/public/access-om2/bin/yatm_1044c48e.exe
       input: /short/public/access-om2/input_38570c62/yatm_01deg
       ncpus: 1
 
     - name: ocean
       model: mom
-      exe: /short/v45/aek156/CHUCKABLE/OceansAus/access-om2-yatm/access-om2/bin/fms_ACCESS-OM_cf63322_libaccessom2_af01d11.x
+#      exe: /short/v45/aek156/CHUCKABLE/OceansAus/access-om2-yatm/access-om2/bin/fms_ACCESS-OM_cf63322_libaccessom2_af01d11.x
 #      exe: /short/v45/aek156/CHUCKABLE/OceansAus/access-om2-yatm/access-om2/bin/fms_ACCESS-OM_bae32b6_libaccessom2_84acdb8.x
 #      exe: /short/v45/aek156/access-om2/control/01deg_jra55_ryf/env-wrapper-mom.sh
+      exe: /short/public/access-om2/bin/fms_ACCESS-OM_b1fb5ae9.x
       input: /short/public/access-om2/input_38570c62/mom_01deg
       ncpus: 4358
 
     - name: ice
       model: cice5
-      exe: /short/v45/aek156/CHUCKABLE/OceansAus/access-om2-yatm/access-om2/bin/cice_auscom_3600x2700_2000p_0981e59_libaccessom2_af01d11.exe
+#      exe: /short/v45/aek156/CHUCKABLE/OceansAus/access-om2-yatm/access-om2/bin/cice_auscom_3600x2700_2000p_0981e59_libaccessom2_af01d11.exe
 #      exe: /short/v45/aek156/CHUCKABLE/OceansAus/access-om2-yatm/access-om2/bin/cice_auscom_3600x2700_2000p_a3391cb_libaccessom2_84acdb8.exe
 #      exe: /short/v45/aek156/access-om2/control/01deg_jra55_ryf/env-wrapper-cice5.sh
+      exe: /short/public/access-om2/bin/cice_auscom_3600x2700_2000p_dae07bea.exe
       input: /short/public/access-om2/input_38570c62/cice_01deg
       ncpus: 2000
 
@@ -52,12 +55,13 @@ stacksize: unlimited
 # Ben Menadue suggestion, email 2018-04-18
 # mpirun: -mca coll ^fca --mca pml yalla -x MXM_LOG_FILE=$PBS_JOBFS/mxm.log
 # mpirun: --mca orte_base_help_aggregate 0 --mca pml yalla
-#mpirun: --mca pml yalla -x MXM_LOG_FILE=$PBS_JOBFS/mxm.log
-mpirun:
-        - -mca orte_base_help_aggregate 0
-        - -mca orte_output_filename log
-        - -mca pml yalla 
-        - -x MXM_LOG_FILE=$PBS_JOBFS/mxm.log
+mpirun: --mca pml yalla -x MXM_LOG_FILE=$PBS_JOBFS/mxm.log
+# Marshall 2018-08-06
+#mpirun:
+#        - -mca orte_base_help_aggregate 0
+#        - -mca orte_output_filename log
+#        - -mca pml yalla 
+#        - -x MXM_LOG_FILE=$PBS_JOBFS/mxm.log
 # Ben Menadue suggestion, email 2018-07-25
 # mpirun: --mca pml yalla -x MXM_LOG_FILE=$PBS_JOBFS/mxm.log --mca btl_base_verbose 100
 # Ben Menadue suggestion, email 2018-07-26
