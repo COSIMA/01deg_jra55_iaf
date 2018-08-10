@@ -7,10 +7,16 @@ ACCESS-OM2-01
 # https://github.com/OceansAus/access-om2/wiki/MOM-diagnostics-list
 
 # output files
+"ocean_daily",      1,  "days",   1, "days", "time",
 "ocean_month",      1,  "months", 1, "days", "time",
 "ocean",            1,  "months", 1, "days", "time",
 "ocean_grid",      -1,  "months", 1, "days", "time",
 "ocean_scalar",     1,  "months", 1, "days", "time",
+
+# For Chris Chapman: Water Mass Transformation Diagnostics for tropical and subtropical Indian Ocean
+"indian_ocean",     1,  "months", 1, "days", "time",
+
+# For showcase movie
 # "ocean_temp_3hourly",    3,  "hours",  1, "days", "time",
 # "ocean_salt_3hourly",    3,  "hours",  1, "days", "time",
 # "ocean_pot_rho_2_3hourly",    3,  "hours",  1, "days", "time",
@@ -22,6 +28,8 @@ ACCESS-OM2-01
 # "southern_ocean_daily_uhrho_et",  24,  "hours", 1, "days", "time",
 # "southern_ocean_daily_vhrho_nt",  24,  "hours", 1, "days", "time",
 # "southern_ocean_daily_rho_dzt",  24,  "hours", 1, "days", "time",
+
+
 
 # Save ocean grid data once and for all
 "ocean_model","geolon_t","geolon_t", "ocean_grid","all",.false.,"none",2
@@ -69,6 +77,9 @@ ACCESS-OM2-01
 # "ocean_model","uhrho_et","uhrho_et",    "ocean","all",.true.,"none",2
 # "ocean_model","vhrho_nt","vhrho_nt",    "ocean","all",.true.,"none",2
 
+# 2d fields - daily output
+"ocean_model","eta_t","eta_t",                     "ocean_daily","all",.true.,"none",2
+"ocean_model","surface_temp","surface_temp",     "ocean_daily","all",.true.,"none",2
 
 # 2d fields - monthly output
 "ocean_model","sea_level","sea_level",             "ocean_month","all",.true.,"none",2
@@ -157,3 +168,14 @@ ACCESS-OM2-01
 # "ocean_model","vhrho_nt","vhrho_nt","southern_ocean_daily_vhrho_nt","all",.true.,"-280,80,-80,-55,-1,-1",2
 # "ocean_model","rho_dzt","rho_dzt","southern_ocean_daily_rho_dzt","all",.true.,"-280,80,-80,-55,-1,-1",2
 
+# For Chris Chapman: Water Mass Transformation Diagnostics for tropical and subtropical Indian Ocean
+"ocean_model","salt_vdiffuse_impl","salt_vdiffuse_impl","indian_ocean","all",.true.,"20,160,-50,0,0,600",2
+"ocean_model","salt_vdiffuse_diff_cbt","salt_vdiffuse_diff_cbt","indian_ocean","all",.true.,"20,160,-50,0,0,600",2
+"ocean_model","salt_advection","salt_advection","indian_ocean","all",.true.,"20,160,-50,0,0,600",2
+"ocean_model","salt_vdiffuse_k33","salt_vdiffuse_k33","indian_ocean","all",.true.,"20,160,-50,0,0,600",2
+"ocean_model","salt_submeso","salt_submeso","indian_ocean","all",.true.,"20,160,-50,0,0,600",2
+"ocean_model","temp_vdiffuse_impl","temp_vdiffuse_impl","indian_ocean","all",.true.,"20,160,-50,0,0,600",2
+"ocean_model","temp_vdiffuse_diff_cbt","temp_vdiffuse_diff_cbt","indian_ocean","all",.true.,"20,160,-50,0,0,600",2
+"ocean_model","temp_advection","temp_advection","indian_ocean","all",.true.,"20,160,-50,0,0,600",2
+"ocean_model","temp_vdiffuse_k33","temp_vdiffuse_k33","indian_ocean","all",.true.,"20,160,-50,0,0,600",2
+"ocean_model","temp_submeso","temp_submeso","indian_ocean","all",.true.,"20,160,-50,0,0,600",2
