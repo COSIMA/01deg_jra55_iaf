@@ -14,7 +14,8 @@ ACCESS-OM2-01
 "ocean_scalar",     1,  "months", 1, "days", "time",
 
 # For Chris Chapman: Water Mass Transformation Diagnostics for tropical and subtropical Indian Ocean
-"indian_ocean",     1,  "months", 1, "days", "time",
+"indian_ocean_west",     1,  "months", 1, "days", "time",
+"indian_ocean_east",     1,  "months", 1, "days", "time",
 
 # For showcase movie
 # "ocean_temp_3hourly",    3,  "hours",  1, "days", "time",
@@ -171,24 +172,24 @@ ACCESS-OM2-01
 # For Chris Chapman: Water Mass Transformation Diagnostics for tropical and subtropical Indian Ocean,
 # 20E-160E and 50S-EQ. But model longitude range is -280E -- +80E, so join is in Indian Ocean.
 # So need two regions: longitude +20 -- +80 and -280 -- -200
-"ocean_model","salt_vdiffuse_impl","salt_vdiffuse_impl","indian_ocean","all",.true.,"20,80,-50,0,0,600",2
-"ocean_model","salt_vdiffuse_diff_cbt","salt_vdiffuse_diff_cbt","indian_ocean","all",.true.,"20,80,-50,0,0,600",2
-"ocean_model","salt_advection","salt_advection","indian_ocean","all",.true.,"20,80,-50,0,0,600",2
-"ocean_model","salt_vdiffuse_k33","salt_vdiffuse_k33","indian_ocean","all",.true.,"20,80,-50,0,0,600",2
-"ocean_model","salt_submeso","salt_submeso","indian_ocean","all",.true.,"20,80,-50,0,0,600",2
-"ocean_model","temp_vdiffuse_impl","temp_vdiffuse_impl","indian_ocean","all",.true.,"20,80,-50,0,0,600",2
-"ocean_model","temp_vdiffuse_diff_cbt","temp_vdiffuse_diff_cbt","indian_ocean","all",.true.,"20,80,-50,0,0,600",2
-"ocean_model","temp_advection","temp_advection","indian_ocean","all",.true.,"20,80,-50,0,0,600",2
-"ocean_model","temp_vdiffuse_k33","temp_vdiffuse_k33","indian_ocean","all",.true.,"20,80,-50,0,0,600",2
-"ocean_model","temp_submeso","temp_submeso","indian_ocean","all",.true.,"20,80,-50,0,0,600",2
+"ocean_model","salt_vdiffuse_impl","salt_vdiffuse_impl","indian_ocean_west","all",.true.,"20,80,-50,0,0,600",2
+"ocean_model","salt_vdiffuse_diff_cbt","salt_vdiffuse_diff_cbt","indian_ocean_west","all",.true.,"20,80,-50,0,0,600",2
+"ocean_model","salt_advection","salt_advection","indian_ocean_west","all",.true.,"20,80,-50,0,0,600",2
+"ocean_model","salt_vdiffuse_k33","salt_vdiffuse_k33","indian_ocean_west","all",.true.,"20,80,-50,0,0,600",2
+"ocean_model","salt_submeso","salt_submeso","indian_ocean_west","all",.true.,"20,80,-50,0,0,600",2
+"ocean_model","temp_vdiffuse_impl","temp_vdiffuse_impl","indian_ocean_west","all",.true.,"20,80,-50,0,0,600",2
+"ocean_model","temp_vdiffuse_diff_cbt","temp_vdiffuse_diff_cbt","indian_ocean_west","all",.true.,"20,80,-50,0,0,600",2
+"ocean_model","temp_advection","temp_advection","indian_ocean_west","all",.true.,"20,80,-50,0,0,600",2
+"ocean_model","temp_vdiffuse_k33","temp_vdiffuse_k33","indian_ocean_west","all",.true.,"20,80,-50,0,0,600",2
+"ocean_model","temp_submeso","temp_submeso","indian_ocean_west","all",.true.,"20,80,-50,0,0,600",2
 #
-"ocean_model","salt_vdiffuse_impl","salt_vdiffuse_impl","indian_ocean","all",.true.,"-280,-200,-50,0,0,600",2
-"ocean_model","salt_vdiffuse_diff_cbt","salt_vdiffuse_diff_cbt","indian_ocean","all",.true.,"-280,-200,-50,0,0,600",2
-"ocean_model","salt_advection","salt_advection","indian_ocean","all",.true.,"-280,-200,-50,0,0,600",2
-"ocean_model","salt_vdiffuse_k33","salt_vdiffuse_k33","indian_ocean","all",.true.,"-280,-200,-50,0,0,600",2
-"ocean_model","salt_submeso","salt_submeso","indian_ocean","all",.true.,"-280,-200,-50,0,0,600",2
-"ocean_model","temp_vdiffuse_impl","temp_vdiffuse_impl","indian_ocean","all",.true.,"-280,-200,-50,0,0,600",2
-"ocean_model","temp_vdiffuse_diff_cbt","temp_vdiffuse_diff_cbt","indian_ocean","all",.true.,"-280,-200,-50,0,0,600",2
-"ocean_model","temp_advection","temp_advection","indian_ocean","all",.true.,"-280,-200,-50,0,0,600",2
-"ocean_model","temp_vdiffuse_k33","temp_vdiffuse_k33","indian_ocean","all",.true.,"-280,-200,-50,0,0,600",2
-"ocean_model","temp_submeso","temp_submeso","indian_ocean","all",.true.,"-280,-200,-50,0,0,600",2
+"ocean_model","salt_vdiffuse_impl","salt_vdiffuse_impl","indian_ocean_east","all",.true.,"-280,-200,-50,0,0,600",2
+"ocean_model","salt_vdiffuse_diff_cbt","salt_vdiffuse_diff_cbt","indian_ocean_east","all",.true.,"-280,-200,-50,0,0,600",2
+"ocean_model","salt_advection","salt_advection","indian_ocean_east","all",.true.,"-280,-200,-50,0,0,600",2
+"ocean_model","salt_vdiffuse_k33","salt_vdiffuse_k33","indian_ocean_east","all",.true.,"-280,-200,-50,0,0,600",2
+"ocean_model","salt_submeso","salt_submeso","indian_ocean_east","all",.true.,"-280,-200,-50,0,0,600",2
+"ocean_model","temp_vdiffuse_impl","temp_vdiffuse_impl","indian_ocean_east","all",.true.,"-280,-200,-50,0,0,600",2
+"ocean_model","temp_vdiffuse_diff_cbt","temp_vdiffuse_diff_cbt","indian_ocean_east","all",.true.,"-280,-200,-50,0,0,600",2
+"ocean_model","temp_advection","temp_advection","indian_ocean_east","all",.true.,"-280,-200,-50,0,0,600",2
+"ocean_model","temp_vdiffuse_k33","temp_vdiffuse_k33","indian_ocean_east","all",.true.,"-280,-200,-50,0,0,600",2
+"ocean_model","temp_submeso","temp_submeso","indian_ocean_east","all",.true.,"-280,-200,-50,0,0,600",2
