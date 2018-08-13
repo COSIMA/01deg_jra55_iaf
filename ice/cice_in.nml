@@ -10,7 +10,7 @@
   , ice_ic         = 'default'
   , restart        = .false.
   , restart_ext    = .false.
-  , use_restart_time = .false.
+  , use_restart_time = .true.
   , restart_format = 'nc'
   , lcdf64         = .true.
   , restart_dir    = './RESTART/'
