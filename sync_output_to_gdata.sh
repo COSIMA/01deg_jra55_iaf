@@ -2,7 +2,7 @@
 #PBS -q copyq
 #PBS -l ncpus=1
 #PBS -l wd
-#PBS -l walltime=1:00:00,mem=2GB
+#PBS -l walltime=4:00:00,mem=2GB
 #PBS -P v45
 #PBS -N sync_output_to_gdata
 
