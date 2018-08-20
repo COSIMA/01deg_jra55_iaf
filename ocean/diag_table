@@ -81,10 +81,9 @@ ACCESS-OM2-01
 # 2d fields - daily output
 "ocean_model","eta_t","eta_t",                     "ocean_daily","all",.true.,"none",2
 "ocean_model","surface_temp","surface_temp",     "ocean_daily","all",.true.,"none",2
+"ocean_model","vorticity_z","vorticity_z",     "ocean_daily","all",.true.,"-280,80,-80,90,0,0",2
 
 # 2d fields - monthly output
-"ocean_model","sea_level","sea_level",             "ocean_month","all",.true.,"none",2
-"ocean_model","eta_t","eta_t",                     "ocean_month","all",.true.,"none",2
 "ocean_model","sea_level_sq","sea_levelsq",        "ocean_month","all",.true.,"none",2
 "ocean_model","surface_temp","surface_temp",     "ocean_month","all",.true.,"none",2
 "ocean_model","surface_salt","surface_salt",     "ocean_month","all",.true.,"none",2
