@@ -7,7 +7,7 @@ ACCESS-OM2-01
 # https://github.com/OceansAus/access-om2/wiki/MOM-diagnostics-list
 
 # output files
-"ocean_daily_k1",   1,  "days",   1, "days", "time",
+"ocean_daily_30m",   1,  "days",   1, "days", "time",
 "ocean_daily",      1,  "days",   1, "days", "time",
 "ocean_month",      1,  "months", 1, "days", "time",
 "ocean",            1,  "months", 1, "days", "time",
@@ -82,8 +82,8 @@ ACCESS-OM2-01
 # 2d fields - daily output
 "ocean_model","eta_t","eta_t",                     "ocean_daily","all",.true.,"none",2
 "ocean_model","surface_temp","surface_temp",     "ocean_daily","all",.true.,"none",2
-# put 2d surface regional subsets of 3d fields in a separate file
-"ocean_model","vorticity_z","vorticity_z",     "ocean_daily_k1","all",.true.,"-280,80,-80,90,0,1.3",2
+# put 2d regional subsets of 3d fields in a separate file
+"ocean_model","vorticity_z","vorticity_z",     "ocean_daily_30m","all",.true.,"-280,80,-81.125,90,25,31",2
 
 # 2d fields - monthly output
 "ocean_model","sea_level_sq","sea_levelsq",        "ocean_month","all",.true.,"none",2
