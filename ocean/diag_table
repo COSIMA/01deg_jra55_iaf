@@ -83,7 +83,7 @@ ACCESS-OM2-01
 "ocean_model","eta_t","eta_t",                     "ocean_daily","all",.true.,"none",2
 "ocean_model","surface_temp","surface_temp",     "ocean_daily","all",.true.,"none",2
 # put 2d regional subsets of 3d fields in a separate file
-"ocean_model","vorticity_z","vorticity_z",     "ocean_daily_30m","all",.true.,"-280,80,-81.125,90,25,31",2
+"ocean_model","vorticity_z","vorticity_z",     "ocean_daily_30m","all",.true.,"-280,80,-81.125,90,26,31",2
 
 # 2d fields - monthly output
 "ocean_model","sea_level_sq","sea_levelsq",        "ocean_month","all",.true.,"none",2
