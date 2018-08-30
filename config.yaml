@@ -1,6 +1,6 @@
 # PBS configuration
 queue: normal
-project: x77
+project: v45
 walltime: 5:00:00
 jobname: 01deg_jra55_iaf
 ncpus: 6368
@@ -65,4 +65,4 @@ qsub_flags: -lother=hyperthread -W umask=027
 #    nodesize: 28
 mpi:
     module: openmpi/1.10.2
-# postscript: sync_output_to_gdata.sh
+postscript: sync_output_to_gdata.sh
