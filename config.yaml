@@ -3,7 +3,7 @@ queue: normal
 project: x77
 walltime: 5:00:00
 jobname: 01deg_jra55_ryf
-ncpus: 5600
+ncpus: 5744
 
 shortpath: /short/x77
 
@@ -26,26 +26,27 @@ submodels:
 
     - name: ice
       model: cice5
-      exe: /short/public/access-om2/bin/cice_auscom_3600x2700_2000p_2ff1ea66.exe
+      exe: /short/public/access-om2/bin/cice_auscom_3600x2700_1392p_076b14f2.exe
       input: /short/public/access-om2/input_38570c62/cice_01deg
-      ncpus: 1200
+      ncpus: 1385
 
 # Collation
 collate: true
 collate_walltime: 10:00:00
-collate_mem: 64GB
+collate_mem: 128GB
 collate_ncpus: 4
-collate_queue: express
+collate_queue: expressbw
 collate_flags: -n4 -z -m -r
 
 # Misc
 runlog: False
 stacksize: unlimited
-mpirun: --mca orte_base_help_aggregate 0 --mca pml yalla
-ipm: 2.0.5
+mpirun: --mca pml yalla -x MXM_LOG_FILE=$PBS_JOBFS/mxm.log
+#ipm: 2.0.5
 qsub_flags: -lother=hyperthread -W umask=027
 # for normalbw
 # platform:
 #    nodesize: 28
-
+mpi:
+    module: openmpi/1.10.2
 #postscript: sync_output_to_gdata.sh

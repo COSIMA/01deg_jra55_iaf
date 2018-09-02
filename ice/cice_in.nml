@@ -5,7 +5,7 @@
   , istep0         = 0
   , dt             = 300
   , npt            = 6480
-  , ndtd           = 1
+  , ndtd           = 3
   , runtype        = 'initial'
   , ice_ic         = 'default'
   , restart        = .false.
@@ -23,7 +23,7 @@
   , diag_type      = 'file'
   , diag_file      = 'ice_diag.d'
   , print_global   = .false.
-  , print_points   = .true.
+  , print_points   = .false.
   , latpnt(1)      =  90.
   , lonpnt(1)      =   0.
   , latpnt(2)      = -65.
@@ -48,9 +48,9 @@
 /
 
 &domain_nml
-    nprocs = 1200
+    nprocs = 1385
   , processor_shape   = 'square-ice'
-  , distribution_type = 'cartesian'
+  , distribution_type = 'roundrobin'
   , distribution_wght = 'latitude'
   , ew_boundary_type  = 'cyclic'
   , ns_boundary_type  = 'tripole'
