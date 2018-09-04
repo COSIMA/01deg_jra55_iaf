@@ -31,7 +31,11 @@ ACCESS-OM2-01
 # "southern_ocean_daily_vhrho_nt",  24,  "hours", 1, "days", "time",
 # "southern_ocean_daily_rho_dzt",  24,  "hours", 1, "days", "time",
 
-
+# Daily 3d prognostic variables: T,S,U,V
+"ocean_daily_3d_temp",  1,  "days", 1, "days", "time",
+"ocean_daily_3d_salt",  1,  "days", 1, "days", "time",
+"ocean_daily_3d_u",  1,  "days", 1, "days", "time",
+"ocean_daily_3d_v",  1,  "days", 1, "days", "time",
 
 # Save ocean grid data once and for all
 "ocean_model","geolon_t","geolon_t", "ocean_grid","all",.false.,"none",2
@@ -51,7 +55,7 @@ ACCESS-OM2-01
 "ocean_model","drag_coeff","drag_coeff","ocean_grid","all",.false.,"none",2
 #==========================================================================
 
-# 3d fields
+# 3d fields - monthly averages
 "ocean_model","temp","temp",            "ocean","all",.true.,"none",2
 "ocean_model","salt","salt",            "ocean","all",.true.,"none",2
 "ocean_model","age_global","age_global","ocean","all",.true.,"none",2
@@ -79,9 +83,16 @@ ACCESS-OM2-01
 # "ocean_model","uhrho_et","uhrho_et",    "ocean","all",.true.,"none",2
 # "ocean_model","vhrho_nt","vhrho_nt",    "ocean","all",.true.,"none",2
 
+# 3d fields - daily output
+"ocean_model","temp","temp","ocean_daily_3d_temp","all",.true.,"none",2
+"ocean_model","salt","salt","ocean_daily_3d_salt","all",.true.,"none",2
+"ocean_model","u","u","ocean_daily_3d_u","all",.true.,"none",2
+"ocean_model","v","v","ocean_daily_3d_v","all",.true.,"none",2
+
 # 2d fields - daily output
 "ocean_model","eta_t","eta_t",                     "ocean_daily","all",.true.,"none",2
 "ocean_model","surface_temp","surface_temp",     "ocean_daily","all",.true.,"none",2
+"ocean_model","mld","mld",     "ocean_daily","all",.true.,"none",2
 # put 2d regional subsets of 3d fields in a separate file
 "ocean_model","vorticity_z","vorticity_z",     "ocean_daily_30m","all",.true.,"-280,80,-81.125,90,26,31",2
 
