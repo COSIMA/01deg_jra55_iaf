@@ -11,4 +11,4 @@ echo
 echo "======================================================="
 echo
 
-rsync --dry-run --remove-source-files --include '*/' --include 'ocean_daily_3d_*.nc' --exclude '*' --exclude "*.nc.*" --exclude "*ocean_*_3hourly*" --exclude "*iceh_03h*" -vrltoD --safe-links output001 ${GDATARR6DIR}
+rsync --remove-source-files --include "*/" --include "ocean_daily_3d_*.nc" --exclude "*" --exclude "*.nc.*" --exclude "*ocean_*_3hourly*" --exclude "*iceh_03h*" -vrltoD --safe-links output??? ${GDATARR6DIR}
