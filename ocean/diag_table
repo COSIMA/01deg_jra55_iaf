@@ -131,7 +131,11 @@ ACCESS-OM2-01
 "ocean_model","ty_trans_int_z","ty_trans_int_z",   "ocean_month","all",.true.,"none",2
 "ocean_model","pbot_t","pbot_t",                   "ocean_month","all",.true.,"none",2
 "ocean_model","temp_yflux_adv_int_z","temp_yflux_adv_int_z",                   "ocean_month","all",.true.,"none",2
- 
+"ocean_model","temp_xflux_adv_int_z","temp_xflux_adv_int_z",                   "ocean_month","all",.true.,"none",2
+"ocean_model","temp_yflux_submeso_int_z","temp_yflux_submeso_int_z",                   "ocean_month","all",.true.,"none",2
+"ocean_model","temp_xflux_submeso_int_z","temp_xflux_submeso_int_z",                   "ocean_month","all",.true.,"none",2
+# see https://github.com/OceansAus/ACCESS-OM2-1-025-010deg-report/pull/13#issuecomment-424594587
+
 
 # timeseries - 1D scalar variables
 "ocean_model","ke_tot","ke_tot", "ocean_scalar","all",.true.,"none",2
