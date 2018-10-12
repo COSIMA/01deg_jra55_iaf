@@ -26,4 +26,4 @@ esac
 
 source sync_output_to_rr6.sh # to define GDATARR6DIR and cd archive
 
-rsync --remove-source-files --include "*/" --include "ocean_daily_3d_*.nc" --exclude "*" --exclude "*.nc.*" --exclude "*ocean_*_3hourly*" --exclude "*iceh_03h*" -vrltoD --safe-links output??? ${GDATARR6DIR}
+rsync --remove-source-files --include "*/" --include "ocean_daily_3d_*.nc" --exclude "*" --exclude "ocean_daily_3d_wt.nc" --exclude "*.nc.*" --exclude "*ocean_*_3hourly*" --exclude "*iceh_03h*" -vrltoD --safe-links output??? ${GDATARR6DIR}

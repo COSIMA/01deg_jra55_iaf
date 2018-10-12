@@ -13,4 +13,4 @@ GDATARR6DIR=/g/data/rr6/cosima/access-om2-01/01deg_jra55v13_iaf
 
 mkdir -p ${GDATARR6DIR}
 cd archive
-rsync --include '*/' --include 'ocean_daily_3d_*.nc' --exclude '*' --exclude "*.nc.*" --exclude "*ocean_*_3hourly*" --exclude "*iceh_03h*" -vrltoD --safe-links output* ${GDATARR6DIR}
+rsync --include '*/' --include 'ocean_daily_3d_*.nc' --exclude '*' --exclude 'ocean_daily_3d_wt.nc' --exclude "*.nc.*" --exclude "*ocean_*_3hourly*" --exclude "*iceh_03h*" -vrltoD --safe-links output* ${GDATARR6DIR}

@@ -31,11 +31,12 @@ ACCESS-OM2-01
 # "southern_ocean_daily_vhrho_nt",  24,  "hours", 1, "days", "time",
 # "southern_ocean_daily_rho_dzt",  24,  "hours", 1, "days", "time",
 
-# Daily 3d prognostic variables: T,S,U,V
+# Daily 3d prognostic variables: T,S,U,V,W
 "ocean_daily_3d_temp",  1,  "days", 1, "days", "time",
 "ocean_daily_3d_salt",  1,  "days", 1, "days", "time",
 "ocean_daily_3d_u",  1,  "days", 1, "days", "time",
 "ocean_daily_3d_v",  1,  "days", 1, "days", "time",
+"ocean_daily_3d_wt",  1,  "days", 1, "days", "time",
 
 # Save ocean grid data once and for all
 "ocean_model","geolon_t","geolon_t", "ocean_grid","all",.false.,"none",2
@@ -88,6 +89,7 @@ ACCESS-OM2-01
 "ocean_model","salt","salt","ocean_daily_3d_salt","all",.true.,"none",2
 "ocean_model","u","u","ocean_daily_3d_u","all",.true.,"none",2
 "ocean_model","v","v","ocean_daily_3d_v","all",.true.,"none",2
+"ocean_model","wt","wt","ocean_daily_3d_wt","all",.true.,"none",2
 
 # 2d fields - daily output
 "ocean_model","eta_t","eta_t",                     "ocean_daily","all",.true.,"none",2
