@@ -1,6 +1,6 @@
 # PBS configuration
 queue: normal
-project: x77
+project: v45
 walltime: 5:00:00
 jobname: 01deg_jra55_ryf
 ncpus: 5744
@@ -10,24 +10,24 @@ shortpath: /short/x77
 # Model configuration
 name: common
 model: access-om2
-input: /short/public/access-om2/input_2407a7bc/common_01deg_jra55
+input: /short/public/access-om2/input_38570c62/common_01deg_jra55
 submodels:
     - name: atmosphere
       model: yatm
-      exe: /short/public/access-om2/bin/yatm_037e4b61.exe
-      input: /short/public/access-om2/input_2407a7bc/yatm_01deg
+      exe: /short/public/access-om2/bin/yatm_e8ad3723.exe
+      input: /short/public/access-om2/input_38570c62/yatm_01deg
       ncpus: 1
 
     - name: ocean
       model: mom
-      exe: /short/public/access-om2/bin/fms_ACCESS-OM_304fe837.x
-      input: /short/public/access-om2/input_2407a7bc/mom_01deg
+      exe: /short/public/access-om2/bin/fms_ACCESS-OM_afe80bfd.x
+      input: /short/public/access-om2/input_38570c62/mom_01deg
       ncpus: 4358
 
     - name: ice
       model: cice5
-      exe: /short/public/access-om2/bin/cice_auscom_3600x2700_432p_5a56b59a.exe
-      input: /short/public/access-om2/input_2407a7bc/cice_01deg
+      exe: cice_auscom_3600x2700_1500p.exe
+      input: /short/public/access-om2/input_38570c62/cice_01deg
       ncpus: 1385
 
 # Collation
@@ -41,7 +41,7 @@ collate_flags: -n4 -z -m -r
 # Misc
 runlog: False
 stacksize: unlimited
-mpirun: --mca pml yalla -x MXM_LOG_FILE=$PBS_JOBFS/mxm.log
+mpirun: --mca orte_base_help_aggregate 0 --mca pml yalla -x MXM_LOG_FILE=$PBS_JOBFS/mxm.log
 #ipm: 2.0.5
 qsub_flags: -lother=hyperthread -W umask=027
 # for normalbw

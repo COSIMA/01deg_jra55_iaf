@@ -24,10 +24,10 @@
   , diag_file      = 'ice_diag.d'
   , print_global   = .false.
   , print_points   = .false.
-  , latpnt(1)      =  90.
-  , lonpnt(1)      =   0.
-  , latpnt(2)      = -65.
-  , lonpnt(2)      = -45.
+  , latpnt(1)      =  66.75
+  , lonpnt(1)      =  72.5
+  , latpnt(2)      =  68.0
+  , lonpnt(2)      =  74.0
   , dbug           = .false.
   , histfreq       = 'd','m','x','x','x'
   , histfreq_n     = 1, 1, 1, 1, 1
@@ -50,7 +50,7 @@
 &domain_nml
     nprocs = 1385
   , processor_shape   = 'square-ice'
-  , distribution_type = 'roundrobin'
+  , distribution_type = 'sectrobin'
   , distribution_wght = 'latitude'
   , ew_boundary_type  = 'cyclic'
   , ns_boundary_type  = 'tripole'
@@ -78,7 +78,7 @@
 
 &thermo_nml
     kitd              = 1
-  , ktherm            = 1
+  , ktherm            = 2
   , conduct           = 'bubbly'
   , a_rapid_mode      =  0.5e-3
   , Rac_rapid_mode    =    10.0
@@ -98,8 +98,8 @@
   , krdg_partic     = 1
   , krdg_redist     = 1
   , mu_rdg          = 3
-  , cosw            = 0.96
-  , sinw            = 0.28
+  , cosw            = 1.0
+  , sinw            = 0.0
   , dragio          = 0.00536
   , iceruf          = 0.0005
 /
@@ -174,6 +174,7 @@
   , trestore        =  0
   , restore_ice     = .false.
   , ustar_min       = 0.0005
+  , tfrz_option     = 'mushy'
 /
 
 &icefields_nml
