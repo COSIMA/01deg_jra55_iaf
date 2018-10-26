@@ -4,13 +4,14 @@ ACCESS-OM2-01
 # MOM diag table format is defined here:
 # https://github.com/mom-ocean/MOM5/blob/master/src/shared/diag_manager/diag_table.F90
 # and available diagnostics are listed here:
-# https://github.com/OceansAus/access-om2/wiki/MOM-diagnostics-list
+# https://raw.githubusercontent.com/OceansAus/access-om2/master/MOM_diags.txt
 
 # output files
 "ocean_daily_30m",   1,  "days",   1, "days", "time",
 "ocean_daily",      1,  "days",   1, "days", "time",
 "ocean_month",      1,  "months", 1, "days", "time",
 "ocean",            1,  "months", 1, "days", "time",
+"ocean_snapshot",   1,  "months", 1, "days", "time",
 "ocean_grid",      -1,  "months", 1, "days", "time",
 "ocean_scalar",     1,  "months", 1, "days", "time",
 
@@ -90,6 +91,9 @@ ACCESS-OM2-01
 "ocean_model","u","u","ocean_daily_3d_u","all",.true.,"none",2
 "ocean_model","v","v","ocean_daily_3d_v","all",.true.,"none",2
 "ocean_model","wt","wt","ocean_daily_3d_wt","all",.true.,"none",2
+
+# 3d fields - snapshots at end of each month
+"ocean_model","vorticity_z","vorticity_z","ocean_snapshot","all",.false.,"none",2
 
 # 2d fields - daily output
 "ocean_model","eta_t","eta_t",                     "ocean_daily","all",.true.,"none",2
