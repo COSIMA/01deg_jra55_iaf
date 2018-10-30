@@ -30,12 +30,16 @@ submodels:
       ncpus: 1600
 
 # Collation
-collate: true
-collate_walltime: 10:00:00
-collate_mem: 128GB
-collate_ncpus: 4
-collate_queue: expressbw
-collate_flags: -n4 -z -m -r
+collate:
+    enable: true
+    queue: express
+    memory: 8GB
+    walltime: 00:30:00
+    mpi: true
+    ncpus: 4
+    threads: 2
+    # flags: -v
+    exe: /short/public/aph502/mppnccombine-fast
 
 # Misc
 runlog: True
