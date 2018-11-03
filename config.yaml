@@ -38,8 +38,8 @@ collate:
     mpi: true
     ncpus: 4
     threads: 2
-    # flags: -v
-    exe: /short/public/aph502/mppnccombine-fast
+    flags: -n4 -z -m -r
+    exe: /short/v45/aek156/access-om2/bin/mppnccombine
 
 # Misc
 runlog: True
