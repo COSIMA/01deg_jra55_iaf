@@ -32,9 +32,9 @@ submodels:
 # Collation
 collate:
     enable: true
-    queue: express
-    memory: 8GB
-    walltime: 05:00:00
+    queue: expressbw
+    memory: 128GB
+    walltime: 10:00:00
     mpi: true
     ncpus: 4
     threads: 2
