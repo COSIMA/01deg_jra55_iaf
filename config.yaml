@@ -30,16 +30,22 @@ submodels:
       ncpus: 1600
 
 # Collation
-collate:
-    enable: true
-    queue: expressbw
-    memory: 128GB
-    walltime: 10:00:00
-    mpi: true
-    ncpus: 4
-    threads: 2
-    flags: -n4 -z -m -r
-    exe: /short/v45/aek156/access-om2/bin/mppnccombine
+collate: true
+collate_walltime: 10:00:00
+collate_mem: 128GB
+collate_ncpus: 4
+collate_queue: expressbw
+collate_flags: -n4 -z -m -r
+#collate:
+#    enable: true
+#    queue: expressbw
+#    memory: 128GB
+#    walltime: 10:00:00
+#    mpi: true
+#    ncpus: 4
+#    threads: 2
+##    flags: -n4 -z -m -r
+##    exe: /short/v45/aek156/access-om2/bin/mppnccombine
 
 # Misc
 runlog: True
