@@ -20,7 +20,7 @@
 echo "WARNING: do not proceed if there are any running jobs or collations underway."
 read -p "Proceed? (y/n) " yesno
 case $yesno in
-    [Yy] ) break;;
+    [Yy] ) ;;
     * ) echo "Cancelled. Wait until all jobs are finished before trying again."; exit 0;;
 esac
 
