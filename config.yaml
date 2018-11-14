@@ -35,7 +35,7 @@ collate_walltime: 10:00:00
 collate_mem: 128GB
 collate_ncpus: 4
 collate_queue: expressbw
-collate_flags: -n4 -z -m -r
+collate_flags: -n4 -z -m # -r
 #collate:
 #    enable: true
 #    queue: expressbw
