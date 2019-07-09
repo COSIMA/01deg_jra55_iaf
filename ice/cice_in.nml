@@ -47,9 +47,9 @@
 /
 
 &domain_nml
-    nprocs = 1600
+    nprocs = 799
   , processor_shape   = 'square-ice'
-  , distribution_type = 'roundrobin'
+  , distribution_type = 'sectrobin'
   , distribution_wght = 'latitude'
   , ew_boundary_type  = 'cyclic'
   , ns_boundary_type  = 'tripole'
@@ -174,6 +174,7 @@
   , restore_ice     = .false.
   , ustar_min       = 0.0005
   , tfrz_option     = 'mushy'
+  , highfreq        = .true.
 /
 
 &icefields_nml
