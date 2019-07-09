@@ -18,7 +18,7 @@
 /
 
 &diag_manager_nml
-    debug_diag_manager = .true.
+    debug_diag_manager = .false.
     issue_oor_warnings = .true.
 /
 
@@ -151,8 +151,8 @@
     eos_linear = .false.
     eos_preteos10 = .true.
     layer_nk = 80
-    neutralrho_max = 1030.0
-    neutralrho_min = 1020.0
+    neutralrho_max = 1038.0
+    neutralrho_min = 1028.0
     potrho_max = 1038.0
     potrho_min = 1028.0
 /
@@ -450,7 +450,7 @@
     t_max_limit = 32.0
     t_min = -20.0
     t_min_limit = -5.0
-    temperature_variable = 'potential_temp'
+    temperature_variable = 'conservative_temp'
 /
 
 &ocean_thickness_nml
