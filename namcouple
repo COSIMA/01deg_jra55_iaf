@@ -318,7 +318,7 @@ cict cict LAG=0 SEQ=+1
 LOCTRANS
 INSTANT
 ##########
-# Field 25 : ice forming waterflux
+# Field 26 : ice forming waterflux
 ########## 
 form_io wfiform 36 300 1 i2o.nc IGNORED
 cict cict LAG=0 SEQ=+1
@@ -353,12 +353,12 @@ cict cict LAG=0 SEQ=+1
 #  
 LOCTRANS
 INSTANT
-########## 
+##########
 # Field 30 : Sea surface salinity (psu)
 ##########
 s_surf sss_i 312 300 1 o2i.nc IGNORED
 cict cict LAG=0 SEQ=+1
-#  
+#
 LOCTRANS
 INSTANT
 ##########
@@ -369,7 +369,7 @@ cict cict LAG=0 SEQ=+1
 #
 LOCTRANS
 INSTANT
-########## 
+##########
 # Field 32 : 'northward' sea surface water velocity
 ##########
 v_surf ssv_i 261 300 1 o2i.nc IGNORED
@@ -378,7 +378,7 @@ cict cict LAG=0 SEQ=+1
 LOCTRANS
 INSTANT
 ##########
-# Field 33 :  frazil ice fromation energy (J/m^2) 
+# Field 33 :  frazil ice formation energy (J/m^2)
 #             ('441' is "upward_sea_ice_basal_heat_flux' 'W m-2')
 ##########
 frazil pfmice_i 441 300 1 o2i.nc IGNORED
