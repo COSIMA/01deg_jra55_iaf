@@ -1,4 +1,3 @@
-
 # PBS configuration
 # If submitting to a different project to your default uncomment line below 
 # and change project code as appropriate
@@ -62,6 +61,10 @@ qsub_flags: -W umask=027
 # set number of cores per node (28 for normalbw, 48 for normal on gadi)
 platform:
     nodesize: 48
+# sweep and resubmit on specific errors - see https://github.com/payu-org/payu/issues/241#issuecomment-610739771
+userscripts:
+    error: resub.sh
+    run: rm -f resubmit.count
 
 # DANGER! Do not uncomment this without checking the script is synching 
 # to the correct location!
