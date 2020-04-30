@@ -1,5 +1,5 @@
 # This is a typical input file for OASIS 3.0, using netCDF format
-# for restart input files.  Oasis reads this file at run-time. 
+# for restart input files.  Oasis reads this file at run-time.
 #
 # Any line beginning with # is ignored. Blank lines are not allowed.
 #
@@ -12,7 +12,7 @@
 #########################################################################
 
  $NFIELDS
-# This is the total number of fields being exchanged. 
+# This is the total number of fields being exchanged.
 ### 11 fields  atm -> ice
 ### 17 fields  ice -> ocn
 ###  7 fields  ocn -> ice
@@ -49,8 +49,8 @@
 # $END
 ###########################################################################
 # $MODINFO
-# Indicates if a header is encapsulated within the field brick 
-# in binary restart files for all communication techniques, and  
+# Indicates if a header is encapsulated within the field brick
+# in binary restart files for all communication techniques, and
 # for coupling field exchanges for PIPE, SIPC and GMEM.
 # (YES or NOT)
 #  NOT
@@ -81,7 +81,7 @@
 # --- note file cf_name_table.txt does not include all the coupling flds ---
 # --- listed below. so the fld number (367 for swfld etc) may not point  ---
 # --- to the realistic 'longname' of the variable. (may modify this file ---
-# --- to add more fields in the future.) 
+# --- to add more fields in the future.)
 ############################################################################
 #
 #                      ATMOSPHERE  --->>>  ICE
@@ -95,7 +95,7 @@ P  0  P  0
 #
 LOCTRANS MAPPING SCRIPR
 INSTANT
-../INPUT/rmp_jrat_to_cict_CONSERV.nc dst
+../INPUT/rmp_jra55_cice_1st_conserve.nc dst
 CONSERV LR SCALAR LATLON 10 FRACNNEI FIRST
 #########
 # Field 02 : lwflx down
@@ -106,7 +106,7 @@ P  0  P  0
 #
 LOCTRANS MAPPING SCRIPR
 INSTANT
-../INPUT/rmp_jrat_to_cict_CONSERV.nc dst
+../INPUT/rmp_jra55_cice_1st_conserve.nc dst
 CONSERV LR SCALAR LATLON 10 FRACNNEI FIRST
 ##########
 # Field 03 : rainfall
@@ -117,7 +117,7 @@ P  0  P  0
 #
 LOCTRANS MAPPING SCRIPR
 INSTANT
-../INPUT/rmp_jrat_to_cict_CONSERV.nc dst
+../INPUT/rmp_jra55_cice_1st_conserve.nc dst
 CONSERV LR SCALAR LATLON 10 FRACNNEI FIRST
 ##########
 # Field 04 : snowfall
@@ -128,7 +128,7 @@ P  0  P  0
 #
 LOCTRANS MAPPING SCRIPR
 INSTANT
-../INPUT/rmp_jrat_to_cict_CONSERV.nc dst
+../INPUT/rmp_jra55_cice_1st_conserve.nc dst
 CONSERV LR SCALAR LATLON 10 FRACNNEI FIRST
 ##########
 # Field 05 : surface pressure
@@ -139,7 +139,7 @@ P  0  P  0
 #
 LOCTRANS MAPPING SCRIPR
 INSTANT
-../INPUT/rmp_jra55_cice_smooth.nc dst
+../INPUT/rmp_jra55_cice_patch.nc dst
 CONSERV LR SCALAR LATLON 10 FRACNNEI FIRST
 ##########
 # Field 06 : runoff. Runoff is passed on the destination grid.
@@ -159,7 +159,7 @@ P  0  P  0
 #
 LOCTRANS MAPPING SCRIPR
 INSTANT
-../INPUT/rmp_jra55_cice_smooth.nc dst
+../INPUT/rmp_jra55_cice_patch.nc dst
 CONSERV LR SCALAR LATLON 10 FRACNNEI FIRST
 ##########
 # Field 08 : 2m air humidity
@@ -170,7 +170,7 @@ P  0  P  0
 #
 LOCTRANS MAPPING SCRIPR
 INSTANT
-../INPUT/rmp_jra55_cice_smooth.nc dst
+../INPUT/rmp_jra55_cice_patch.nc dst
 CONSERV LR SCALAR LATLON 10 FRACNNEI FIRST
 ##########
 # Field 09 : 10m wind (u)
@@ -180,7 +180,7 @@ jrat cict LAG=0 SEQ=+1
 P  0  P  0
 #
 MAPPING SCRIPR
-../INPUT/rmp_jra55_cice_smooth.nc dst
+../INPUT/rmp_jra55_cice_patch.nc dst
 DISTWGT LR VECTOR LATLON 10 4 vwnd_ai
 ##########
 # Field 10 : 10m wind (v)
@@ -190,7 +190,7 @@ jrat cict LAG=0 SEQ=+1
 P  0  P  0
 #
 MAPPING SCRIPR
-../INPUT/rmp_jra55_cice_smooth.nc dst
+../INPUT/rmp_jra55_cice_patch.nc dst
 DISTWGT LR VECTOR LATLON 10 4 uwnd_ai
 ##########
 # Field 11 : land ice calving flux, like runoff it is passed on the destination grid
