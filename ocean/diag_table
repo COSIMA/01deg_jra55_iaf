@@ -142,6 +142,9 @@ ACCESS-OM2-01
 "ocean-2d-ekman_we-1-monthly-mean-ym%4yr%2mo", 1, "months", 1, "days", "time", 3, "months"
 "ocean_model", "ekman_we", "ekman_we", "ocean-2d-ekman_we-1-monthly-mean-ym%4yr%2mo", "all", "average", "none", 2
 
+"ocean-2d-eta_nonbouss-1-monthly-mean-ym%4yr%2mo", 1, "months", 1, "days", "time", 3, "months"
+"ocean_model", "eta_nonbouss", "eta_nonbouss", "ocean-2d-eta_nonbouss-1-monthly-mean-ym%4yr%2mo", "all", "average", "none", 2
+
 "ocean-2d-evap_heat-1-monthly-mean-ym%4yr%2mo", 1, "months", 1, "days", "time", 3, "months"
 "ocean_model", "evap_heat", "evap_heat", "ocean-2d-evap_heat-1-monthly-mean-ym%4yr%2mo", "all", "average", "none", 2
 
@@ -318,6 +321,24 @@ ACCESS-OM2-01
 
 "ocean-2d-vorticity_z_surf-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 3, "months"
 "ocean_model", "vorticity_z_surf", "vorticity_z_surf", "ocean-2d-vorticity_z_surf-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
+
+
+# daily 2d fields at 695m
+
+"ocean-2d695m-u-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 3, "months"
+"ocean_model", "u", "u", "ocean-2d695m-u-1-daily-mean-ym%4yr%2mo", "all", "average", "-280,80,-81.125,90,680,720", 2
+
+"ocean-2d695m-v-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 3, "months"
+"ocean_model", "v", "v", "ocean-2d695m-v-1-daily-mean-ym%4yr%2mo", "all", "average", "-280,80,-81.125,90,680,720", 2
+
+
+# daily 2d fields at 1017m
+
+"ocean-2d1017m-u-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 3, "months"
+"ocean_model", "u", "u", "ocean-2d1017m-u-1-daily-mean-ym%4yr%2mo", "all", "average", "-280,80,-81.125,90,950,1050", 2
+
+"ocean-2d1017m-v-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 3, "months"
+"ocean_model", "v", "v", "ocean-2d1017m-v-1-daily-mean-ym%4yr%2mo", "all", "average", "-280,80,-81.125,90,950,1050", 2
 
 
 # daily scalar snapshots
