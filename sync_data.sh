@@ -11,7 +11,7 @@
 # To share your data, sync to a subdirectory in /g/data/ik11/outputs/
 # but first add an experiment description - see /g/data/ik11/outputs/README
 # DOUBLE-CHECK SYNCDIR PATH IS UNIQUE SO YOU DON'T OVERWRITE EXISTING OUTPUT!
-SYNCDIR=/ERROR/SET/SYNCDIR/IN/sync_data.sh
+SYNCDIR=/g/data/ik11/outputs/access-om2-01/01deg_jra55v140_iaf
 
 exitcode=0
 help=false

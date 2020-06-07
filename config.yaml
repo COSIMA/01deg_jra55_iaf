@@ -1,7 +1,7 @@
 # PBS configuration
 # If submitting to a different project to your default uncomment line below 
 # and change project code as appropriate
-# project: w35
+project: x77
 queue: normal
 walltime: 5:00:00
 jobname: 01deg_jra55_iaf
@@ -69,4 +69,4 @@ userscripts:
 
 # DANGER! Do not uncomment this without checking the script is synching 
 # to the correct location!
-# postscript: sync_data.sh
+postscript: sync_data.sh
