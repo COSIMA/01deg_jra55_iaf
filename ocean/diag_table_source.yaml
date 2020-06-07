@@ -289,7 +289,7 @@ diag_table:
             file_name_dimension: 2d1017m  # descriptor for filename, e.g. 3d, 2d, scalar
             output_freq: 1  # integer: output sampling frequency in output_freq_units (0: every timestep; -1: only at end of run)
             output_freq_units: days  # time units for output: years, months, days, hours, minutes, or seconds
-            regional_section: '-280,80,-81.125,90,950,1050'  # string: bounds of the regional section to capture ("none" indicates a global region). String format: lat_min, lat_max, lon_min, lon_max, vert_min, vert_max. Use vert_min = -1 and vert_max = -1 to get the entire vertical axis.
+            regional_section: '-280,80,-81.125,90,995,1050'  # string: bounds of the regional section to capture ("none" indicates a global region). String format: lat_min, lat_max, lon_min, lon_max, vert_min, vert_max. Use vert_min = -1 and vert_max = -1 to get the entire vertical axis.
         fields:
             u:
             v:
