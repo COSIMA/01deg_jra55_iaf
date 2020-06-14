@@ -61,10 +61,10 @@ if __name__ == '__main__':
         This is best used with restart_freq: 1 in config.yaml.')
     parser.add_argument('-y', '--year-skip', type=int,
                         metavar='n', default=1,
-                        help="keep one restart every n years")
+                        help="keep one restart every n years (default=1)")
     parser.add_argument('-k', '--keep-last', type=int,
-                        metavar='n', default=6,
-                        help="keep last n restarts")
+                        metavar='m', default=6,
+                        help="keep last m restarts (default=6)")
     args = parser.parse_args()
     yearskip = vars(args)['year_skip']
     keeplast = vars(args)['keep_last']
