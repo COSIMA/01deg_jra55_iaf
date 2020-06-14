@@ -100,6 +100,6 @@ rsync -vrltoD --safe-links pbs_logs ${SYNCDIR}
 cd ${SYNCDIR} || exit 1
 ls git-runlog || git clone $sourcepath git-runlog
 cd git-runlog
-git pull
+git pull --no-rebase
 
 echo $0" completed successfully"
