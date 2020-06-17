@@ -102,4 +102,12 @@ ls git-runlog || git clone $sourcepath git-runlog
 cd git-runlog
 git pull --no-rebase
 
+# update and sync run summary
+module use /g/data/hh5/public/modules
+module load conda/analysis3
+module load python3-as-python
+cd -
+./run_summary.py
+rsync -vrltoD --safe-links run_summary*.csv ${SYNCDIR}
+
 echo $0" completed successfully"
