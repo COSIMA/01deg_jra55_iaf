@@ -547,6 +547,7 @@ def run_summary(basepath=os.getcwd(), outfile=None, list_available=False,
     Generate run summary
     """
     basepath = os.path.abspath(basepath)
+    archive_path = os.path.realpath(os.path.join(basepath, 'archive'))
     print('Generating run summary of ' + basepath, end='')
 
     # get jobname from config.yaml -- NB: we assume this is the same for all jobs
@@ -582,7 +583,7 @@ def run_summary(basepath=os.getcwd(), outfile=None, list_available=False,
     # NB: match jobname[:15] because in some cases the pbs log files use a shortened version of the jobname in config.yaml
     # e.g. see /home/157/amh157/payu/025deg_jra55_ryf8485
     # NB: logs in archive may be duplicated in sync_path, in which case the latter is used
-    logfiles = glob.glob(os.path.join(basepath, 'archive/pbs_logs', jobname[:15] + '*.o*'))\
+    logfiles = glob.glob(os.path.join(archive_path, 'pbs_logs', jobname[:15] + '*.o*'))\
              + glob.glob(os.path.join(basepath, jobname[:15] + '*.o*'))
     if sync_path:
              logfiles += glob.glob(os.path.join(sync_path, 'pbs_logs', jobname[:15] + '*.o*'))
@@ -593,6 +594,11 @@ def run_summary(basepath=os.getcwd(), outfile=None, list_available=False,
         run_data[jobid] = dict()
         run_data[jobid]['PBS log'] = parse_pbs_log(f)
         run_data[jobid]['PBS log']['PBS log file'] = f
+        # fudge: these paths might actually apply only to the latest job
+        run_data[jobid]['paths'] = dict()
+        run_data[jobid]['paths']['Control path'] = basepath
+        run_data[jobid]['paths']['Sync path'] = sync_path
+        run_data[jobid]['paths']['Archive path'] = archive_path
 
     # get run data for all jobs
     for jobid in run_data:
@@ -605,10 +611,39 @@ def run_summary(basepath=os.getcwd(), outfile=None, list_available=False,
             # BUG: assumes the time zones match - no timezone specified in date - what does git assume? UTC?
             if pbs['Exit Status'] == 0:  # output dir belongs to this job only if Exit Status = 0
                 outdir = 'output' + str(pbs['Run number']).zfill(3)
+                restartdir = 'restart' + str(pbs['Run number']).zfill(3)
                 paths = []
+
                 if sync_path:
-                    paths += [os.path.join(sync_path, outdir)]
-                paths += [os.path.join(basepath, 'archive', outdir)]
+                    sync_output_path = os.path.join(sync_path, outdir)
+                    if os.path.isdir(sync_output_path):
+                        paths += [sync_output_path]
+                        run_data[jobid]['paths']['Sync output path'] =\
+                            sync_output_path
+                    sync_restart_path = os.path.join(sync_path, restartdir)
+                    if os.path.isdir(sync_restart_path):
+                        run_data[jobid]['paths']['Sync restart path'] =\
+                            sync_restart_path
+
+                archive_output_path = os.path.join(archive_path, outdir)
+                if os.path.isdir(archive_output_path):
+                    paths += [archive_output_path]
+                    run_data[jobid]['paths']['Archive output path'] =\
+                        archive_output_path
+                archive_restart_path = os.path.join(archive_path, restartdir)
+                if os.path.isdir(archive_restart_path):
+                    run_data[jobid]['paths']['Archive restart path'] =\
+                        archive_restart_path
+
+                # 'Sync output path' if it exists, otherwise 'Archive output path'
+                run_data[jobid]['paths']['Output path'] =\
+                    run_data[jobid]['paths'].get('Sync output path') or\
+                    run_data[jobid]['paths'].get('Archive output path')
+                # 'Sync restart path' if it exists, otherwise 'Archive restart path'
+                run_data[jobid]['paths']['Restart path'] =\
+                    run_data[jobid]['paths'].get('Sync restart path') or\
+                    run_data[jobid]['paths'].get('Archive restart path')
+
                 run_data[jobid]['MOM_time_stamp.out'] = parse_mom_time_stamp(paths)
                 run_data[jobid]['config.yaml'] = parse_config_yaml(paths)
                 run_data[jobid]['namelists'] = parse_nml(paths)
@@ -774,10 +809,16 @@ def run_summary(basepath=os.getcwd(), outfile=None, list_available=False,
         ('Run end', ['MOM_time_stamp.out', 'Model end time']),
         ('Run length (y, m, d, s)', ['timing', 'Run length']),
         ('Run length (days)', ['MOM_time_stamp.out', 'Model run length (days)']),
+        ('Control directory', ['paths', 'Control path']),
+        # ('Archive directory', ['paths', 'Archive path']),
+        # ('Sync directory', ['paths', 'Sync path']),
+        ('Output directory', ['paths', 'Output path']),
+        ('Restart directory', ['paths', 'Restart path']),
+        ('Run by', ['git log', 'Author']),
+        ('Run completion date', ['PBS log', 'Run completion date']),
         ('Job Id', ['PBS log', 'Job Id']),
         # ('Failed jobs', ['PBS log', 'Failed previous jobs']),
         ('Failed jobids', ['PBS log', 'Failed previous jobids']),
-        ('Run completion date', ['PBS log', 'Run completion date']),
         ('Queue', ['config.yaml', 'queue']),
         ('Service Units', ['PBS log', 'Service Units']),
         ('Walltime Used (hr)', ['PBS log', 'Walltime Used (hr)']),
