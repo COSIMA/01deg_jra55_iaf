@@ -107,7 +107,7 @@ cd $sourcepath
 module use /g/data/hh5/public/modules
 module load conda/analysis3
 module load python3-as-python
-./run_summary.py
+./run_summary.py --no_header
 rsync -vrltoD --safe-links run_summary*.csv ${SYNCDIR}
 git add run_summary*.csv
 git commit -m "update run summary"
