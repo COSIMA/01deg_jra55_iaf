@@ -286,9 +286,9 @@ def parse_mom_time_stamp(paths):
     try:
         d1 = dateutil.parser.parse(parsed_items[keys[0]])
         d2 = dateutil.parser.parse(parsed_items[keys[1]])
-        len = d2-d1  # BUG: presumably assumes Gregorian calendar with leap years and time in UTC
-        parsed_items['Model run length (s)'] = len.total_seconds()
-        parsed_items['Model run length (days)'] = len.total_seconds()/3600/24
+        duration = d2-d1  # BUG: presumably assumes Gregorian calendar with leap years and time in UTC
+        parsed_items['Model run length (s)'] = duration.total_seconds()
+        parsed_items['Model run length (days)'] = duration.total_seconds()/3600/24
     except KeyError:
         pass
     return parsed_items
@@ -723,7 +723,8 @@ def run_summary(basepath=os.getcwd(), outfile=None, list_available=False,
 
         # make a 'timing' entry to contain model timestep and run length for both MATM and YATM runs
         # run length is [years, months, days, seconds] to accommodate both MATM and YATM
-        for jobid in run_data:
+        prevjobid = -1
+        for jobid in sortedjobids:
             r = run_data[jobid]
             timing = dict()
             if r['namelists']['accessom2.nml'] is None:  # non-YATM run
@@ -737,7 +738,18 @@ def run_summary(basepath=os.getcwd(), outfile=None, list_available=False,
             yrs = r['MOM_time_stamp.out']['Model run length (days)']/365.25  # FUDGE: assumes 365.25-day year
             timing['SU per model year'] = r['PBS log']['Service Units']/yrs
             timing['Walltime (hr) per model year'] = r['PBS log']['Walltime Used (hr)']/yrs
+
+            if prevjobid >= 0:  # also record time including wait between runs
+                d1 = dateutil.parser.parse(run_data[prevjobid]['PBS log']['Run completion date'])
+                d2 = dateutil.parser.parse(r['PBS log']['Run completion date'])
+                tot_walltime = (d2-d1).total_seconds()/3600
+                timing['Walltime (hr) between this completion and previous completion'] = tot_walltime
+                timing['Wait (hr) between this run and previous'] = tot_walltime - r['PBS log']['Walltime Used (hr)']
+                timing['SU per calendar day'] = r['PBS log']['Service Units']/tot_walltime*24
+                timing['Model years per calendar day'] = yrs/tot_walltime*24
+
             r['timing'] = timing
+            prevjobid = jobid
 
         # include changes in all git commits since previous run
         for i, jobid in enumerate(sortedjobids):
@@ -751,7 +763,7 @@ def run_summary(basepath=os.getcwd(), outfile=None, list_available=False,
         # BUG: always have zero count between two successful runs straddling a jobid rollover
         # BUG: first run also counts all fails after a rollover
         prevjobid = -1
-        for i, jobid in enumerate(sortedjobids):
+        for jobid in sortedjobids:
             c = [e for e in all_run_data.keys() if e > prevjobid and e < jobid
                  and e not in run_data]
             c.sort()
@@ -824,6 +836,9 @@ def run_summary(basepath=os.getcwd(), outfile=None, list_available=False,
         ('Walltime Used (hr)', ['PBS log', 'Walltime Used (hr)']),
         ('SU per model year', ['timing', 'SU per model year']),
         ('Walltime (hr) per model year', ['timing', 'Walltime (hr) per model year']),
+        ('Wait (hr) between runs', ['timing', 'Wait (hr) between this run and previous']),
+        ('SU per calendar day', ['timing', 'SU per calendar day']),
+        ('Model years per calendar day', ['timing', 'Model years per calendar day']),
         ('Memory Used (Gb)', ['PBS log', 'Memory Used (Gb)']),
         ('NCPUs Used', ['PBS log', 'NCPUs Used']),
         ('MOM NCPUs', ['config.yaml', 'submodels-by-name', 'ocean', 'ncpus']),
