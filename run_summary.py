@@ -985,7 +985,7 @@ def run_summary(basepath=os.getcwd(), outfile=None, list_available=False,
                 coldata = [c for c in coldata if c is not None]
                 statsdata[k] = {label:tryfunc(func, coldata) for (label, func) in stats.items()}
             # write summary stats
-            csvw.writerow([None])
+            csvw.writerow(lhcol + [None]*len(list(output_format.keys())))  # blank row
             csvw.writerow(lhcol + list(output_format.keys()))  # header
             for s in stats:
                 csvw.writerow([s] + [statsdata[k][s] for k in statsdata.keys()])
