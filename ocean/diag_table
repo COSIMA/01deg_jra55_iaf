@@ -61,6 +61,12 @@ ACCESS-OM2-01
 "ocean-3d-age_global-1-monthly-mean-ym%4yr%2mo", 1, "months", 1, "days", "time", 3, "months"
 "ocean_model", "age_global", "age_global", "ocean-3d-age_global-1-monthly-mean-ym%4yr%2mo", "all", "average", "none", 2
 
+"ocean-3d-bih_fric_u-1-monthly-mean-ym%4yr%2mo", 1, "months", 1, "days", "time", 3, "months"
+"ocean_model", "bih_fric_u", "bih_fric_u", "ocean-3d-bih_fric_u-1-monthly-mean-ym%4yr%2mo", "all", "average", "none", 2
+
+"ocean-3d-bih_fric_v-1-monthly-mean-ym%4yr%2mo", 1, "months", 1, "days", "time", 3, "months"
+"ocean_model", "bih_fric_v", "bih_fric_v", "ocean-3d-bih_fric_v-1-monthly-mean-ym%4yr%2mo", "all", "average", "none", 2
+
 "ocean-3d-buoyfreq2_wt-1-monthly-mean-ym%4yr%2mo", 1, "months", 1, "days", "time", 3, "months"
 "ocean_model", "buoyfreq2_wt", "buoyfreq2_wt", "ocean-3d-buoyfreq2_wt-1-monthly-mean-ym%4yr%2mo", "all", "average", "none", 2
 
@@ -106,6 +112,9 @@ ACCESS-OM2-01
 "ocean-3d-ty_trans-1-monthly-mean-ym%4yr%2mo", 1, "months", 1, "days", "time", 3, "months"
 "ocean_model", "ty_trans", "ty_trans", "ocean-3d-ty_trans-1-monthly-mean-ym%4yr%2mo", "all", "average", "none", 2
 
+"ocean-3d-u_dot_grad_vert_pv-1-monthly-mean-ym%4yr%2mo", 1, "months", 1, "days", "time", 3, "months"
+"ocean_model", "u_dot_grad_vert_pv", "u_dot_grad_vert_pv", "ocean-3d-u_dot_grad_vert_pv-1-monthly-mean-ym%4yr%2mo", "all", "average", "none", 2
+
 "ocean-3d-u-1-monthly-mean-ym%4yr%2mo", 1, "months", 1, "days", "time", 3, "months"
 "ocean_model", "u", "u", "ocean-3d-u-1-monthly-mean-ym%4yr%2mo", "all", "average", "none", 2
 
@@ -130,20 +139,23 @@ ACCESS-OM2-01
 
 # daily 3d fields for particle tracking
 
-
-# 1-day mean 3d fields at the start of each month for DA ensembles
-
-"ocean-3d-salt-1-daily-mean-ymd%4yr%2mo%2dy", 1, "days", 1, "days", "time", 1, "months", "1987 1 1 0 0 0", 1, "days"
+"ocean-3d-salt-1-daily-mean-ymd%4yr%2mo%2dy", 1, "days", 1, "days", "time", 1, "days"
 "ocean_model", "salt", "salt", "ocean-3d-salt-1-daily-mean-ymd%4yr%2mo%2dy", "all", "average", "none", 2
 
-"ocean-3d-temp-1-daily-mean-ymd%4yr%2mo%2dy", 1, "days", 1, "days", "time", 1, "months", "1987 1 1 0 0 0", 1, "days"
+"ocean-3d-temp-1-daily-mean-ymd%4yr%2mo%2dy", 1, "days", 1, "days", "time", 1, "days"
 "ocean_model", "temp", "temp", "ocean-3d-temp-1-daily-mean-ymd%4yr%2mo%2dy", "all", "average", "none", 2
 
-"ocean-3d-u-1-daily-mean-ymd%4yr%2mo%2dy", 1, "days", 1, "days", "time", 1, "months", "1987 1 1 0 0 0", 1, "days"
+"ocean-3d-u-1-daily-mean-ymd%4yr%2mo%2dy", 1, "days", 1, "days", "time", 1, "days"
 "ocean_model", "u", "u", "ocean-3d-u-1-daily-mean-ymd%4yr%2mo%2dy", "all", "average", "none", 2
 
-"ocean-3d-v-1-daily-mean-ymd%4yr%2mo%2dy", 1, "days", 1, "days", "time", 1, "months", "1987 1 1 0 0 0", 1, "days"
+"ocean-3d-v-1-daily-mean-ymd%4yr%2mo%2dy", 1, "days", 1, "days", "time", 1, "days"
 "ocean_model", "v", "v", "ocean-3d-v-1-daily-mean-ymd%4yr%2mo%2dy", "all", "average", "none", 2
+
+"ocean-3d-wt-1-daily-mean-ymd%4yr%2mo%2dy", 1, "days", 1, "days", "time", 1, "days"
+"ocean_model", "wt", "wt", "ocean-3d-wt-1-daily-mean-ymd%4yr%2mo%2dy", "all", "average", "none", 2
+
+
+# 1-day mean 3d fields at the start of each month for DA ensembles
 
 
 # monthly 2d fields

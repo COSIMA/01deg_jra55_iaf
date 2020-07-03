@@ -16,7 +16,7 @@ SYNCDIR=/g/data/ik11/outputs/access-om2-01/01deg_jra55v140_iaf
 exitcode=0
 help=false
 dirtype=output
-exclude="--exclude *.nc.*"
+exclude="--exclude *.nc.* --exclude ocean-3d-*-1-daily-*"
 rmlocal=false
 
 # parse argument list
