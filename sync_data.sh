@@ -17,6 +17,7 @@ exitcode=0
 help=false
 dirtype=output
 exclude="--exclude *.nc.* --exclude ocean-3d-*-1-daily-*"
+rsyncflags="-vrltoD --safe-links" 
 rmlocal=false
 
 # parse argument list
@@ -30,7 +31,7 @@ while [ $# -ge 1 ]; do
             dirtype=restart
             ;;
         -u)
-            echo "syncing collated and uncollated .nc files"
+            echo "ignoring exclusions - syncing collated and uncollated .nc files"
             exclude=""
             ;;
         -D)
@@ -70,31 +71,32 @@ if [ $exitcode != "0" -o $help == true ]; then
     echo "usage: $0 [-h] [-r] [-u] [-D]"
     echo "  -h: show this help message and exit"
     echo "  -r: sync all restart directories instead of output directories"
-    echo "  -u: sync collated and uncollated .nc files (default is collated only)"
+    echo "  -u: ignore exclusions - sync collated and uncollated .nc files (default is collated only)"
     echo "  -D: delete local copies of synced files in all but the most recent synced directories (outputs or restarts, depending on -r). Must be done interactively. (Default leaves local copies intact.)"
     exit $exitcode
 fi
 
 sourcepath="$PWD"
-mkdir -p ${SYNCDIR} || { echo "Error: cannot create ${SYNCDIR} - edit $0 to set SYNCDIR"; exit 1; }
+mkdir -p $SYNCDIR || { echo "Error: cannot create $SYNCDIR - edit $0 to set SYNCDIR"; exit 1; }
 cd archive || exit 1
 
 # first delete any cice log files that only have a 105-character header and nothing else
 find output* -size 105c -iname "ice.log.task_*" -delete
 
 # copy all collated outputs/restarts
-rsync $exclude -vrltoD --safe-links $dirtype[0-9][0-9][0-9] ${SYNCDIR}
+rsync $exclude $rsyncflags $dirtype[0-9][0-9][0-9] $SYNCDIR
 if [ $rmlocal == true ]; then
     # Now do removals. Don't remove final local copy, so we can continue run.
-    rsync --remove-source-files --exclude `\ls -1d $dirtype[0-9][0-9][0-9] | tail -1` $exclude -vrltoD --safe-links $dirtype[0-9][0-9][0-9] ${SYNCDIR}
+    rsync --remove-source-files --exclude `\ls -1d $dirtype[0-9][0-9][0-9] | tail -1` $exclude $rsyncflags $dirtype[0-9][0-9][0-9] $SYNCDIR
 fi
 
-# Also sync error and PBS logs
-rsync -vrltoD --safe-links error_logs ${SYNCDIR}
-rsync -vrltoD --safe-links pbs_logs ${SYNCDIR}
+# Also sync error and PBS logs and metadata.yaml
+rsync $rsyncflags error_logs $SYNCDIR
+rsync $rsyncflags pbs_logs $SYNCDIR
+rsync $rsyncflags metadata.yaml $SYNCDIR
 
-# create/update a clone of the run history in ${SYNCDIR}/git-runlog
-cd ${SYNCDIR} || exit 1
+# create/update a clone of the run history in $SYNCDIR/git-runlog
+cd $SYNCDIR || exit 1
 ls git-runlog || git clone $sourcepath git-runlog
 cd git-runlog
 git pull --no-rebase
@@ -105,9 +107,9 @@ module use /g/data/hh5/public/modules
 module load conda/analysis3
 module load python3-as-python
 ./run_summary.py --no_header
-rsync -vrltoD --safe-links run_summary*.csv ${SYNCDIR}
+rsync $rsyncflags run_summary*.csv $SYNCDIR
 git add run_summary*.csv
 git commit -m "update run summary"
-cd ${SYNCDIR}/git-runlog && git pull --no-rebase
+cd $SYNCDIR/git-runlog && git pull --no-rebase
 
 echo "$0 completed successfully"
