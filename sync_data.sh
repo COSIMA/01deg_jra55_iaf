@@ -17,7 +17,7 @@ exitcode=0
 help=false
 dirtype=output
 exclude="--exclude *.nc.* --exclude ocean-3d-*-1-daily-*"
-rsyncflags="-vrltoD --safe-links" 
+rsyncflags="-vrltoD --safe-links"
 rmlocal=false
 
 # parse argument list
@@ -93,6 +93,7 @@ fi
 # Also sync error and PBS logs and metadata.yaml
 rsync $rsyncflags error_logs $SYNCDIR
 rsync $rsyncflags pbs_logs $SYNCDIR
+cd $sourcepath
 rsync $rsyncflags metadata.yaml $SYNCDIR
 
 # create/update a clone of the run history in $SYNCDIR/git-runlog
