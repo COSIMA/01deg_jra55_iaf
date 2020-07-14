@@ -28,9 +28,9 @@ import dateutil.parser
 from collections import OrderedDict
 import csv
 import copy
-import numpy as np
 
 try:
+    import numpy as np
     import yaml
     import f90nml  # from https://f90nml.readthedocs.io/en/latest/
 except ImportError:  # BUG: don't get this exception if payu module loaded, even if on python 2.6.6
@@ -292,20 +292,22 @@ def parse_mom_time_stamp(paths):
     return parsed_items
 
 
-def parse_config_yaml(paths):
+def parse_yaml(paths, filename):
     """
-    Return dict of items from parsed config.yaml.
+    Return dict of items from parsed yaml file.
 
     paths: list of base paths
+    filename: yaml filename to attempt to read from base paths
 
-    output: dict parsed from first matching config.yaml in paths
+    output: dict parsed from first matching filename in paths
     """
     parsed_items = dict()
     for path in paths:
-        fname = os.path.join(path, 'config.yaml')
-        if os.path.isfile(fname):
-            with open(fname, 'r') as infile:
-                parsed_items = yaml.load(infile, Loader=yaml.FullLoader)
+        fpath = os.path.join(path, filename)
+        if os.path.isfile(fpath):
+            with open(fpath, 'r') as infile:
+                # Need to use load_all to handle manifests. Only return final part.
+                parsed_items = list(yaml.load_all(infile, Loader=yaml.FullLoader))[-1]
             break
     return parsed_items
 
@@ -665,10 +667,12 @@ def run_summary(basepath=os.getcwd(), outfile=None, list_available=False,
                             round(bytes/1073741824, 3)
 
                 run_data[jobid]['MOM_time_stamp.out'] = parse_mom_time_stamp(paths)
-                run_data[jobid]['config.yaml'] = parse_config_yaml(paths)
                 run_data[jobid]['namelists'] = parse_nml(paths)
                 run_data[jobid]['access-om2.out'] = parse_accessom2_out(paths)
                 run_data[jobid]['ice_diag.d'] = parse_ice_diag_d(paths)
+                for fn in ['config.yaml', 'env.yaml', 'job.yaml', 'metadata.yaml',
+                           'manifests/exe.yaml', 'manifests/input.yaml', 'manifests/restart.yaml']:
+                    run_data[jobid][fn] = parse_yaml(paths, fn)
 
     all_run_data = copy.deepcopy(run_data)  # all_run_data includes failed jobs
 
@@ -758,6 +762,9 @@ def run_summary(basepath=os.getcwd(), outfile=None, list_available=False,
             yrs = r['MOM_time_stamp.out']['Model run length (days)']/365.25  # FUDGE: assumes 365.25-day year
             timing['SU per model year'] = r['PBS log']['Service Units']/yrs
             timing['Walltime (hr) per model year'] = r['PBS log']['Walltime Used (hr)']/yrs
+            storagekeys = list(r['storage'].keys())
+            for k in storagekeys:
+                timing[k + ' per model year'] = round(r['storage'][k]/yrs, 3)
 
             if prevjobid >= 0:  # also record time including wait between runs
                 d1 = dateutil.parser.parse(run_data[prevjobid]['PBS log']['Run completion date'])
@@ -767,6 +774,8 @@ def run_summary(basepath=os.getcwd(), outfile=None, list_available=False,
                 timing['Wait (hr) between this run and previous'] = tot_walltime - r['PBS log']['Walltime Used (hr)']
                 timing['SU per calendar day'] = r['PBS log']['Service Units']/tot_walltime*24
                 timing['Model years per calendar day'] = yrs/tot_walltime*24
+                for k in storagekeys:
+                    timing[k + ' per calendar day'] = round(r['storage'][k]/tot_walltime*24, 3)
 
             r['timing'] = timing
             prevjobid = jobid
@@ -798,8 +807,9 @@ def run_summary(basepath=os.getcwd(), outfile=None, list_available=False,
         for k in keylistssuperset(run_data):
             keylist.append((k[-1], "['" + "', '".join(k) + "']"))
         keylist.sort(key = lambda x: x[1])
+        maxkeywidth = max([len(k[0]) for k in keylist])
         for k in keylist:
-            print("        ('" + k[0] + "', " + k[1] + "),")
+            print("        ('" + k[0] + "', " + " "*(maxkeywidth-len(k[0])) + k[1] + "),")
 
     if dump_all:
         dumpoutfile = os.path.splitext(outfile)[0]+'.yaml'
