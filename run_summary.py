@@ -670,7 +670,8 @@ def run_summary(basepath=os.getcwd(), outfile=None, list_available=False,
                 run_data[jobid]['namelists'] = parse_nml(paths)
                 run_data[jobid]['access-om2.out'] = parse_accessom2_out(paths)
                 run_data[jobid]['ice_diag.d'] = parse_ice_diag_d(paths)
-                for fn in ['config.yaml', 'env.yaml', 'job.yaml', 'metadata.yaml',
+                run_data[jobid]['metadata.yaml'] = parse_yaml([basepath, sync_path], 'metadata.yaml')
+                for fn in ['config.yaml', 'env.yaml', 'job.yaml',
                            'manifests/exe.yaml', 'manifests/input.yaml', 'manifests/restart.yaml']:
                     run_data[jobid][fn] = parse_yaml(paths, fn)
 
