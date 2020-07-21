@@ -366,7 +366,7 @@ diag_table:
             output_freq_units: months  # time units for output: years, months, days, hours, minutes, or seconds
             reduction_method: snap  # mean, snap, rms, pow##, min, max, or diurnal##
         fields:
-            # sea_level:
+            sea_level:
     'monthly 3d snapshots':
         defaults:  # these can be overridden for individual fields below
             file_name_dimension: 3d  # descriptor for filename, e.g. 3d, 2d, scalar
@@ -374,7 +374,9 @@ diag_table:
             output_freq_units: months  # time units for output: years, months, days, hours, minutes, or seconds
             reduction_method: snap  # mean, snap, rms, pow##, min, max, or diurnal##
         fields:
-            # temp:
-            # u:
-            # v:
-            # vorticity_z:
+            salt:
+            temp:
+            u:
+            v:
+            vert_pv:
+            vorticity_z:
