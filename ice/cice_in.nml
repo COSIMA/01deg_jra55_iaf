@@ -32,7 +32,7 @@
     restart_format    = 'nc'
     runtype           = 'initial'
     use_leap_years    = .false.
-    use_restart_time  = .false.
+    use_restart_time  = .true.
     write_ic          = .false.
     year_init         = 1
 /
