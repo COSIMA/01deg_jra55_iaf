@@ -188,11 +188,11 @@ diag_table:
             new_file_freq: 1  # optional integer: frequency (in new_file_freq_units) for closing the existing file, and creating a new file
             new_file_freq_units: months  # time units for new_file_freq: years, months, days, hours, minutes, or seconds (optional; required if and only if new_file_freq specified)
         fields:
-            salt:
-            temp:
-            u:
-            v:
-            wt:
+#            salt:
+#            temp:
+#            u:
+#            v:
+#            wt:
     '1-day mean 3d fields at the start of each month for DA ensembles':
         defaults:  # these can be overridden for individual fields below
             file_name_dimension: 3d  # descriptor for filename, e.g. 3d, 2d, scalar
@@ -366,7 +366,7 @@ diag_table:
             output_freq_units: months  # time units for output: years, months, days, hours, minutes, or seconds
             reduction_method: snap  # mean, snap, rms, pow##, min, max, or diurnal##
         fields:
-            sea_level:
+#            sea_level:
     'monthly 3d snapshots':
         defaults:  # these can be overridden for individual fields below
             file_name_dimension: 3d  # descriptor for filename, e.g. 3d, 2d, scalar
@@ -374,9 +374,9 @@ diag_table:
             output_freq_units: months  # time units for output: years, months, days, hours, minutes, or seconds
             reduction_method: snap  # mean, snap, rms, pow##, min, max, or diurnal##
         fields:
-            salt:
-            temp:
-            u:
-            v:
-            vert_pv:
-            vorticity_z:
+#            salt:
+#            temp:
+#            u:
+#            v:
+#            vert_pv:
+#            vorticity_z:

@@ -139,21 +139,6 @@ ACCESS-OM2-01
 
 # daily 3d fields for particle tracking
 
-"ocean-3d-salt-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
-"ocean_model", "salt", "salt", "ocean-3d-salt-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
-
-"ocean-3d-temp-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
-"ocean_model", "temp", "temp", "ocean-3d-temp-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
-
-"ocean-3d-u-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
-"ocean_model", "u", "u", "ocean-3d-u-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
-
-"ocean-3d-v-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
-"ocean_model", "v", "v", "ocean-3d-v-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
-
-"ocean-3d-wt-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
-"ocean_model", "wt", "wt", "ocean-3d-wt-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
-
 
 # 1-day mean 3d fields at the start of each month for DA ensembles
 
@@ -394,26 +379,5 @@ ACCESS-OM2-01
 
 # monthly 2d snapshots
 
-"ocean-2d-sea_level-1-monthly-snap-ym%4yr%2mo", 1, "months", 1, "days", "time", 3, "months"
-"ocean_model", "sea_level", "sea_level", "ocean-2d-sea_level-1-monthly-snap-ym%4yr%2mo", "all", "none", "none", 2
-
 
 # monthly 3d snapshots
-
-"ocean-3d-salt-1-monthly-snap-ym%4yr%2mo", 1, "months", 1, "days", "time", 3, "months"
-"ocean_model", "salt", "salt", "ocean-3d-salt-1-monthly-snap-ym%4yr%2mo", "all", "none", "none", 2
-
-"ocean-3d-temp-1-monthly-snap-ym%4yr%2mo", 1, "months", 1, "days", "time", 3, "months"
-"ocean_model", "temp", "temp", "ocean-3d-temp-1-monthly-snap-ym%4yr%2mo", "all", "none", "none", 2
-
-"ocean-3d-u-1-monthly-snap-ym%4yr%2mo", 1, "months", 1, "days", "time", 3, "months"
-"ocean_model", "u", "u", "ocean-3d-u-1-monthly-snap-ym%4yr%2mo", "all", "none", "none", 2
-
-"ocean-3d-v-1-monthly-snap-ym%4yr%2mo", 1, "months", 1, "days", "time", 3, "months"
-"ocean_model", "v", "v", "ocean-3d-v-1-monthly-snap-ym%4yr%2mo", "all", "none", "none", 2
-
-"ocean-3d-vert_pv-1-monthly-snap-ym%4yr%2mo", 1, "months", 1, "days", "time", 3, "months"
-"ocean_model", "vert_pv", "vert_pv", "ocean-3d-vert_pv-1-monthly-snap-ym%4yr%2mo", "all", "none", "none", 2
-
-"ocean-3d-vorticity_z-1-monthly-snap-ym%4yr%2mo", 1, "months", 1, "days", "time", 3, "months"
-"ocean_model", "vorticity_z", "vorticity_z", "ocean-3d-vorticity_z-1-monthly-snap-ym%4yr%2mo", "all", "none", "none", 2
