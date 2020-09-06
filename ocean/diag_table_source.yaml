@@ -278,22 +278,29 @@ diag_table:
             output_freq: 1  # integer: output sampling frequency in output_freq_units (0: every timestep; -1: only at end of run)
             output_freq_units: days  # time units for output: years, months, days, hours, minutes, or seconds
         fields:
-            bottom_temp_max:
             bottom_temp:
             frazil_3d_int_z:
             mld:
             pme_river:
-            sea_level_max:
             sea_level:
             sfc_hflux_coupler:
             sfc_hflux_from_runoff:
             sfc_hflux_pme:
             surface_salt:
-            surface_temp_max:
             surface_temp:
             u_surf:
             v_surf:
             vorticity_z_surf:
+    'daily 2d fields with different reduction methods':
+        defaults:  # these can be overridden for individual fields below
+            file_name_dimension: 2d  # descriptor for filename, e.g. 3d, 2d, scalar
+            output_freq: 1  # integer: output sampling frequency in output_freq_units (0: every timestep; -1: only at end of run)
+            output_freq_units: days  # time units for output: years, months, days, hours, minutes, or seconds
+        fields:
+            bottom_temp: {reduction_method: max}
+            sea_level: {reduction_method: max}
+            surface_temp: {reduction_method: max}
+            surface_temp: {reduction_method: min}  # min for comparison with foundation temperature
     'daily 2d fields at 695m':
         defaults:  # these can be overridden for individual fields below
             file_name_dimension: 2d695m  # descriptor for filename, e.g. 3d, 2d, scalar
