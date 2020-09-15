@@ -1,19 +1,18 @@
 contact: Andrew Kiss
 email: andrew.kiss@anu.edu.au
-created: 2020-06-09
+created: 2020-08-20
 description: >-
   0.1 degree ACCESS-OM2 global model configuration under interannual forcing.
   The configuration is based on that described in Kiss et al. (2020),
   https://doi.org/10.5194/gmd-13-401-2020, but with many improvements.
-  Initial conditions are WOA13v2 potential temperature and practical salinity.
+  This is cycle 2 of the IAF spinup. 
+  Configuration is identical to 01deg_jra55v140_iaf apart from some diagnostics.
+  Initial conditions are from final 1 Jan 2019 restart from 01deg_jra55v140_iaf.
   Run with JRA55-do v1.4.0 interannually-varying forcing with all solid runoff 
   converted to liquid runoff with no heat transfer.
-  Spin up starts 1 Jan 1958 and will be run to 1 Jan 2019.
-note: >-
-  Additional output from 1 Jan 1987 (run 116) onward:
-  - daily mean sea ice area and volume, by category (aicen, vicen)
-  - monthly mean 3d bih_fric_u, bih_fric_v, u_dot_grad_vert_pv
-  - daily mean 3d conservative temperature, practical salinity, u, v, wt (not yet synced to ik11)
+  61-year spin up, from 1 Jan 1958 to 1 Jan 2019.
+notes: >-
+  Run configuration and history: https://github.com/COSIMA/01deg_jra55_iaf/tree/01deg_jra55v140_iaf_cycle2
 keywords:
   - tenth
   - cosima
