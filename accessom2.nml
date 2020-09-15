@@ -7,7 +7,7 @@
     ! e.g. one of 100, 108, 120, 135, 144, 150, 180, 200, 216, 225, 240, 270, 300,
     ! 360, 400, 432, 450, 540, 600, 675, 720 or 900 seconds.
     ! After initial adjustment from rest, 540 (or even 600) seconds is usually stable.
-    ice_ocean_timestep = 540
+    ice_ocean_timestep = 300
 &end
 
 &date_manager_nml
@@ -16,5 +16,5 @@
 
     ! Runtime for a single segment/job/submit, format is years, months, seconds,
     ! two of which must be zero.
-    restart_period = 0, 3, 0
+    restart_period = 0, 0, 864000
 &end
