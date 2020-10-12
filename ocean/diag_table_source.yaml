@@ -261,7 +261,7 @@ diag_table:
             # temp_yflux_ndiffuse_int_z:
             # temp_yflux_submeso_int_z:
             tx_trans_int_z:
-            ty_trans_int_z:
+            # ty_trans_int_z:  # disable until we switch to MOM exe that fixes bug
             wfiform:
             wfimelt:
     'monthly 2d fields with different reduction methods':
