@@ -88,7 +88,8 @@ find output* -size 105c -iname "ice.log.task_*" -delete
 rsync $exclude $rsyncflags $dirtype[0-9][0-9][0-9] $SYNCDIR
 if [ $rmlocal == true ]; then
     # Now do removals. Don't remove final local copy, so we can continue run.
-    rsync --remove-source-files --exclude `\ls -1d $dirtype[0-9][0-9][0-9] | tail -1` $exclude $rsyncflags $dirtype[0-9][0-9][0-9] $SYNCDIR
+#    rsync --remove-source-files --exclude `\ls -1d $dirtype[0-9][0-9][0-9] | tail -1` $exclude $rsyncflags $dirtype[0-9][0-9][0-9] $SYNCDIR
+    rsync --remove-source-files $exclude $rsyncflags $dirtype[0-9][0-9][0-9] $SYNCDIR
 fi
 
 exit 0
