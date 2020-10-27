@@ -12,12 +12,12 @@
 # but first add an experiment description - see /g/data/ik11/outputs/README
 # and make sure metadata.yaml is correct.
 # DOUBLE-CHECK SYNCDIR PATH IS UNIQUE SO YOU DON'T OVERWRITE EXISTING OUTPUT!
-SYNCDIR=/g/data/cj50/admin/access-om2-01/01deg_jra55v140_iaf
+SYNCDIR=/g/data/cj50/access-om2/raw-output/access-om2-01/01deg_jra55v140_iaf
 
 exitcode=0
 help=false
 dirtype=output
-exclude="--exclude *.nc.* --exclude iceh*"
+exclude="--exclude *.nc.* --exclude iceh* --exclude *-DEPRECATED --exclude *-DELETE --exclude *-IN-PROGRESS --exclude *ty_trans_int_z*"
 rsyncflags="-vrltoD --safe-links"
 rmlocal=false
 
