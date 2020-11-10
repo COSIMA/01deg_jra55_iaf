@@ -1,24 +1,27 @@
 # PBS configuration
-# If submitting to a different project to your default uncomment line below 
-# and change project code as appropriate
+
+# If submitting to a different project to your default, uncomment line below 
+# and change project code as appropriate; also set shortpath below
 project: x77
+
+# Force payu to always find, and save, files in this scratch project directory
+# (you may need to add the corresponding PBS -l storage flag in sync_data.sh)
+# shortpath: /scratch/v45
+
 queue: normal
 walltime: 5:00:00
 jobname: 01deg_jra55_iaf
 
-# Force payu to always find, and save, files in this scratch project directory
-shortpath: /scratch/x77
-
 # Model configuration
 name: common
 model: access-om2
-input: /g/data/ik11/inputs/access-om2/input_20200530/common_01deg_jra55
+input: /g/data/ik11/inputs/access-om2/input_20201102/common_01deg_jra55
 submodels:
     - name: atmosphere
       model: yatm
-      exe: /g/data/ik11/inputs/access-om2/bin/yatm_a6e5d87.exe
+      exe: /g/data/ik11/inputs/access-om2/bin/yatm_2617f7c.exe
       input:
-            - /g/data/ik11/inputs/access-om2/input_20200530/yatm_01deg
+            - /g/data/ik11/inputs/access-om2/input_20201102/yatm_01deg
             - /g/data/qv56/replicas/input4MIPs/CMIP6/OMIP/MRI/MRI-JRA55-do-1-4-0/atmos/3hr/rsds/gr/v20190429
             - /g/data/qv56/replicas/input4MIPs/CMIP6/OMIP/MRI/MRI-JRA55-do-1-4-0/atmos/3hr/rlds/gr/v20190429
             - /g/data/qv56/replicas/input4MIPs/CMIP6/OMIP/MRI/MRI-JRA55-do-1-4-0/atmos/3hr/prra/gr/v20190429
@@ -34,15 +37,15 @@ submodels:
 
     - name: ocean
       model: mom
-      exe: /g/data/ik11/inputs/access-om2/bin/fms_ACCESS-OM_08cf2b5_libaccessom2_a6e5d87.x
-      input: /g/data/ik11/inputs/access-om2/input_20200530/mom_01deg
+      exe: /g/data/ik11/inputs/access-om2/bin/fms_ACCESS-OM-BGC_af3a94d_libaccessom2_2617f7c.x
+      input: /g/data/ik11/inputs/access-om2/input_20201102/mom_01deg
       ncpus: 4358
 
     - name: ice
       model: cice5
-      exe: /g/data/ik11/inputs/access-om2/bin/cice_auscom_3600x2700_722p_26e6159_libaccessom2_a6e5d87.exe
-      input: /g/data/ik11/inputs/access-om2/input_20200530/cice_01deg
-      ncpus: 799
+      exe: /g/data/ik11/inputs/access-om2/bin/cice_auscom_3600x2700_722p_015877c_libaccessom2_2617f7c.exe
+      input: /g/data/ik11/inputs/access-om2/input_20201102/cice_01deg
+      ncpus: 722
 
 # Collation
 collate:
@@ -58,7 +61,7 @@ collate:
 runlog: true
 stacksize: unlimited
 restart_freq: 1  # use tidy_restarts.py instead
-# mpirun: --mca pml yalla -x MXM_LOG_FILE=$PBS_JOBFS/mxm.log
+mpirun: --mca io ompio --mca io_ompio_num_aggregators 1
 qsub_flags: -W umask=027
 # set number of cores per node (28 for normalbw, 48 for normal on gadi)
 platform:
@@ -68,6 +71,5 @@ userscripts:
     error: resub.sh
     run: rm -f resubmit.count
 
-# DANGER! Do not uncomment this without checking the script is synching 
-# to the correct location!
+# DANGER! Do not uncomment this without checking the script is syncing to the correct location!
 # postscript: sync_data.sh

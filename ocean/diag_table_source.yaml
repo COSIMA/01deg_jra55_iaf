@@ -248,7 +248,7 @@ diag_table:
             sfc_salt_flux_restore:
             surface_pot_temp:
             surface_salt:
-            surface_temp:
+            surface_pot_temp:
             swflx:
             tau_x:
             tau_y:
@@ -273,7 +273,6 @@ diag_table:
         fields:
             mld: {reduction_method: max}  # max avoids spurious small values due to rainfall
             surface_pot_temp: {reduction_method: min}  # min for comparison with foundation temperature
-            surface_temp: {reduction_method: min}  # min for comparison with foundation temperature
     'daily 2d fields':
         defaults:  # these can be overridden for individual fields below
             file_name_dimension: 2d  # descriptor for filename, e.g. 3d, 2d, scalar
@@ -290,10 +289,9 @@ diag_table:
             sfc_hflux_pme:
             surface_pot_temp:
             surface_salt:
-            surface_temp:
+            surface_pot_temp:
             usurf:
             vsurf:
-            vorticity_z_surf:
     'daily 2d maximum fields':
         defaults:  # these can be overridden for individual fields below
             file_name_dimension: 2d  # descriptor for filename, e.g. 3d, 2d, scalar
@@ -304,7 +302,6 @@ diag_table:
             bottom_temp:
             sea_level:
             surface_pot_temp:
-            surface_temp:
     'daily 2d minimum fields':
         defaults:  # these can be overridden for individual fields below
             file_name_dimension: 2d  # descriptor for filename, e.g. 3d, 2d, scalar
@@ -313,25 +310,6 @@ diag_table:
             reduction_method: min  # mean, snap, rms, pow##, min, max, or diurnal##
         fields:
             surface_pot_temp:  # min for comparison with foundation temperature
-            surface_temp:  # min for comparison with foundation temperature
-    'daily 2d fields at 695m':
-        defaults:  # these can be overridden for individual fields below
-            file_name_dimension: 2d695m  # descriptor for filename, e.g. 3d, 2d, scalar
-            output_freq: 1  # integer: output sampling frequency in output_freq_units (0: every timestep; -1: only at end of run)
-            output_freq_units: days  # time units for output: years, months, days, hours, minutes, or seconds
-            regional_section: '-280,80,-81.125,90,680,720'  # string: bounds of the regional section to capture ("none" indicates a global region). String format: lat_min, lat_max, lon_min, lon_max, vert_min, vert_max. Use vert_min = -1 and vert_max = -1 to get the entire vertical axis.
-        fields:
-#            u:
-#            v:
-    'daily 2d fields at 1017m':
-        defaults:  # these can be overridden for individual fields below
-            file_name_dimension: 2d1017m  # descriptor for filename, e.g. 3d, 2d, scalar
-            output_freq: 1  # integer: output sampling frequency in output_freq_units (0: every timestep; -1: only at end of run)
-            output_freq_units: days  # time units for output: years, months, days, hours, minutes, or seconds
-            regional_section: '-280,80,-81.125,90,995,1050'  # string: bounds of the regional section to capture ("none" indicates a global region). String format: lat_min, lat_max, lon_min, lon_max, vert_min, vert_max. Use vert_min = -1 and vert_max = -1 to get the entire vertical axis.
-        fields:
-#            u:
-#            v:
     'daily scalar snapshots':  # snapshots of global integrals give better parallel performance
         defaults:  # these can be overridden for individual fields below
             file_name_dimension: scalar  # descriptor for filename, e.g. 3d, 2d, scalar
