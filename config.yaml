@@ -38,7 +38,9 @@ submodels:
     - name: ocean
       model: mom
       exe: /g/data/ik11/inputs/access-om2/bin/fms_ACCESS-OM-BGC_af3a94d_libaccessom2_2617f7c.x
-      input: /g/data/ik11/inputs/access-om2/input_20201102/mom_01deg
+      input:
+            - /g/data/ik11/inputs/access-om2/input_20201102/mom_01deg
+            - /g/data/ik11/inputs/access-om2/passive4-2020-11-13
       ncpus: 4358
 
     - name: ice

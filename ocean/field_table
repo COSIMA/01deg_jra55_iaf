@@ -22,11 +22,33 @@ ppm_vlimiter = 3
 restart_file = ocean_age.res.nc
 min_tracer_limit=0.0
 /
+"tracer_packages","ocean_mod","ocean_passive"
+names = ross, weddell, prydz, adelie
+const_init_tracer = .false.
+horizontal-advection-scheme = mdppm
+vertical-advection-scheme = mdppm
+ppm_hlimiter = 3
+ppm_vlimiter = 3
+restart_file = ocean_passive.res.nc
+min_tracer_limit=0.0
+/
 "namelists","ocean_mod","ocean_age_tracer/global"
 slat = -90.0
 nlat =  90.0
 wlon =   0.0
 elon = 360.0
+/
+"namelists","ocean_mod","ocean_passive/ross"
+restore = .false.
+/
+"namelists","ocean_mod","ocean_passive/weddell"
+restore = .false.
+/
+"namelists","ocean_mod","ocean_passive/prydz"
+restore = .false.
+/
+"namelists","ocean_mod","ocean_passive/adelie"
+restore = .false.
 /
 # added by FRE: sphum must be present in atmos
 # specific humidity for moist runs
