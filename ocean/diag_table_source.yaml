@@ -141,8 +141,8 @@ diag_table:
         fields:
             age_global:
             # aiso_bih:
-            bih_fric_u:
-            bih_fric_v:
+            # bih_fric_u:
+            # bih_fric_v:
             buoyfreq2_wt:
             diff_cbt_t:
             dzt:  # potentially calculable from other fields - https://github.com/COSIMA/access-om2/issues/203#issuecomment-635752170
@@ -169,7 +169,7 @@ diag_table:
             ty_trans_rho:
             ty_trans_submeso:
             ty_trans:
-            u_dot_grad_vert_pv:
+            # u_dot_grad_vert_pv:
             u:
             v:
             vert_pv:
@@ -271,7 +271,7 @@ diag_table:
             # temp_yflux_ndiffuse_int_z:
             # temp_yflux_submeso_int_z:
             tx_trans_int_z:
-            # ty_trans_int_z:  # disable until we switch to MOM exe that fixes bug
+            ty_trans_int_z:
             wfiform:
             wfimelt:
     'monthly 2d fields with different reduction methods':
