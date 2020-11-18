@@ -20,6 +20,9 @@
 &diag_manager_nml
     debug_diag_manager = .false.
     issue_oor_warnings = .true.
+    max_axes          = 400
+    max_files         = 200
+    max_num_axis_sets = 200
 /
 
 &fms_io_nml
@@ -35,19 +38,18 @@
 /
 
 &mom_oasis3_interface_nml
-    fields_in = 'u_flux', 'v_flux', 'lprec', 'fprec', 'salt_flx', 'mh_flux', 'sw_flux',
-                'q_flux', 't_flux', 'lw_flux', 'runof', 'p', 'aice', 'wfimelt',
-                'wfiform', 'licefw', 'liceht'
-    fields_out = 't_surf', 's_surf', 'u_surf', 'v_surf', 'dssldx', 'dssldy',
-                 'frazil'
-    num_fields_in = 17
-    num_fields_out = 7
+    fields_in         = 'u_flux', 'v_flux', 'lprec', 'fprec', 'salt_flx',
+                        'mh_flux', 'sw_flux', 'q_flux', 't_flux', 'lw_flux',
+                        'runof', 'p', 'aice', 'wfimelt', 'wfiform', 'licefw',
+                        'liceht'
+    fields_out        = 't_surf', 's_surf', 'u_surf', 'v_surf', 'dssldx', 'dssldy', 'frazil'
+    num_fields_in     = 17
+    num_fields_out    = 7
     send_after_ocean_update = .true.
     send_before_ocean_update = .false.
 /
 
 &monin_obukhov_nml
-    neutral = .true.
 /
 
 &mpp_io_nml
@@ -67,7 +69,6 @@
 /
 
 &ocean_albedo_nml
-    ocean_albedo_option = 2
 /
 
 &ocean_barotropic_nml
@@ -95,12 +96,9 @@
 
 &ocean_bbc_nml
     bmf_implicit = .true.
-    cdbot = 0.001
     cdbot_hi = 0.007
-    cdbot_roughness_length = .false.
     cdbot_roughness_uamp = .true.
     uresidual = 0.05
-    use_geothermal_heating = .false.
 /
 
 &ocean_bih_friction_nml
@@ -123,7 +121,7 @@
     equatorial_zonal = .false.
     k_smag_aniso = 0.0
     k_smag_iso = 2.0
-    ncar_boundary_scaling = .true.
+    ncar_boundary_scaling = .false.
     ncar_boundary_scaling_read = .false.
     ncar_rescale_power = 2
     ncar_vconst_4 = 2e-08
@@ -218,7 +216,7 @@
     cmip_units = .true.
     debug = .false.
     io_layout = 5, 5
-    layout = 80, 75
+    layout = 150, 100
     surface_height_split = 1
     time_tendency = 'twolevel'
     vertical_coordinate = 'zstar'
@@ -245,28 +243,6 @@
 /
 
 &ocean_nphysics_util_nml
-    agm = 100.0
-    agm_closure = .true.
-    agm_closure_baroclinic = .true.
-    agm_closure_buoy_freq = 0.004
-    agm_closure_length = 50000.0
-    agm_closure_length_bczone = .false.
-    agm_closure_length_fixed = .false.
-    agm_closure_length_rossby = .false.
-    agm_closure_lower_depth = 2000.0
-    agm_closure_max = 600.0
-    agm_closure_min = 100.0
-    agm_closure_scaling = 0.07
-    agm_closure_upper_depth = 100.0
-    aredi = 600.0
-    aredi_equal_agm = .false.
-    drhodz_mom4p1 = .false.
-    drhodz_smooth_horz = .false.
-    drhodz_smooth_vert = .false.
-    rossby_radius_max = 100000.0
-    rossby_radius_min = 15000.0
-    tracer_mix_micom = .false.
-    vel_micom = 0.0
 /
 
 &ocean_nphysicsa_nml
@@ -380,7 +356,7 @@
     optics_morel_antoine = .false.
     read_chl = .true.
     use_this_module = .true.
-    zmax_pen = 300.0
+    zmax_pen          = 1000000.0
 /
 
 &ocean_shortwave_jerlov_nml
