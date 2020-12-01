@@ -192,10 +192,10 @@ diag_table:
             new_file_freq: 1  # optional integer: frequency (in new_file_freq_units) for closing the existing file, and creating a new file
             new_file_freq_units: months  # time units for new_file_freq: years, months, days, hours, minutes, or seconds (optional; required if and only if new_file_freq specified)
         fields:
-            passive_adelie:
-            passive_prydz:
-            passive_ross:
-            passive_weddell:
+#            passive_adelie:
+#            passive_prydz:
+#            passive_ross:
+#            passive_weddell:
             salt:
             temp:
             uhrho_et:
