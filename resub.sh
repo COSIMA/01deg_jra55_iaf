@@ -4,7 +4,7 @@ logfile='resubmit.log'
 counterfile='resubmit.count'
 outfile='access-om2.err'
 
-MAX_RESUBMISSIONS=2
+MAX_RESUBMISSIONS=6
 date >> ${logfile}
 
 # Define errors from which a resubmit is appropriate
