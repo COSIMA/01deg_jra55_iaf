@@ -13,6 +13,7 @@ declare -a errors=(
                    "Segmentation fault: invalid permissions for mapped object"
                    "Transport retry count exceeded"
                    "atmosphere/input.nml"
+                   "ORTE has lost communication with a remote daemon"
 		  )
 
 resub=false
