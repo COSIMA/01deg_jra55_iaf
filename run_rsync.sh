@@ -1,18 +1,18 @@
+#!/bin/bash
 #PBS -S /bin/bash
-#PBS -P v14
+#PBS -P v45
 #PBS -q normal
-#PBS -l walltime=02:00:00
+#PBS -l walltime=03:00:00
 #PBS -V
 #PBS -l ncpus=1
 #PBS -l mem=8GB
 #PBS -j oe
-##PBS -W block=true
-#PBS -lstorage=scratch/x77+scratch/v14+scratch/v45
+#PBS -lstorage=scratch/x77+scratch/v45+gdata/ik11+gdata/cj50+gdata/hh5
 
 date
 
 umask 027
-  
+
 set -xeuEo pipefail
 
 function traperr
@@ -24,7 +24,4 @@ function traperr
 trap 'traperr $LINENO' ERR
 
 
-rsync -avhr ${srcdir}/${mem} ${tardir}
-
-
-chgrp -R v14 ${tardir} 
+rsync ${rsyncflags} ${exclude} ${srcdir}/${dir} ${destdir}
