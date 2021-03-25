@@ -75,4 +75,4 @@ userscripts:
     run: rm -f resubmit.count
 
 # DANGER! Do not uncomment this without checking the script is syncing to the correct location!
-# postscript: sync_data.sh
+postscript: sync_data.sh

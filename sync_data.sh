@@ -107,6 +107,10 @@ for d in archive/output*/ice/OUTPUT; do
     done
 done
 
+echo "$0 completed successfully"
+exit 0  ################################################# EARLY EXIT ##############################################
+
+
 
 sourcepath="$PWD"
 mkdir -p $SYNCDIR || { echo "Error: cannot create $SYNCDIR - edit $0 to set SYNCDIR"; exit 1; }
