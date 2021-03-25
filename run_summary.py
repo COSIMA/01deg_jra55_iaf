@@ -573,8 +573,6 @@ def run_summary(basepath=os.getcwd(), outfile=None, list_available=False,
     else:
         sync_path = None
 
-    sync_path = '/scratch/x77/aek156/access-om2/archive/01deg_jra55v140_iaf_cycle3' # kludge for 01deg_jra55v140_iaf_cycle3
-
     if outfile is None:
         if outfile_syncdir and sync_path:
             outfile = 'run_summary_' + sync_path.strip(os.sep).replace(os.sep, '_') + '.csv'
