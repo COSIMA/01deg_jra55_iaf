@@ -78,7 +78,7 @@
 &thermo_nml
     a_rapid_mode      = 0.0005
     aspect_rapid_mode = 1.0
-    chio              = 0.004
+    chio              = 0.006
     conduct           = 'bubbly'
     dsdt_slow_mode    = -5e-08
     kitd              = 1
@@ -117,6 +117,7 @@
     r_snw             = 0.0
     rsnw_mlt          = 1500.0
     shortwave         = 'default'
+    snowpatch         = 0.02
     tocnfrz           = -1.8
 /
 
