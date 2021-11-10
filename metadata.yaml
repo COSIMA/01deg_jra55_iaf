@@ -4,11 +4,14 @@ created: 2021-03-25
 description: >-
   0.1 degree ACCESS-OM2 global model configuration under interannual forcing.
   The configuration is based on that described in Kiss et al. (2020),
-  https://doi.org/10.5194/gmd-13-401-2020, but with many improvements.
+  https://doi.org/10.5194/gmd-13-401-2020, but with many improvements and
+  coupled biogeochemistry in the ocean and sea ice.
   This is cycle 4 of the IAF spinup. 
   Configuration physics is identical to 01deg_jra55v140_iaf_cycle3 but executables and
-  diagnostics have changed, and ice-ocean coupled BGC is included.
+  diagnostics have changed, and sea ice and ocean coupled BGC is included.
   Initial conditions are from final 1 Jan 2019 restart from 01deg_jra55v140_iaf_cycle3.
+  and BGC tracers as in https://github.com/COSIMA/input_om2-bgc/tree/6aee4a4
+  with my_choice == '01deg_jra55v140_iaf_cycle4'.
   Run with JRA55-do v1.4.0 interannually-varying forcing with all solid runoff 
   converted to liquid runoff with no heat transfer.
   61-year spin up, from 1 Jan 1958 to 1 Jan 2019.
@@ -32,3 +35,5 @@ keywords:
   - access-om2-01
   - jra55-do-v1.4.0
   - iaf
+  - bgc
+  
