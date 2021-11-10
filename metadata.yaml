@@ -8,7 +8,8 @@ description: >-
   This is cycle 4 of the IAF spinup. 
   Configuration physics is identical to 01deg_jra55v140_iaf_cycle3 but executables and
   diagnostics have changed, and ice-ocean coupled BGC is included.
-  Initial conditions are from final 1 Jan 2019 restart from 01deg_jra55v140_iaf_cycle3.
+  Initial conditions for physics are from final 1 Jan 2019 restart from 01deg_jra55v140_iaf_cycle3.
+  Initial conditions for BGC are from GLODAPv2 2016b (no3,o2), final 1 Jan 2019 restart from 1deg_jra55_iaf_omip2_cycle5 (dic,adic,alk), FeMIP median values (fe), and constant (0.01 mmol m-3; phy,zoo,det,caco3).
   Run with JRA55-do v1.4.0 interannually-varying forcing with all solid runoff 
   converted to liquid runoff with no heat transfer.
   61-year spin up, from 1 Jan 1958 to 1 Jan 2019.
@@ -32,3 +33,4 @@ keywords:
   - access-om2-01
   - jra55-do-v1.4.0
   - iaf
+  - bgc
