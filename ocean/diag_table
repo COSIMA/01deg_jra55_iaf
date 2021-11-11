@@ -422,25 +422,7 @@ ACCESS-OM2-01
 "ocean_model", "zoo", "zoo", "oceanbgc-3d-zoo-1-monthly-mean-y%4yr", "all", "average", "none", 2
 
 
-# monthly 3d diagnostic BGC fields
-
-"oceanbgc-3d-npp3d-1-monthly-mean-y%4yr", 1, "months", 1, "days", "time", 1, "months"
-"ocean_model", "npp3d", "npp3d", "oceanbgc-3d-npp3d-1-monthly-mean-y%4yr", "all", "average", "none", 2
-
-"oceanbgc-3d-pprod_gross-1-monthly-mean-y%4yr", 1, "months", 1, "days", "time", 1, "months"
-"ocean_model", "pprod_gross", "pprod_gross", "oceanbgc-3d-pprod_gross-1-monthly-mean-y%4yr", "all", "average", "none", 2
-
-"oceanbgc-3d-radbio3d-1-monthly-mean-y%4yr", 1, "months", 1, "days", "time", 1, "months"
-"ocean_model", "radbio3d", "radbio3d", "oceanbgc-3d-radbio3d-1-monthly-mean-y%4yr", "all", "average", "none", 2
-
-
 # monthly 2d diagnostic BGC fields
-
-"oceanbgc-2d-paco2-1-monthly-mean-y%4yr", 1, "months", 1, "days", "time", 1, "months"
-"ocean_model", "paco2", "paco2", "oceanbgc-2d-paco2-1-monthly-mean-y%4yr", "all", "average", "none", 2
-
-"oceanbgc-2d-pco2-1-monthly-mean-y%4yr", 1, "months", 1, "days", "time", 1, "months"
-"ocean_model", "pco2", "pco2", "oceanbgc-2d-pco2-1-monthly-mean-y%4yr", "all", "average", "none", 2
 
 "oceanbgc-2d-stf03-1-monthly-mean-y%4yr", 1, "months", 1, "days", "time", 1, "months"
 "ocean_model", "stf03", "stf03", "oceanbgc-2d-stf03-1-monthly-mean-y%4yr", "all", "average", "none", 2
@@ -453,6 +435,12 @@ ACCESS-OM2-01
 
 "oceanbgc-2d-wdet100-1-monthly-mean-y%4yr", 1, "months", 1, "days", "time", 1, "months"
 "ocean_model", "wdet100", "wdet100", "oceanbgc-2d-wdet100-1-monthly-mean-y%4yr", "all", "average", "none", 2
+
+"oceanbgc-2d-npp2d-1-monthly-mean-y%4yr", 1, "months", 1, "days", "time", 1, "months"
+"ocean_model", "npp2d", "npp2d", "oceanbgc-2d-npp2d-1-monthly-mean-y%4yr", "all", "average", "none", 2
+
+"oceanbgc-2d-pprod_gross_2d-1-monthly-mean-y%4yr", 1, "months", 1, "days", "time", 1, "months"
+"ocean_model", "pprod_gross_2d", "pprod_gross_2d", "oceanbgc-2d-pprod_gross_2d-1-monthly-mean-y%4yr", "all", "average", "none", 2
 
 
 # monthly scalar BGC timeseries snapshots
