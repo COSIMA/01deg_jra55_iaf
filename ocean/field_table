@@ -12,9 +12,17 @@ restart_file  = ocean_temp_salt.res.nc
 ppm_hlimiter = 3
 ppm_vlimiter = 3
 /
+"diag_tracers","ocean_mod","pot_temp"
+const_init_tracer = .false.
+restart_file  = ocean_pot_temp.res.nc
+/
+"diag_tracers","ocean_mod","frazil"
+const_init_tracer = .false.
+restart_file  = ocean_frazil.res.nc
+/
 "tracer_packages","ocean_mod","ocean_age_tracer"
 names = global
-const_init_tracer = .true.
+const_init_tracer = .false.
 horizontal-advection-scheme = mdppm
 vertical-advection-scheme = mdppm
 ppm_hlimiter = 3
