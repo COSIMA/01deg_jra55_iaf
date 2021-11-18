@@ -146,10 +146,6 @@ diag_table:
             buoyfreq2_wt:
             diff_cbt_t:
             dzt:  # potentially calculable from other fields - https://github.com/COSIMA/access-om2/issues/203#issuecomment-635752170
-            passive_adelie:
-            passive_prydz:
-            passive_ross:
-            passive_weddell:
             pot_rho_0:
             pot_rho_2:
             pot_temp:
@@ -194,10 +190,6 @@ diag_table:
             new_file_freq: 1  # optional integer: frequency (in new_file_freq_units) for closing the existing file, and creating a new file
             new_file_freq_units: months  # time units for new_file_freq: years, months, days, hours, minutes, or seconds (optional; required if and only if new_file_freq specified)
         fields:
-            # passive_adelie:
-            # passive_prydz:
-            # passive_ross:
-            # passive_weddell:
             # salt:
             # temp:
             # uhrho_et:
