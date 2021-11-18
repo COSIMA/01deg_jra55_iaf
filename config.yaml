@@ -12,6 +12,10 @@ queue: normal
 walltime: 3:00:00
 jobname: 01deg_jra55_iaf
 
+storage:
+      gdata:
+            - cj50
+
 # Model configuration
 name: common
 model: access-om2
