@@ -3467,6 +3467,12 @@ work/ice/RESTART/dust.nc:
   hashes:
     binhash: ad893e6167113e5a0bd07e573a6e52f6
     md5: 4dc7c1b541f4dbf842541a4ff605ad00
+work/ice/RESTART/ocean_sbc.res.nc:
+  copy: true
+  fullpath: /g/data/ik11/inputs/access-om2/input_bgc_20211105/01deg-cycle4/ocean_sbc.res.nc
+  hashes:
+    binhash: 4d300254602058d02794a339d1209a97
+    md5: 2de3b5807d2404c3b1d048858f821209
 work/ocean/INPUT/bgc_param.nc:
   fullpath: /g/data/ik11/inputs/access-om2/input_bgc_20211105/01deg/bgc_param.nc
   hashes:
@@ -3510,13 +3516,13 @@ work/ocean/INPUT/grid_spec.nc:
 work/ocean/INPUT/i2o.nc:
   fullpath: /g/data/ik11/inputs/access-om2/input_bgc_20211105/01deg-cycle4/i2o.nc
   hashes:
-    binhash: 34e624c31ab5f61f64be934a45b4bc37
-    md5: ff6ae2eb9919f6ed563fdef7d3571291
+    binhash: 20aabf27eefd2a3c28686ad424f7a1ed
+    md5: 29106363601ebe22b0df83dc306cdd51
 work/ocean/INPUT/iced.2019-01-01-00000.nc:
   fullpath: /g/data/ik11/inputs/access-om2/input_bgc_20211105/01deg-cycle4/iced.2019-01-01-00000.nc
   hashes:
-    binhash: 6b6ee7675076770cf09de1eb0dfa5bf5
-    md5: 74cbabfde842123c7a07af10b3fe348b
+    binhash: dbfa9635d56e3afbfe185b010b2406d3
+    md5: 39bb925904307bf1f4872796658cbe28
 work/ocean/INPUT/mask_table.1642.80x75:
   fullpath: /g/data/ik11/inputs/access-om2/input_20201102/mom_01deg/mask_table.1642.80x75
   hashes:
@@ -3530,8 +3536,8 @@ work/ocean/INPUT/mask_table.4539.150x100:
 work/ocean/INPUT/o2i.nc:
   fullpath: /g/data/ik11/inputs/access-om2/input_bgc_20211105/01deg-cycle4/o2i.nc
   hashes:
-    binhash: d3c0e99b08be7fca4599ca5f4a96641e
-    md5: 51e261fc969f23b48c6c9c0479fd24b5
+    binhash: 67cf650b80212961221fc70745a60ff7
+    md5: a85682de9e813af7dc883af144caae7b
 work/ocean/INPUT/ocean_hgrid.nc:
   fullpath: /g/data/ik11/inputs/access-om2/input_20201102/mom_01deg/ocean_hgrid.nc
   hashes:
