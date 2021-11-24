@@ -436,10 +436,10 @@
 /
 
 &ocean_tracer_nml
-    age_tracer_max_init = 0.0
+    age_tracer_max_init = 61.0
     frazil_heating_after_vphysics = .true.
     frazil_heating_before_vphysics = .false.
-    limit_age_tracer  = .false.
+    limit_age_tracer  = .true.
     remap_depth_to_s_init = .false.
     use_tempsalt_check_range = .true.
     zero_tendency     = .false.
