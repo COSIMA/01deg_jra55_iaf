@@ -431,8 +431,8 @@ ACCESS-OM2-01
 "ocean_model", "pprod_gross_2d", "pprod_gross_2d", "oceanbgc-2d-pprod_gross_2d-1-monthly-mean-ym%4yr%2mo", "all", "average", "none", 2
 
 
-# monthly scalar BGC timeseries snapshots
+# daily scalar BGC snapshots
 
-"oceanbgc-scalar-1-monthly-ym%4yr%2mo", 1, "months", 1, "days", "time", 1, "months"
-"ocean_model", "total_aco2_flux", "total_aco2_flux", "oceanbgc-scalar-1-monthly-ym%4yr%2mo", "all", "none", "none", 1
-"ocean_model", "total_co2_flux", "total_co2_flux", "oceanbgc-scalar-1-monthly-ym%4yr%2mo", "all", "none", "none", 1
+"oceanbgc-scalar-1-daily-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
+"ocean_model", "total_aco2_flux", "total_aco2_flux", "oceanbgc-scalar-1-daily-ym%4yr%2mo", "all", "none", "none", 1
+"ocean_model", "total_co2_flux", "total_co2_flux", "oceanbgc-scalar-1-daily-ym%4yr%2mo", "all", "none", "none", 1

@@ -412,7 +412,7 @@ diag_table:
             wdet100:            
             npp2d:
             pprod_gross_2d:
-    'monthly scalar BGC timeseries snapshots':  # snapshots of global integrals give better parallel performance
+    'daily scalar BGC snapshots':  # snapshots of global integrals give better parallel performance
         defaults:  # these can be overridden for individual fields below
             file_name_prefix: oceanbgc
             file_name_dimension: scalar  # descriptor for filename, e.g. 3d, 2d, scalar
@@ -425,7 +425,7 @@ diag_table:
                 - output_freq_units
                 - file_name_date
             output_freq: 1  # integer: output sampling frequency in output_freq_units (0: every timestep; -1: only at end of run)
-            output_freq_units: months  # time units for output: years, months, days, hours, minutes, or seconds
+            output_freq_units: days  # time units for output: years, months, days, hours, minutes, or seconds
             reduction_method: snap  # mean, snap, rms, pow##, min, max, or diurnal##
             packing: 1  # double precision
         fields:
