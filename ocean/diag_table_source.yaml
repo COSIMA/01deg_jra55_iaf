@@ -518,6 +518,25 @@ diag_table:
             npp_intmld:
             radbio_int100:
             radbio_intmld: 
+    '6-hourly 2d prognostic BGC fields':
+        defaults:  # these can be overridden for individual fields below
+            file_name_prefix: oceanbgc
+            file_name_dimension: 2d  # descriptor for filename, e.g. 3d, 2d, scalar
+            output_freq: 6  # integer: output sampling frequency in output_freq_units (0: every timestep; -1: only at end of run)
+            output_freq_units: hours  # time units for output: years, months, days, hours, minutes, or seconds
+        fields:
+            surface_fe:
+            surface_no3:
+            surface_o2:
+            surface_phy:
+    '6-hourly 2d diagnostic BGC fields':
+        defaults:  # these can be overridden for individual fields below
+            file_name_prefix: oceanbgc
+            file_name_dimension: 2d  # descriptor for filename, e.g. 3d, 2d, scalar
+            output_freq: 6  # integer: output sampling frequency in output_freq_units (0: every timestep; -1: only at end of run)
+            output_freq_units: hours  # time units for output: years, months, days, hours, minutes, or seconds
+        fields:
+            radbio1:
     'daily scalar BGC snapshots':  # snapshots of global integrals give better parallel performance
         defaults:  # these can be overridden for individual fields below
             file_name_prefix: oceanbgc
@@ -537,3 +556,4 @@ diag_table:
         fields:
             total_aco2_flux:
             total_co2_flux:
+                

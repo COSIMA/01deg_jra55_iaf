@@ -674,6 +674,27 @@ ACCESS-OM2-01
 "ocean_model", "radbio_intmld", "radbio_intmld", "oceanbgc-2d-radbio_intmld-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
 
 
+# 6-hourly 2d prognostic BGC fields
+
+"oceanbgc-2d-surface_fe-6-hourly-mean-ym%4yr%2mo", 6, "hours", 1, "days", "time", 1, "months"
+"ocean_model", "surface_fe", "surface_fe", "oceanbgc-2d-surface_fe-6-hourly-mean-ym%4yr%2mo", "all", "average", "none", 2
+
+"oceanbgc-2d-surface_no3-6-hourly-mean-ym%4yr%2mo", 6, "hours", 1, "days", "time", 1, "months"
+"ocean_model", "surface_no3", "surface_no3", "oceanbgc-2d-surface_no3-6-hourly-mean-ym%4yr%2mo", "all", "average", "none", 2
+
+"oceanbgc-2d-surface_o2-6-hourly-mean-ym%4yr%2mo", 6, "hours", 1, "days", "time", 1, "months"
+"ocean_model", "surface_o2", "surface_o2", "oceanbgc-2d-surface_o2-6-hourly-mean-ym%4yr%2mo", "all", "average", "none", 2
+
+"oceanbgc-2d-surface_phy-6-hourly-mean-ym%4yr%2mo", 6, "hours", 1, "days", "time", 1, "months"
+"ocean_model", "surface_phy", "surface_phy", "oceanbgc-2d-surface_phy-6-hourly-mean-ym%4yr%2mo", "all", "average", "none", 2
+
+
+# 6-hourly 2d diagnostic BGC fields
+
+"oceanbgc-2d-radbio1-6-hourly-mean-ym%4yr%2mo", 6, "hours", 1, "days", "time", 1, "months"
+"ocean_model", "radbio1", "radbio1", "oceanbgc-2d-radbio1-6-hourly-mean-ym%4yr%2mo", "all", "average", "none", 2
+
+
 # daily scalar BGC snapshots
 
 "oceanbgc-scalar-1-daily-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
