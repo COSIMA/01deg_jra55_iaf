@@ -107,8 +107,8 @@ for d in archive/output*/ice/OUTPUT; do
     done
 done
 
-echo "$0 completed successfully"
-exit 0  ################################################# EARLY EXIT ##############################################
+# echo "$0 completed successfully"
+# exit 0  ################################################# EARLY EXIT ##############################################
 
 
 
