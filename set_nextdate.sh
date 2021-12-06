@@ -1,3 +1,5 @@
+#!/usr/bin/bash
+
 # This script modifies the reference date for daily-mean ocean diagnostics saved every 5 days (or any frequency you like).
 # https://github.com/COSIMA/access-om2/issues/241
 # 
@@ -13,27 +15,32 @@
 #
 # The only thing you need to modify is `namediag` below.
 
-set -e
 
 #Define the name of the diagnostic that you want to modify the reference date
-namediag=oceanbgc-3d-no3-5-daily-mean-1-daily-ymd_*
+namediag=oceanbgc-3d-no3-1-daily-mean-5-daily-ymd*
 
 ### NO NEED TO MODIFY BELOW ###
 
 #Identify the most recent run
 lastoutput=$(ls -d archive/output* | tail -n 1)
 
-# Look for the date on which the daily output was last saved.
-ls ${lastoutput}/ocean/${namediag} | tail -n 1 | grep -o [0-9][0-9][0-9][0-9]_[0-9][0-9]_[0-9][0-9] > lastdate.txt
+#Do the rest if the target diags exist in the most recent run.
+if [ -z "$(ls ${lastoutput}/ocean/${namediag})" ]
+then
+	echo "${lastoutput}/ocean/${namediag} does not exist..."
+else
+	# Look for the date on which the daily output was last saved.
+	ls ${lastoutput}/ocean/${namediag} | tail -n 1 | grep -o [0-9][0-9][0-9][0-9]_[0-9][0-9]_[0-9][0-9] > lastdate.txt
 
-# Replace underscores with hyphens to enable the `date` command to work (next step).
-sed -i 's/_/-/g' lastdate.txt
+	# Replace underscores with hyphens to enable the `date` command to work (next step).
+	sed -i 's/_/-/g' lastdate.txt
 
-# Add 5 days from the last date.
-nextdate=$(date '+%C%y %m %d' -d $(cat lastdate.txt)+5days)
+	# Add 5 days from the last date.
+	nextdate=$(date '+%C%y %m %d' -d $(cat lastdate.txt)+5days)
 
-# Replace the reference date for daily mean at every 5 days with the new reference date (next saving date)
-sed -i "s/start_time.*set_nextdate/start_time: [ $nextdate 0 0 0 ] # set_nextdate/g" ocean/diag_table_source.yaml
-cd ocean
-./make_diag_table.py
-cd ../
+	# Replace the reference date for daily mean at every 5 days with the new reference date (next saving date)
+	sed -i "s/start_time.*set_nextdate/start_time: [ $nextdate 0 0 0 ] # set_nextdate/g" ocean/diag_table_source.yaml
+	cd ocean
+	./make_diag_table.py
+	cd ../
+fi
