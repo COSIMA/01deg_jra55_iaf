@@ -14,6 +14,7 @@ declare -a errors=(
                    "Transport retry count exceeded"
                    "atmosphere/input.nml"
                    "ORTE has lost communication with a remote daemon"
+                   "MPI_ERRORS_ARE_FATAL"
 		  )
 
 resub=false
