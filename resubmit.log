@@ -1,0 +1,90 @@
+Thu Nov 18 15:37:23 AEDT 2021
+Error found: Segmentation fault: address not mapped to object
+Reset resubmission counter
+Resubmission counter: 1
+laboratory path:  /scratch/v45/aek156/access-om2
+binary path:  /scratch/v45/aek156/access-om2/bin
+input path:  /scratch/v45/aek156/access-om2/input
+work path:  /scratch/v45/aek156/access-om2/work
+archive path:  /scratch/v45/aek156/access-om2/archive
+Removing work path /scratch/v45/aek156/access-om2/work/01deg_jra55v140_iaf_cycle4
+Removing symlink /home/156/aek156/payu/01deg_jra55v140_iaf_cycle4/work
+31352299.gadi-pbs
+Loading input manifest: manifests/input.yaml
+Loading restart manifest: manifests/restart.yaml
+Loading exe manifest: manifests/exe.yaml
+payu: Found modules in /opt/Modules/v4.3.0
+qsub -q normal -P x77 -l walltime=10800 -l ncpus=12144 -l mem=48576GB -N 01deg_jra55_iaf -l wd -j n -v PAYU_PATH=/g/data3/hh5/public/apps/miniconda3/envs/analysis3-21.07/bin,PAYU_N_RUNS=1,MODULESHOME=/opt/Modules/v4.3.0,MODULES_CMD=/opt/Modules/v4.3.0/libexec/modulecmd.tcl,MODULEPATH=/g/data/hh5/public/modules:/etc/scl/modulefiles:/apps/Modules/restricted-modulefiles/matlab_unsw:/apps/Modules/restricted-modulefiles/matlab_anu:/opt/Modules/modulefiles:/opt/Modules/v4.3.0/modulefiles:/apps/Modules/modulefiles -W umask=027 -l storage=gdata/hh5+gdata/ik11+gdata/qv56+scratch/v45 -- /g/data/hh5/public/apps/miniconda3/envs/analysis3-21.07/bin/python3.9 /g/data3/hh5/public/apps/miniconda3/envs/analysis3-21.07/bin/payu-run
+
+Thu Nov 18 15:40:35 AEDT 2021
+Error found: Segmentation fault: address not mapped to object
+Resubmission counter: 0
+Resubmit limit reached ... 
+
+Fri Nov 19 09:15:19 AEDT 2021
+Error not found: Segmentation fault: address not mapped to object
+Error not found: Segmentation fault: invalid permissions for mapped object
+Error not found: Transport retry count exceeded
+Error not found: atmosphere/input.nml
+Error not found: ORTE has lost communication with a remote daemon
+Error not eligible for resubmission
+Thu Nov 25 00:27:45 AEDT 2021
+Error not found: Segmentation fault: address not mapped to object
+Error not found: Segmentation fault: invalid permissions for mapped object
+Error not found: Transport retry count exceeded
+Error not found: atmosphere/input.nml
+Error not found: ORTE has lost communication with a remote daemon
+Error not eligible for resubmission
+Sat Nov 27 07:40:24 AEDT 2021
+Error not found: Segmentation fault: address not mapped to object
+Error not found: Segmentation fault: invalid permissions for mapped object
+Error not found: Transport retry count exceeded
+Error not found: atmosphere/input.nml
+Error not found: ORTE has lost communication with a remote daemon
+Error not eligible for resubmission
+Tue Nov 30 23:10:59 AEDT 2021
+Error not found: Segmentation fault: address not mapped to object
+Error not found: Segmentation fault: invalid permissions for mapped object
+Error found: Transport retry count exceeded
+Reset resubmission counter
+Resubmission counter: 1
+laboratory path:  /scratch/v45/aek156/access-om2
+binary path:  /scratch/v45/aek156/access-om2/bin
+input path:  /scratch/v45/aek156/access-om2/input
+work path:  /scratch/v45/aek156/access-om2/work
+archive path:  /scratch/v45/aek156/access-om2/archive
+Moving log 01deg_jra55_iaf.o32029754
+Moving log 01deg_jra55_iaf.e32029754
+Moving log 01deg_jra55_i_c.o32038892
+Moving log 01deg_jra55_i_c.e32038892
+Moving log 01deg_jra55_iaf.o32038893
+Moving log 01deg_jra55_iaf.e32038893
+Moving log 01deg_jra55_i_c.o32045249
+Moving log 01deg_jra55_i_c.e32045249
+Moving log 01deg_jra55_iaf.o32045250
+Moving log 01deg_jra55_iaf.e32045250
+Moving log 01deg_jra55_i_c.o32052614
+Moving log 01deg_jra55_i_c.e32052614
+Removing work path /scratch/v45/aek156/access-om2/work/01deg_jra55v140_iaf_cycle4
+Removing symlink /home/156/aek156/payu/01deg_jra55v140_iaf_cycle4/work
+32053182.gadi-pbs
+Loading input manifest: manifests/input.yaml
+Loading restart manifest: manifests/restart.yaml
+Loading exe manifest: manifests/exe.yaml
+payu: Found modules in /opt/Modules/v4.3.0
+qsub -q normal -P x77 -l walltime=18000 -l ncpus=12144 -l mem=48576GB -N 01deg_jra55_iaf -l wd -j n -v PAYU_PATH=/g/data3/hh5/public/apps/miniconda3/envs/analysis3-21.07/bin,PAYU_N_RUNS=73,MODULESHOME=/opt/Modules/v4.3.0,MODULES_CMD=/opt/Modules/v4.3.0/libexec/modulecmd.tcl,MODULEPATH=/g/data/hh5/public/modules:/etc/scl/modulefiles:/apps/Modules/restricted-modulefiles/matlab_unsw:/apps/Modules/restricted-modulefiles/matlab_anu:/opt/Modules/modulefiles:/opt/Modules/v4.3.0/modulefiles:/apps/Modules/modulefiles -W umask=027 -l storage=gdata/cj50+gdata/hh5+gdata/ik11+gdata/qv56+scratch/v45 -- /g/data/hh5/public/apps/miniconda3/envs/analysis3-21.07/bin/python3.9 /g/data3/hh5/public/apps/miniconda3/envs/analysis3-21.07/bin/payu-run
+
+Tue Dec  7 12:14:53 AEDT 2021
+Error not found: Segmentation fault: address not mapped to object
+Error not found: Segmentation fault: invalid permissions for mapped object
+Error not found: Transport retry count exceeded
+Error not found: atmosphere/input.nml
+Error not found: ORTE has lost communication with a remote daemon
+Error not eligible for resubmission
+Wed Dec  8 02:07:21 AEDT 2021
+Error not found: Segmentation fault: address not mapped to object
+Error not found: Segmentation fault: invalid permissions for mapped object
+Error not found: Transport retry count exceeded
+Error not found: atmosphere/input.nml
+Error not found: ORTE has lost communication with a remote daemon
+Error not eligible for resubmission
