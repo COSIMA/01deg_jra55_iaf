@@ -88,3 +88,22 @@ Error not found: Transport retry count exceeded
 Error not found: atmosphere/input.nml
 Error not found: ORTE has lost communication with a remote daemon
 Error not eligible for resubmission
+Thu Dec  9 11:04:51 AEDT 2021
+Error found: Segmentation fault: address not mapped to object
+Reset resubmission counter
+Resubmission counter: 1
+/ocean/oceanbgc-3d-no3-1-daily-mean-5-daily-ymd* does not exist...
+laboratory path:  /scratch/v45/hh0162/access-om2
+binary path:  /scratch/v45/hh0162/access-om2/bin
+input path:  /scratch/v45/hh0162/access-om2/input
+work path:  /scratch/v45/hh0162/access-om2/work
+archive path:  /scratch/v45/hh0162/access-om2/archive
+Removing work path /scratch/v45/hh0162/access-om2/work/01deg_jra55v140_iaf_cycle4
+Removing symlink /scratch/v45/hh0162/access-om2/control/01deg_jra55v140_iaf_cycle4/work
+32511103.gadi-pbs
+Loading input manifest: manifests/input.yaml
+Loading restart manifest: manifests/restart.yaml
+Loading exe manifest: manifests/exe.yaml
+payu: Found modules in /opt/Modules/v4.3.0
+qsub -q normal -P x77 -l walltime=18000 -l ncpus=12144 -l mem=48576GB -N 01deg_jra55_iaf -l wd -j n -v PAYU_PATH=/g/data3/hh5/public/apps/miniconda3/envs/analysis3-21.10/bin,PAYU_N_RUNS=7,MODULESHOME=/opt/Modules/v4.3.0,MODULES_CMD=/opt/Modules/v4.3.0/libexec/modulecmd.tcl,MODULEPATH=/g/data3/hh5/public/modules:/etc/scl/modulefiles:/opt/Modules/modulefiles:/opt/Modules/v4.3.0/modulefiles:/apps/Modules/modulefiles -W umask=027 -l storage=gdata/cj50+gdata/hh5+gdata/ik11+gdata/qv56+scratch/v45 -- /g/data/hh5/public/apps/miniconda3/envs/analysis3-21.10/bin/python3.9 /g/data3/hh5/public/apps/miniconda3/envs/analysis3-21.10/bin/payu-run
+
