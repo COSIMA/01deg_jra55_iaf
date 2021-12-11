@@ -234,3 +234,11 @@ Loading exe manifest: manifests/exe.yaml
 payu: Found modules in /opt/Modules/v4.3.0
 qsub -q normal -P x77 -l walltime=18000 -l ncpus=12144 -l mem=48576GB -N 01deg_jra55_iaf -l wd -j n -v PAYU_PATH=/g/data3/hh5/public/apps/miniconda3/envs/analysis3-21.10/bin,PAYU_N_RUNS=22,MODULESHOME=/opt/Modules/v4.3.0,MODULES_CMD=/opt/Modules/v4.3.0/libexec/modulecmd.tcl,MODULEPATH=/g/data3/hh5/public/modules:/etc/scl/modulefiles:/opt/Modules/modulefiles:/opt/Modules/v4.3.0/modulefiles:/apps/Modules/modulefiles -W umask=027 -l storage=gdata/cj50+gdata/hh5+gdata/ik11+gdata/qv56+gdata/v45+scratch/v45 -- /g/data/hh5/public/apps/miniconda3/envs/analysis3-21.10/bin/python3.9 /g/data3/hh5/public/apps/miniconda3/envs/analysis3-21.10/bin/payu-run
 
+Sun Dec 12 03:25:57 AEDT 2021
+Error not found: Segmentation fault: address not mapped to object
+Error not found: Segmentation fault: invalid permissions for mapped object
+Error not found: Transport retry count exceeded
+Error not found: atmosphere/input.nml
+Error not found: ORTE has lost communication with a remote daemon
+Error not found: MPI_ERRORS_ARE_FATAL
+Error not eligible for resubmission
