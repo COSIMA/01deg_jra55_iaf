@@ -160,3 +160,77 @@ Error found: Segmentation fault: address not mapped to object
 Resubmission counter: 0
 Resubmit limit reached ... 
 
+Sat Dec 11 23:27:01 AEDT 2021
+Error not found: Segmentation fault: address not mapped to object
+Error not found: Segmentation fault: invalid permissions for mapped object
+Error not found: Transport retry count exceeded
+Error not found: atmosphere/input.nml
+Error found: ORTE has lost communication with a remote daemon
+Reset resubmission counter
+Resubmission counter: 1
+laboratory path:  /scratch/v45/hh0162/access-om2
+binary path:  /scratch/v45/hh0162/access-om2/bin
+input path:  /scratch/v45/hh0162/access-om2/input
+work path:  /scratch/v45/hh0162/access-om2/work
+archive path:  /scratch/v45/hh0162/access-om2/archive
+Moving log 01deg_jra55_i_c.o32665152
+Moving log 01deg_jra55_iaf.e32670631
+Moving log 01deg_jra55_i_c.e32683929
+Moving log 01deg_jra55_iaf.o32674898
+Moving log 01deg_jra55_iaf.e32673252
+Moving log 01deg_jra55_i_c.o32658505
+Moving log 01deg_jra55_i_c.e32681278
+Moving log 01deg_jra55_iaf.o32683930
+Moving log 01deg_jra55_i_c.e32679096
+Moving log 01deg_jra55_iaf.e32667603
+Moving log 01deg_jra55_iaf.o32670631
+Moving log 01deg_jra55_iaf.o32681279
+Moving log 01deg_jra55_iaf.o32647532
+Moving log 01deg_jra55_iaf.o32679126
+Moving log 01deg_jra55_i_c.e32667602
+Moving log 01deg_jra55_iaf.e32654232
+Moving log 01deg_jra55_i_c.e32674897
+Moving log 01deg_jra55_i_c.o32654231
+Moving log 01deg_jra55_iaf.e32679126
+Moving log 01deg_jra55_iaf.o32673252
+Moving log 01deg_jra55_i_c.o32667602
+Moving log 01deg_jra55_i_c.o32689973
+Moving log 01deg_jra55_i_c.e32654231
+Moving log 01deg_jra55_iaf.e32665153
+Moving log 01deg_jra55_iaf.o32658506
+Moving log 01deg_jra55_i_c.o32686960
+Moving log 01deg_jra55_i_c.e32689973
+Moving log 01deg_jra55_iaf.e32658506
+Moving log 01deg_jra55_i_c.o32670630
+Moving log 01deg_jra55_iaf.e32683930
+Moving log 01deg_jra55_iaf.e32662013
+Moving log 01deg_jra55_iaf.o32686962
+Moving log 01deg_jra55_i_c.o32679096
+Moving log 01deg_jra55_iaf.o32654232
+Moving log 01deg_jra55_iaf.e32647532
+Moving log 01deg_jra55_i_c.e32686960
+Moving log 01deg_jra55_iaf.o32665153
+Moving log 01deg_jra55_i_c.o32681278
+Moving log 01deg_jra55_i_c.o32683929
+Moving log 01deg_jra55_i_c.o32674897
+Moving log 01deg_jra55_iaf.e32681279
+Moving log 01deg_jra55_iaf.o32662013
+Moving log 01deg_jra55_i_c.e32665152
+Moving log 01deg_jra55_i_c.o32662012
+Moving log 01deg_jra55_i_c.e32670630
+Moving log 01deg_jra55_i_c.e32673251
+Moving log 01deg_jra55_i_c.o32673251
+Moving log 01deg_jra55_iaf.e32674898
+Moving log 01deg_jra55_i_c.e32658505
+Moving log 01deg_jra55_i_c.e32662012
+Moving log 01deg_jra55_iaf.e32686962
+Moving log 01deg_jra55_iaf.o32667603
+Removing work path /scratch/v45/hh0162/access-om2/work/01deg_jra55v140_iaf_cycle4
+Removing symlink /scratch/v45/hh0162/access-om2/control/01deg_jra55v140_iaf_cycle4/work
+32690891.gadi-pbs
+Loading input manifest: manifests/input.yaml
+Loading restart manifest: manifests/restart.yaml
+Loading exe manifest: manifests/exe.yaml
+payu: Found modules in /opt/Modules/v4.3.0
+qsub -q normal -P x77 -l walltime=18000 -l ncpus=12144 -l mem=48576GB -N 01deg_jra55_iaf -l wd -j n -v PAYU_PATH=/g/data3/hh5/public/apps/miniconda3/envs/analysis3-21.10/bin,PAYU_N_RUNS=22,MODULESHOME=/opt/Modules/v4.3.0,MODULES_CMD=/opt/Modules/v4.3.0/libexec/modulecmd.tcl,MODULEPATH=/g/data3/hh5/public/modules:/etc/scl/modulefiles:/opt/Modules/modulefiles:/opt/Modules/v4.3.0/modulefiles:/apps/Modules/modulefiles -W umask=027 -l storage=gdata/cj50+gdata/hh5+gdata/ik11+gdata/qv56+gdata/v45+scratch/v45 -- /g/data/hh5/public/apps/miniconda3/envs/analysis3-21.10/bin/python3.9 /g/data3/hh5/public/apps/miniconda3/envs/analysis3-21.10/bin/payu-run
+
