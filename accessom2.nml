@@ -10,7 +10,7 @@
     ! After the first few months of equilibration you should increase the timestep 
     ! to 450s and then to 540s (or even 600s) for improved throughput, but you
     ! may need to decrease the timestep occasionally to avoid instability.
-    ice_ocean_timestep = 360
+    ice_ocean_timestep = 300
 &end
 
 &date_manager_nml
