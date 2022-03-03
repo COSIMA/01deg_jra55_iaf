@@ -398,6 +398,45 @@ diag_table:
             o2:
             phy:
             zoo:
+    'monthly 3d diagnostic BGC fields':
+        defaults:  # these can be overridden for individual fields below
+            file_name_prefix: oceanbgc
+            file_name_dimension: 3d  # descriptor for filename, e.g. 3d, 2d, scalar
+            output_freq: 1  # integer: output sampling frequency in output_freq_units (0: every timestep; -1: only at end of run)
+            output_freq_units: months  # time units for output: years, months, days, hours, minutes, or seconds
+            file_name_date: "ym%4yr%2mo"  # run date/time of file opening; format: %, 1 digit (#digits), one of (yr, mo, dy, hr, mi, sc); date/time components will be separated by _ in filename.
+        fields:
+            npp3d:
+            pprod_gross:
+            radbio3d:
+            no3_xflux_adv: # no3 advective flux in x-direction
+            no3_yflux_adv: # no3 advective flux in y-direction
+            no3_zflux_adv: # no3 advective flux in z-direction
+            src01: # no3 biological source-minus-sink term           
+            o2_xflux_adv:
+            o2_yflux_adv:
+            o2_zflux_adv:
+            src03:
+            det_xflux_adv:
+            det_yflux_adv:
+            det_zflux_adv:
+            src05:
+            caco3_xflux_adv:
+            caco3_yflux_adv:
+            caco3_zflux_adv:
+            src06:
+            dic_xflux_adv:
+            dic_yflux_adv:
+            dic_zflux_adv:
+            src07:
+            adic_xflux_adv:
+            adic_yflux_adv:
+            adic_zflux_adv:
+            src09:
+            fe_xflux_adv:
+            fe_yflux_adv:
+            fe_zflux_adv:
+            src10:
     'monthly 2d diagnostic BGC fields':
         defaults:  # these can be overridden for individual fields below
             file_name_prefix: oceanbgc
@@ -412,6 +451,89 @@ diag_table:
             wdet100:            
             npp2d:
             pprod_gross_2d:
+    'daily-mean-sampled-every-five-days 3d prognostic BGC fields':
+        defaults:  # these can be overridden for individual fields below
+            file_name_prefix: oceanbgc
+            file_name_dimension: 3d  # descriptor for filename, e.g. 3d, 2d, scalar
+            output_freq: 1  # integer: output sampling frequency in output_freq_units (0: every timestep; -1: only at end of run)
+            output_freq_units: days  # time units for output: years, months, days, hours, minutes, or seconds
+            file_name_date: "ymd%4yr%2mo%2dy"
+            file_duration: 1
+            file_duration_units: days
+            new_file_freq: 5
+            new_file_freq_units: days
+            start_time: [ 1991 07 02 0 0 0 ] # set_nextdate
+            file_name:
+                - file_name_prefix
+                - file_name_dimension
+                - field_name  # substituted by field name in diag_table section below
+                - output_freq
+                - output_freq_units
+                - reduction_method
+                - new_file_freq
+                - new_file_freq_units
+                - file_name_date
+        fields:
+            adic:
+            dic:
+            o2:
+            no3:
+            fe:
+            phy:
+    'daily 2d prognostic BGC fields':
+        defaults:  # these can be overridden for individual fields below
+            file_name_prefix: oceanbgc
+            file_name_dimension: 2d  # descriptor for filename, e.g. 3d, 2d, scalar
+            output_freq: 1  # integer: output sampling frequency in output_freq_units (0: every timestep; -1: only at end of run)
+            output_freq_units: days  # time units for output: years, months, days, hours, minutes, or seconds
+        fields:
+            surface_adic:
+            surface_alk:
+            surface_caco3:
+            surface_det:
+            surface_dic:
+            surface_fe:
+            surface_no3:
+            surface_o2:
+            surface_phy:
+            surface_zoo:     
+    'daily 2d diagnostic BGC fields':
+        defaults:  # these can be overridden for individual fields below
+            file_name_prefix: oceanbgc
+            file_name_dimension: 2d  # descriptor for filename, e.g. 3d, 2d, scalar
+            output_freq: 1  # integer: output sampling frequency in output_freq_units (0: every timestep; -1: only at end of run)
+            output_freq_units: days  # time units for output: years, months, days, hours, minutes, or seconds
+        fields:
+            npp1:
+            paco2:
+            pco2:
+            radbio1:
+            stf03: # o2 air-to-sea flux
+            stf07: # dic air-to-sea flux
+            stf09: # adic air-to-sea flux
+            wdet100:            
+            npp2d:
+            pprod_gross_2d:
+            adic_int100:
+            adic_intmld:
+            det_int100:
+            det_intmld:
+            dic_int100:
+            dic_intmld:
+            fe_int100:
+            fe_intmld:
+            no3_int100:
+            no3_intmld:
+            o2_int100:
+            o2_intmld:
+            phy_int100:
+            phy_intmld:
+            pprod_gross_int100:
+            pprod_gross_intmld:
+            npp_int100:
+            npp_intmld:
+            radbio_int100:
+            radbio_intmld: 
     'daily scalar BGC snapshots':  # snapshots of global integrals give better parallel performance
         defaults:  # these can be overridden for individual fields below
             file_name_prefix: oceanbgc
