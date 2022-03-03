@@ -86,4 +86,4 @@ userscripts:
     run: rm -f resubmit.count
     init: set_nextdate.sh
 # DANGER! Do not uncomment this without checking the script is syncing to the correct location!
-postscript: sync_data.sh
+#postscript: sync_data.sh
