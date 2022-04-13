@@ -9,8 +9,8 @@
     dumpfreq          = 'm'
     dumpfreq_n        = 3
     hist_avg          = .true.
-    histfreq          = 'd', 'm', 'x', 'x', 'x'
-    histfreq_n        = 1, 1, 1, 1, 1
+    histfreq          = 'd', 'm', 'h', 'x', 'x'
+    histfreq_n        = 1, 1, 6, 1, 1
     history_chunksize_x = 360
     history_chunksize_y = 270
     history_deflate_level = 1
@@ -179,19 +179,19 @@
 /
 
 &icefields_nml
-    f_aice            = 'md'
+    f_aice            = 'mdh'
     f_aicen           = 'm'
     f_aisnap          = 'x'
     f_albice          = 'x'
     f_albpnd          = 'x'
     f_albsni          = 'md'
     f_albsno          = 'x'
-    f_alidf_ai        = 'm'
+    f_alidf_ai        = 'md'
     f_alidr           = 'x'
-    f_alidr_ai        = 'm'
-    f_alvdf_ai        = 'm'
+    f_alidr_ai        = 'md'
+    f_alvdf_ai        = 'md'
     f_alvdr           = 'x'
-    f_alvdr_ai        = 'm'
+    f_alvdr_ai        = 'md'
     f_angle           = .true.
     f_anglet          = .true.
     f_bounds          = .false.
@@ -240,7 +240,7 @@
     f_fswfac          = 'x'
     f_fswthru         = 'x'
     f_fswthru_ai      = 'md'
-    f_fswup           = 'm'
+    f_fswup           = 'md'
     f_fy              = 'x'
     f_hi              = 'md'
     f_hisnap          = 'x'
@@ -262,7 +262,7 @@
     f_sice            = 'x'
     f_sig1            = 'x'
     f_sig2            = 'x'
-    f_sinz            = 'x'
+    f_sinz            = 'md'
     f_snoice          = 'md'
     f_snow            = 'x'
     f_snow_ai         = 'x'
@@ -281,7 +281,7 @@
     f_strtlty         = 'x'
     f_tair            = 'x'
     f_tarea           = .true.
-    f_tinz            = 'x'
+    f_tinz            = 'md'
     f_tmask           = .true.
     f_tref            = 'x'
     f_trsig           = 'x'

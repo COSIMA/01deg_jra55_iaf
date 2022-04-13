@@ -312,6 +312,15 @@ diag_table:
             reduction_method: min  # mean, snap, rms, pow##, min, max, or diurnal##
         fields:
             surface_pot_temp:  # min for comparison with foundation temperature
+    '6-hourly 2d fields':
+        defaults:  # these can be overridden for individual fields below
+            file_name_dimension: 2d  # descriptor for filename, e.g. 3d, 2d, scalar
+            output_freq: 6  # integer: output sampling frequency in output_freq_units (0: every timestep; -1: only at end of run)
+            output_freq_units: hours  # time units for output: years, months, days, hours, minutes, or seconds
+        fields:
+            surface_pot_temp:
+            surface_salt:
+            mld:
     'daily scalar snapshots':  # snapshots of global integrals give better parallel performance
         defaults:  # these can be overridden for individual fields below
             file_name_dimension: scalar  # descriptor for filename, e.g. 3d, 2d, scalar
@@ -480,6 +489,18 @@ diag_table:
             no3:
             fe:
             phy:
+    '6-hourly 2d prognostic BGC fields':
+        defaults:  # these can be overridden for individual fields below
+            file_name_prefix: oceanbgc
+            file_name_dimension: 2d  # descriptor for filename, e.g. 3d, 2d, scalar
+            output_freq: 6  # integer: output sampling frequency in output_freq_units (0: every timestep; -1: only at end of run)
+            output_freq_units: hours  # time units for output: years, months, days, hours, minutes, or seconds
+        fields:
+            surface_o2:
+            surface_phy:
+            surface_fe:
+            surface_no3:
+            radbio1:
     'daily 2d prognostic BGC fields':
         defaults:  # these can be overridden for individual fields below
             file_name_prefix: oceanbgc
