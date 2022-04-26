@@ -335,18 +335,6 @@ ACCESS-OM2-01
 "ocean_model", "surface_pot_temp", "surface_pot_temp", "ocean-2d-surface_pot_temp-1-daily-min-ym%4yr%2mo", "all", "min", "none", 2
 
 
-# 6-hourly 2d fields
-
-"ocean-2d-surface_pot_temp-6-hourly-mean-ym%4yr%2mo", 6, "hours", 1, "days", "time", 1, "months"
-"ocean_model", "surface_pot_temp", "surface_pot_temp", "ocean-2d-surface_pot_temp-6-hourly-mean-ym%4yr%2mo", "all", "average", "none", 2
-
-"ocean-2d-surface_salt-6-hourly-mean-ym%4yr%2mo", 6, "hours", 1, "days", "time", 1, "months"
-"ocean_model", "surface_salt", "surface_salt", "ocean-2d-surface_salt-6-hourly-mean-ym%4yr%2mo", "all", "average", "none", 2
-
-"ocean-2d-mld-6-hourly-mean-ym%4yr%2mo", 6, "hours", 1, "days", "time", 1, "months"
-"ocean_model", "mld", "mld", "ocean-2d-mld-6-hourly-mean-ym%4yr%2mo", "all", "average", "none", 2
-
-
 # daily scalar snapshots
 
 "ocean-scalar-1-daily-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
@@ -541,41 +529,23 @@ ACCESS-OM2-01
 
 # daily-mean-sampled-every-five-days 3d prognostic BGC fields
 
-"oceanbgc-3d-adic-1-daily-mean-5-daily-ymd%4yr%2mo%2dy", 1, "days", 1, "days", "time", 5, "days", "2016 10 03 0 0 0", 1, "days"
+"oceanbgc-3d-adic-1-daily-mean-5-daily-ymd%4yr%2mo%2dy", 1, "days", 1, "days", "time", 5, "days", "2017 01 01 0 0 0", 1, "days"
 "ocean_model", "adic", "adic", "oceanbgc-3d-adic-1-daily-mean-5-daily-ymd%4yr%2mo%2dy", "all", "average", "none", 2
 
-"oceanbgc-3d-dic-1-daily-mean-5-daily-ymd%4yr%2mo%2dy", 1, "days", 1, "days", "time", 5, "days", "2016 10 03 0 0 0", 1, "days"
+"oceanbgc-3d-dic-1-daily-mean-5-daily-ymd%4yr%2mo%2dy", 1, "days", 1, "days", "time", 5, "days", "2017 01 01 0 0 0", 1, "days"
 "ocean_model", "dic", "dic", "oceanbgc-3d-dic-1-daily-mean-5-daily-ymd%4yr%2mo%2dy", "all", "average", "none", 2
 
-"oceanbgc-3d-o2-1-daily-mean-5-daily-ymd%4yr%2mo%2dy", 1, "days", 1, "days", "time", 5, "days", "2016 10 03 0 0 0", 1, "days"
+"oceanbgc-3d-o2-1-daily-mean-5-daily-ymd%4yr%2mo%2dy", 1, "days", 1, "days", "time", 5, "days", "2017 01 01 0 0 0", 1, "days"
 "ocean_model", "o2", "o2", "oceanbgc-3d-o2-1-daily-mean-5-daily-ymd%4yr%2mo%2dy", "all", "average", "none", 2
 
-"oceanbgc-3d-no3-1-daily-mean-5-daily-ymd%4yr%2mo%2dy", 1, "days", 1, "days", "time", 5, "days", "2016 10 03 0 0 0", 1, "days"
+"oceanbgc-3d-no3-1-daily-mean-5-daily-ymd%4yr%2mo%2dy", 1, "days", 1, "days", "time", 5, "days", "2017 01 01 0 0 0", 1, "days"
 "ocean_model", "no3", "no3", "oceanbgc-3d-no3-1-daily-mean-5-daily-ymd%4yr%2mo%2dy", "all", "average", "none", 2
 
-"oceanbgc-3d-fe-1-daily-mean-5-daily-ymd%4yr%2mo%2dy", 1, "days", 1, "days", "time", 5, "days", "2016 10 03 0 0 0", 1, "days"
+"oceanbgc-3d-fe-1-daily-mean-5-daily-ymd%4yr%2mo%2dy", 1, "days", 1, "days", "time", 5, "days", "2017 01 01 0 0 0", 1, "days"
 "ocean_model", "fe", "fe", "oceanbgc-3d-fe-1-daily-mean-5-daily-ymd%4yr%2mo%2dy", "all", "average", "none", 2
 
-"oceanbgc-3d-phy-1-daily-mean-5-daily-ymd%4yr%2mo%2dy", 1, "days", 1, "days", "time", 5, "days", "2016 10 03 0 0 0", 1, "days"
+"oceanbgc-3d-phy-1-daily-mean-5-daily-ymd%4yr%2mo%2dy", 1, "days", 1, "days", "time", 5, "days", "2017 01 01 0 0 0", 1, "days"
 "ocean_model", "phy", "phy", "oceanbgc-3d-phy-1-daily-mean-5-daily-ymd%4yr%2mo%2dy", "all", "average", "none", 2
-
-
-# 6-hourly 2d prognostic BGC fields
-
-"oceanbgc-2d-surface_o2-6-hourly-mean-ym%4yr%2mo", 6, "hours", 1, "days", "time", 1, "months"
-"ocean_model", "surface_o2", "surface_o2", "oceanbgc-2d-surface_o2-6-hourly-mean-ym%4yr%2mo", "all", "average", "none", 2
-
-"oceanbgc-2d-surface_phy-6-hourly-mean-ym%4yr%2mo", 6, "hours", 1, "days", "time", 1, "months"
-"ocean_model", "surface_phy", "surface_phy", "oceanbgc-2d-surface_phy-6-hourly-mean-ym%4yr%2mo", "all", "average", "none", 2
-
-"oceanbgc-2d-surface_fe-6-hourly-mean-ym%4yr%2mo", 6, "hours", 1, "days", "time", 1, "months"
-"ocean_model", "surface_fe", "surface_fe", "oceanbgc-2d-surface_fe-6-hourly-mean-ym%4yr%2mo", "all", "average", "none", 2
-
-"oceanbgc-2d-surface_no3-6-hourly-mean-ym%4yr%2mo", 6, "hours", 1, "days", "time", 1, "months"
-"ocean_model", "surface_no3", "surface_no3", "oceanbgc-2d-surface_no3-6-hourly-mean-ym%4yr%2mo", "all", "average", "none", 2
-
-"oceanbgc-2d-radbio1-6-hourly-mean-ym%4yr%2mo", 6, "hours", 1, "days", "time", 1, "months"
-"ocean_model", "radbio1", "radbio1", "oceanbgc-2d-radbio1-6-hourly-mean-ym%4yr%2mo", "all", "average", "none", 2
 
 
 # daily 2d prognostic BGC fields
