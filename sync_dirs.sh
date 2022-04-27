@@ -43,6 +43,10 @@ eval "$(grep "^exclude=" ${SCRIPTDIR}/sync_data.sh)"
 eval "$(grep "^SYNCDIR=" ${SCRIPTDIR}/sync_data.sh)"
 DESTDIR=${SYNCDIR}
 
+# for copying 01deg_jra55v140_iaf_cycle4 from ik11 to cj50
+SRCDIR=/g/data/ik11/outputs/access-om2-01/${expt}
+DESTDIR=/g/data/cj50/admin/incoming/access-om2/raw-output/access-om2-01/${expt}
+
 echo "About to rsync" ${rsyncflags} ${exclude}
 echo ${SRCDIR}
 echo ${dirtype} "to"
