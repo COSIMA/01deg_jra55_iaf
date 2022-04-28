@@ -25,3 +25,5 @@ for d in archive/output???/ice/OUTPUT; do
     done
 done
 
+echo
+echo "After the qsub jobs have all successfully completed, you should run concat_ice_6hourlies_fix.sh"
