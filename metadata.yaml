@@ -19,8 +19,9 @@ description: >-
   61-year spin up, from 1 Jan 1958 to 1 Jan 2019.
 notes: >-
   Run configuration and history: https://github.com/COSIMA/01deg_jra55_iaf/tree/01deg_jra55v140_iaf_cycle4
-  Ice data is currently missing from April 2002 to the end of 2018, apart from 6-hourly ice area from 2014-2016 inclusive.
-  We plan to re-generate this missing data sometime in 2022.
+  Sea ice data is currently missing from April 2002 to the end of 2018, apart from 6-hourly ice area from 2014-2016 inclusive.
+  We plan to re-generate and publish this missing sea ice data sometime in 2022.
+  2d and 3d BGC data has 2, 3, or 4 decimal digits of precision - see https://github.com/COSIMA/01deg_jra55_iaf/blob/386771b/reduce_sigfig.sh#L13-L93
   Source code: https://github.com/COSIMA/access-om2
   License: Attribution-NonCommercial-NoDerivatives 4.0 International (http://creativecommons.org/licenses/by-nc-nd/4.0/legalcode)
   Conditions of use:
