@@ -22,17 +22,28 @@ submodels:
       exe: /g/data/ik11/inputs/access-om2/bin/yatm_a227a61.exe
       input:
             - /g/data/ik11/inputs/access-om2/input_20201102/yatm_01deg
-            - /g/data/qv56/replicas/input4MIPs/CMIP6/OMIP/MRI/MRI-JRA55-do-1-5-0/atmos/3hr/rsds/gr/v20200916
-            - /g/data/qv56/replicas/input4MIPs/CMIP6/OMIP/MRI/MRI-JRA55-do-1-5-0/atmos/3hr/rlds/gr/v20200916
-            - /g/data/qv56/replicas/input4MIPs/CMIP6/OMIP/MRI/MRI-JRA55-do-1-5-0/atmos/3hr/prra/gr/v20200916
-            - /g/data/qv56/replicas/input4MIPs/CMIP6/OMIP/MRI/MRI-JRA55-do-1-5-0/atmos/3hr/prsn/gr/v20200916
-            - /g/data/qv56/replicas/input4MIPs/CMIP6/OMIP/MRI/MRI-JRA55-do-1-5-0/atmos/3hrPt/psl/gr/v20200916
-            - /g/data/qv56/replicas/input4MIPs/CMIP6/OMIP/MRI/MRI-JRA55-do-1-5-0/land/day/friver/gr/v20200916
-            - /g/data/qv56/replicas/input4MIPs/CMIP6/OMIP/MRI/MRI-JRA55-do-1-5-0/atmos/3hrPt/tas/gr/v20200916
-            - /g/data/qv56/replicas/input4MIPs/CMIP6/OMIP/MRI/MRI-JRA55-do-1-5-0/atmos/3hrPt/huss/gr/v20200916
-            - /g/data/qv56/replicas/input4MIPs/CMIP6/OMIP/MRI/MRI-JRA55-do-1-5-0/atmos/3hrPt/uas/gr/v20200916
-            - /g/data/qv56/replicas/input4MIPs/CMIP6/OMIP/MRI/MRI-JRA55-do-1-5-0/atmos/3hrPt/vas/gr/v20200916
-            - /g/data/qv56/replicas/input4MIPs/CMIP6/OMIP/MRI/MRI-JRA55-do-1-5-0/landIce/day/licalvf/gr/v20200916
+            - /g/data/ik11/inputs/JRA-55/JRA55-do-1-5-0-1/mirror/atmos/3hr/rsds/gr/latest
+            - /g/data/ik11/inputs/JRA-55/JRA55-do-1-5-0-1/mirror/atmos/3hr/rlds/gr/latest
+            - /g/data/ik11/inputs/JRA-55/JRA55-do-1-5-0-1/mirror/atmos/3hr/prra/gr/latest
+            - /g/data/ik11/inputs/JRA-55/JRA55-do-1-5-0-1/mirror/atmos/3hr/prsn/gr/latest
+            - /g/data/ik11/inputs/JRA-55/JRA55-do-1-5-0-1/mirror/atmos/3hrPt/psl/gr/latest
+            - /g/data/ik11/inputs/JRA-55/JRA55-do-1-5-0-1/mirror/land/day/friver/gr/latest
+            - /g/data/ik11/inputs/JRA-55/JRA55-do-1-5-0-1/mirror/atmos/3hrPt/tas/gr/latest
+            - /g/data/ik11/inputs/JRA-55/JRA55-do-1-5-0-1/mirror/atmos/3hrPt/huss/gr/latest
+            - /g/data/ik11/inputs/JRA-55/JRA55-do-1-5-0-1/mirror/atmos/3hrPt/uas/gr/latest
+            - /g/data/ik11/inputs/JRA-55/JRA55-do-1-5-0-1/mirror/atmos/3hrPt/vas/gr/latest
+            - /g/data/ik11/inputs/JRA-55/JRA55-do-1-5-0-1/mirror/landIce/day/licalvf/gr/latest
+            - /g/data/ik11/inputs/JRA-55/JRA55-do-1-5-0-1/mirror/atmos/3hr/rsds/gr/v20210315
+            - /g/data/ik11/inputs/JRA-55/JRA55-do-1-5-0-1/mirror/atmos/3hr/rlds/gr/v20210315
+            - /g/data/ik11/inputs/JRA-55/JRA55-do-1-5-0-1/mirror/atmos/3hr/prra/gr/v20210315
+            - /g/data/ik11/inputs/JRA-55/JRA55-do-1-5-0-1/mirror/atmos/3hr/prsn/gr/v20210315
+            - /g/data/ik11/inputs/JRA-55/JRA55-do-1-5-0-1/mirror/atmos/3hrPt/psl/gr/v20210315
+            - /g/data/ik11/inputs/JRA-55/JRA55-do-1-5-0-1/mirror/land/day/friver/gr/v20210315
+            - /g/data/ik11/inputs/JRA-55/JRA55-do-1-5-0-1/mirror/atmos/3hrPt/tas/gr/v20210315
+            - /g/data/ik11/inputs/JRA-55/JRA55-do-1-5-0-1/mirror/atmos/3hrPt/huss/gr/v20210315
+            - /g/data/ik11/inputs/JRA-55/JRA55-do-1-5-0-1/mirror/atmos/3hrPt/uas/gr/v20210315
+            - /g/data/ik11/inputs/JRA-55/JRA55-do-1-5-0-1/mirror/atmos/3hrPt/vas/gr/v20210315
+            - /g/data/ik11/inputs/JRA-55/JRA55-do-1-5-0-1/mirror/landIce/day/licalvf/gr/v20210315
       ncpus: 1
 
     - name: ocean
