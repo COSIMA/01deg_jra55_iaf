@@ -43,6 +43,12 @@ eval "$(grep "^exclude=" ${SCRIPTDIR}/sync_data.sh)"
 eval "$(grep "^SYNCDIR=" ${SCRIPTDIR}/sync_data.sh)"
 DESTDIR=${SYNCDIR}
 
+# for DELETING LOCAL COPY of files copied from archive to cj50
+lastoutput=`\ls -1d ${SRCDIR}/${dirtype}[0-9][0-9][0-9] | tail -1`
+#rsyncflags="${rsyncflags} --dry-run --exclude `basename ${lastoutput}`"
+#rsyncflags="${rsyncflags} --dry-run --remove-source-files --exclude `basename ${lastoutput}`"
+rsyncflags="${rsyncflags} --remove-source-files --exclude `basename ${lastoutput}`"
+
 # for copying 01deg_jra55v140_iaf_cycle4 from ik11 to cj50
 #SRCDIR=/g/data/ik11/outputs/access-om2-01/${expt}
 #DESTDIR=/g/data/cj50/admin/incoming/access-om2/raw-output/access-om2-01/${expt}
@@ -54,11 +60,11 @@ DESTDIR=${SYNCDIR}
 #rsyncflags="${rsyncflags} --dry-run --exclude `basename ${lastoutput}`"
 
 # for DELETING LOCAL COPY of files copied from ik11 to cj50
-SRCDIR=/g/data/ik11/tmp/${expt}
-DESTDIR=/g/data/cj50/access-om2/raw-output/access-om2-01/01deg_jra55v140_iaf_cycle4
-lastoutput=`\ls -1d ${SRCDIR}/${dirtype}[0-9][0-9][0-9] | tail -1`
-#rsyncflags="${rsyncflags} --dry-run --remove-source-files --exclude `basename ${lastoutput}`"
-rsyncflags="${rsyncflags} --remove-source-files --exclude `basename ${lastoutput}`"
+#SRCDIR=/g/data/ik11/tmp/${expt}
+#DESTDIR=/g/data/cj50/access-om2/raw-output/access-om2-01/01deg_jra55v140_iaf_cycle4
+#lastoutput=`\ls -1d ${SRCDIR}/${dirtype}[0-9][0-9][0-9] | tail -1`
+##rsyncflags="${rsyncflags} --dry-run --remove-source-files --exclude `basename ${lastoutput}`"
+#rsyncflags="${rsyncflags} --remove-source-files --exclude `basename ${lastoutput}`"
 
 
 echo "About to rsync" ${rsyncflags} ${exclude}
