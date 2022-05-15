@@ -13,8 +13,8 @@
 
 umask 027
 
-dirtype=output
-# dirtype=restart  # also need to change exclude - see below
+#dirtype=output
+dirtype=restart  # also need to change exclude - see below
 
 #expt=01deg_jra55v140_iaf_cycle4
 #SCRIPTDIR=/home/156/aek156/payu/${expt}
@@ -44,10 +44,10 @@ eval "$(grep "^SYNCDIR=" ${SCRIPTDIR}/sync_data.sh)"
 DESTDIR=${SYNCDIR}
 
 # for DELETING LOCAL COPY of files copied from archive to cj50
-lastoutput=`\ls -1d ${SRCDIR}/${dirtype}[0-9][0-9][0-9] | tail -1`
-#rsyncflags="${rsyncflags} --dry-run --exclude `basename ${lastoutput}`"
-#rsyncflags="${rsyncflags} --dry-run --remove-source-files --exclude `basename ${lastoutput}`"
-rsyncflags="${rsyncflags} --remove-source-files --exclude `basename ${lastoutput}`"
+#lastoutput=`\ls -1d ${SRCDIR}/${dirtype}[0-9][0-9][0-9] | tail -1`
+##rsyncflags="${rsyncflags} --dry-run --exclude `basename ${lastoutput}`"
+##rsyncflags="${rsyncflags} --dry-run --remove-source-files --exclude `basename ${lastoutput}`"
+#rsyncflags="${rsyncflags} --remove-source-files --exclude `basename ${lastoutput}`"
 
 # for copying 01deg_jra55v140_iaf_cycle4 from ik11 to cj50
 #SRCDIR=/g/data/ik11/outputs/access-om2-01/${expt}
@@ -66,6 +66,10 @@ rsyncflags="${rsyncflags} --remove-source-files --exclude `basename ${lastoutput
 ##rsyncflags="${rsyncflags} --dry-run --remove-source-files --exclude `basename ${lastoutput}`"
 #rsyncflags="${rsyncflags} --remove-source-files --exclude `basename ${lastoutput}`"
 
+# for copying restarts
+DESTDIR=/g/data/ik11/restarts/access-om2-01/${expt}
+#rsyncflags="${rsyncflags}"
+exclude=""  # for dirtype=restart
 
 echo "About to rsync" ${rsyncflags} ${exclude}
 echo ${SRCDIR}

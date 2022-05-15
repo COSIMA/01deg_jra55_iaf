@@ -20,8 +20,8 @@ exitcode=0
 help=false
 dirtype=output
 exclude="--exclude *.nc.* --exclude iceh.????-??-??.nc --exclude iceh*.????-??-??-?????.nc --exclude *-DEPRECATED --exclude *-DELETE --exclude *-IN-PROGRESS"
-#rsyncflags="-vrltoD --safe-links"
-rsyncflags="-vrloD --safe-links"
+rsyncflags="-vrltoD --safe-links"
+#rsyncflags="-vrloD --safe-links"
 rmlocal=false
 backward=false
 
