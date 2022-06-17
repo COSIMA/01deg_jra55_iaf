@@ -192,3 +192,88 @@ Error not found: atmosphere/input.nml
 Error not found: ORTE has lost communication with a remote daemon
 Error not found: MPI_ERRORS_ARE_FATAL
 Error not eligible for resubmission
+Fri Jun 17 16:34:27 AEST 2022
+Error not found: Segmentation fault: address not mapped to object
+Error not found: Segmentation fault: invalid permissions for mapped object
+Error found: Transport retry count exceeded
+Reset resubmission counter
+Resubmission counter: 1
+archive/output951/ocean/oceanbgc-3d-no3-1-daily-mean-5-daily-ymd* does not exist...
+laboratory path:  /scratch/v45/aek156/access-om2
+binary path:  /scratch/v45/aek156/access-om2/bin
+input path:  /scratch/v45/aek156/access-om2/input
+work path:  /scratch/v45/aek156/access-om2/work
+archive path:  /scratch/v45/aek156/access-om2/archive
+Moving log 01deg_jra55_iaf.o44195742
+Moving log 01deg_jra55_iaf.e44195742
+Moving log 01deg_jra55_i_c.o44209079
+Moving log 01deg_jra55_i_c.e44209079
+Moving log 01deg_jra55_iaf.o44209080
+Moving log 01deg_jra55_iaf.e44209080
+Moving log 01deg_jra55_i_c.o44221284
+Moving log 01deg_jra55_i_c.e44221284
+Moving log 01deg_jra55_iaf.o44221287
+Moving log 01deg_jra55_iaf.e44221287
+Moving log 01deg_jra55_i_c.o44235605
+Moving log 01deg_jra55_i_c.e44235605
+Moving log 01deg_jra55_iaf.o44235606
+Moving log 01deg_jra55_iaf.e44235606
+Moving log 01deg_jra55_i_c.o44243617
+Moving log 01deg_jra55_i_c.e44243617
+Moving log 01deg_jra55_iaf.o44243619
+Moving log 01deg_jra55_iaf.e44243619
+Moving log 01deg_jra55_i_c.o44255600
+Moving log 01deg_jra55_i_c.e44255600
+Moving log 01deg_jra55_iaf.o44255601
+Moving log 01deg_jra55_iaf.e44255601
+Moving log 01deg_jra55_i_c.o44262803
+Moving log 01deg_jra55_i_c.e44262803
+Moving log 01deg_jra55_iaf.o44262804
+Moving log 01deg_jra55_iaf.e44262804
+Moving log 01deg_jra55_i_c.o44269835
+Moving log 01deg_jra55_i_c.e44269835
+Moving log 01deg_jra55_iaf.o44269836
+Moving log 01deg_jra55_iaf.e44269836
+Moving log 01deg_jra55_i_c.o44277036
+Moving log 01deg_jra55_i_c.e44277036
+Moving log 01deg_jra55_iaf.o44277040
+Moving log 01deg_jra55_iaf.e44277040
+Moving log 01deg_jra55_i_c.o44283353
+Moving log 01deg_jra55_i_c.e44283353
+Moving log 01deg_jra55_iaf.o44283354
+Moving log 01deg_jra55_iaf.e44283354
+Moving log 01deg_jra55_i_c.o44288967
+Moving log 01deg_jra55_i_c.e44288967
+Moving log 01deg_jra55_iaf.o44288968
+Moving log 01deg_jra55_iaf.e44288968
+Moving log 01deg_jra55_i_c.o44295780
+Moving log 01deg_jra55_i_c.e44295780
+Moving log 01deg_jra55_iaf.o44295781
+Moving log 01deg_jra55_iaf.e44295781
+Moving log 01deg_jra55_i_c.o44300912
+Moving log 01deg_jra55_i_c.e44300912
+Moving log 01deg_jra55_iaf.o44300913
+Moving log 01deg_jra55_iaf.e44300913
+Moving log 01deg_jra55_i_c.o44309373
+Moving log 01deg_jra55_i_c.e44309373
+Moving log 01deg_jra55_iaf.o44309374
+Moving log 01deg_jra55_iaf.e44309374
+Moving log 01deg_jra55_i_c.o44317416
+Moving log 01deg_jra55_i_c.e44317416
+Moving log 01deg_jra55_iaf.o44317417
+Moving log 01deg_jra55_iaf.e44317417
+Moving log 01deg_jra55_i_c.o44326250
+Moving log 01deg_jra55_i_c.e44326250
+Moving log 01deg_jra55_iaf.o44326251
+Moving log 01deg_jra55_iaf.e44326251
+Moving log 01deg_jra55_i_c.o44335918
+Moving log 01deg_jra55_i_c.e44335918
+Removing work path /scratch/v45/aek156/access-om2/work/01deg_jra55v140_iaf_cycle4_rerun_from_2002
+Removing symlink /home/156/aek156/payu/01deg_jra55v140_iaf_cycle4_rerun_from_2002/work
+44339559.gadi-pbs
+Loading input manifest: manifests/input.yaml
+Loading restart manifest: manifests/restart.yaml
+Loading exe manifest: manifests/exe.yaml
+payu: Found modules in /opt/Modules/v4.3.0
+qsub -q normal -P x77 -l walltime=12600 -l ncpus=12144 -l mem=48576GB -N 01deg_jra55_iaf -l wd -j n -v PAYU_PATH=/g/data3/hh5/public/apps/miniconda3/envs/analysis3-22.01/bin,PAYU_N_RUNS=5,MODULESHOME=/opt/Modules/v4.3.0,MODULES_CMD=/opt/Modules/v4.3.0/libexec/modulecmd.tcl,MODULEPATH=/g/data/hh5/public/modules:/etc/scl/modulefiles:/apps/Modules/restricted-modulefiles/matlab_unsw:/apps/Modules/restricted-modulefiles/matlab_anu:/opt/Modules/modulefiles:/opt/Modules/v4.3.0/modulefiles:/apps/Modules/modulefiles -W umask=027 -l storage=gdata/cj50+gdata/hh5+gdata/ik11+gdata/qv56+gdata/v45+scratch/v45 -- /g/data/hh5/public/apps/miniconda3/envs/analysis3-22.01/bin/python3.9 /g/data3/hh5/public/apps/miniconda3/envs/analysis3-22.01/bin/payu-run
+
