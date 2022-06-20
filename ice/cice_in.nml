@@ -9,7 +9,7 @@
     dumpfreq          = 'm'
     dumpfreq_n        = 3
     hist_avg          = .true.
-    histfreq          = 'd', 'm', 'x', 'x', 'x'
+    histfreq          = 'd', 'm', 'h', 'x', 'x'
     histfreq_n        = 1, 1, 1, 1, 1
     history_chunksize_x = 360
     history_chunksize_y = 270
@@ -179,8 +179,8 @@
 /
 
 &icefields_nml
-    f_aice            = 'md'
-    f_aicen           = 'm'
+    f_aice            = 'mdh'
+    f_aicen           = 'mh'
     f_aisnap          = 'x'
     f_albice          = 'x'
     f_albpnd          = 'x'
@@ -201,7 +201,7 @@
     f_dagedtt         = 'x'
     f_daidtd          = 'md'
     f_daidtt          = 'md'
-    f_divu            = 'md'
+    f_divu            = 'mdh'
     f_dsnow           = 'x'
     f_dvidtd          = 'md'
     f_dvidtt          = 'md'
@@ -227,7 +227,7 @@
     f_fresh           = 'm'
     f_fresh_ai        = 'x'
     f_frz_onset       = 'x'
-    f_frzmlt          = 'md'
+    f_frzmlt          = 'mdh'
     f_fsalt           = 'm'
     f_fsalt_ai        = 'm'
     f_fsens           = 'x'
@@ -242,7 +242,7 @@
     f_fswthru_ai      = 'md'
     f_fswup           = 'md'
     f_fy              = 'x'
-    f_hi              = 'md'
+    f_hi              = 'mdh'
     f_hisnap          = 'x'
     f_hs              = 'md'
     f_hte             = .true.
@@ -258,7 +258,7 @@
     f_qref            = 'x'
     f_rain            = 'x'
     f_rain_ai         = 'x'
-    f_shear           = 'm'
+    f_shear           = 'mh'
     f_sice            = 'x'
     f_sig1            = 'x'
     f_sig2            = 'x'
@@ -290,14 +290,14 @@
     f_uarea           = .true.
     f_uatm            = 'x'
     f_uocn            = 'x'
-    f_uvel            = 'md'
+    f_uvel            = 'mdh'
     f_vatm            = 'x'
     f_vgrdb           = .false.
     f_vgrdi           = .false.
     f_vgrds           = .false.
     f_vicen           = 'm'
     f_vocn            = 'x'
-    f_vvel            = 'md'
+    f_vvel            = 'mdh'
 /
 
 &icefields_mechred_nml
