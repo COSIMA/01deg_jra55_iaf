@@ -179,8 +179,8 @@
 /
 
 &icefields_nml
-    f_aice            = 'mdh'
-    f_aicen           = 'mh'
+    f_aice            = 'md'
+    f_aicen           = 'md'
     f_aisnap          = 'x'
     f_albice          = 'x'
     f_albpnd          = 'x'
@@ -227,7 +227,7 @@
     f_fresh           = 'm'
     f_fresh_ai        = 'x'
     f_frz_onset       = 'x'
-    f_frzmlt          = 'mdh'
+    f_frzmlt          = 'md'
     f_fsalt           = 'm'
     f_fsalt_ai        = 'm'
     f_fsens           = 'x'
@@ -242,7 +242,7 @@
     f_fswthru_ai      = 'md'
     f_fswup           = 'md'
     f_fy              = 'x'
-    f_hi              = 'mdh'
+    f_hi              = 'md'
     f_hisnap          = 'x'
     f_hs              = 'md'
     f_hte             = .true.
@@ -295,7 +295,7 @@
     f_vgrdb           = .false.
     f_vgrdi           = .false.
     f_vgrds           = .false.
-    f_vicen           = 'm'
+    f_vicen           = 'md'
     f_vocn            = 'x'
     f_vvel            = 'mdh'
 /
