@@ -9,8 +9,8 @@
     dumpfreq          = 'm'
     dumpfreq_n        = 3
     hist_avg          = .true.
-    histfreq          = 'd', 'm', 'h', 'x', 'x'
-    histfreq_n        = 1, 1, 3, 1, 1
+    histfreq          = 'd', 'm', 'x', 'x', 'x'
+    histfreq_n        = 1, 1, 1, 1, 1
     history_chunksize_x = 360
     history_chunksize_y = 270
     history_deflate_level = 1
@@ -180,18 +180,18 @@
 
 &icefields_nml
     f_aice            = 'md'
-    f_aicen           = 'md'
+    f_aicen           = 'm'
     f_aisnap          = 'x'
     f_albice          = 'x'
     f_albpnd          = 'x'
     f_albsni          = 'md'
     f_albsno          = 'x'
-    f_alidf_ai        = 'md'
+    f_alidf_ai        = 'm'
     f_alidr           = 'x'
-    f_alidr_ai        = 'md'
-    f_alvdf_ai        = 'md'
+    f_alidr_ai        = 'm'
+    f_alvdf_ai        = 'm'
     f_alvdr           = 'x'
-    f_alvdr_ai        = 'md'
+    f_alvdr_ai        = 'm'
     f_angle           = .true.
     f_anglet          = .true.
     f_bounds          = .false.
@@ -201,7 +201,7 @@
     f_dagedtt         = 'x'
     f_daidtd          = 'md'
     f_daidtt          = 'md'
-    f_divu            = 'mdh'
+    f_divu            = 'md'
     f_dsnow           = 'x'
     f_dvidtd          = 'md'
     f_dvidtt          = 'md'
@@ -240,7 +240,7 @@
     f_fswfac          = 'x'
     f_fswthru         = 'x'
     f_fswthru_ai      = 'md'
-    f_fswup           = 'md'
+    f_fswup           = 'm'
     f_fy              = 'x'
     f_hi              = 'md'
     f_hisnap          = 'x'
@@ -258,11 +258,11 @@
     f_qref            = 'x'
     f_rain            = 'x'
     f_rain_ai         = 'x'
-    f_shear           = 'mh'
+    f_shear           = 'm'
     f_sice            = 'x'
     f_sig1            = 'x'
     f_sig2            = 'x'
-    f_sinz            = 'md'
+    f_sinz            = 'x'
     f_snoice          = 'md'
     f_snow            = 'x'
     f_snow_ai         = 'x'
@@ -281,7 +281,7 @@
     f_strtlty         = 'x'
     f_tair            = 'x'
     f_tarea           = .true.
-    f_tinz            = 'md'
+    f_tinz            = 'x'
     f_tmask           = .true.
     f_tref            = 'x'
     f_trsig           = 'x'
@@ -290,14 +290,14 @@
     f_uarea           = .true.
     f_uatm            = 'x'
     f_uocn            = 'x'
-    f_uvel            = 'mdh'
+    f_uvel            = 'md'
     f_vatm            = 'x'
     f_vgrdb           = .false.
     f_vgrdi           = .false.
     f_vgrds           = .false.
-    f_vicen           = 'md'
+    f_vicen           = 'm'
     f_vocn            = 'x'
-    f_vvel            = 'mdh'
+    f_vvel            = 'md'
 /
 
 &icefields_mechred_nml
