@@ -12,7 +12,7 @@
 # but first add an experiment description - see /g/data/ik11/outputs/README
 # and make sure metadata.yaml is correct.
 # DOUBLE-CHECK SYNCDIR PATH IS UNIQUE SO YOU DON'T OVERWRITE EXISTING OUTPUT!
-SYNCDIR=/g/data/ik11/outputs/access-om2-01/01deg_jra55v140_iaf_cycle4
+SYNCDIR=/g/data/v45/aek156/outputs/access-om2-01/01deg_jra55v140_iaf_cycle4_jra55v150_extension
 
 exitcode=0
 help=false
@@ -107,8 +107,8 @@ for d in archive/output*/ice/OUTPUT; do
     done
 done
 
-echo "$0 completed successfully"
-exit 0  ################################################# EARLY EXIT ##############################################
+#echo "$0 completed successfully"
+#exit 0  ################################################# EARLY EXIT ##############################################
 
 
 
