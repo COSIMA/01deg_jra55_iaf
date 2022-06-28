@@ -10,7 +10,7 @@
     ! After the first few months of equilibration you should increase the timestep 
     ! to 450s and then to 540s (or even 600s) for improved throughput, but you
     ! may need to decrease the timestep occasionally to avoid instability.
-    ice_ocean_timestep = 60
+    ice_ocean_timestep = 360
 &end
 
 &date_manager_nml
@@ -19,5 +19,5 @@
 
     ! Runtime for a single segment/job/submit, format is years, months, seconds,
     ! two of which must be zero.
-    restart_period = 0, 1, 0
+    restart_period = 0, 3, 0
 &end
