@@ -7,11 +7,11 @@ description: >-
   https://doi.org/10.5194/gmd-13-401-2020, but with many improvements and
   coupled biogeochemistry in the ocean and sea ice.
   This is an extension to cycle 4 of the IAF spinup, simulating from 1 Jan 2019 to near-present day.
-  Configuration physics is identical to 01deg_jra55v140_iaf_cycle4, except forcing is JRA55-do version
-  is 1.5.0, not 1.4.0. This will cause a small forcing shock at the start of this simulation.
+  Configuration physics is identical to 01deg_jra55v140_iaf_cycle4, except forcing is JRA55-do v1.5.0 and v1.5.0.1,
+  not v1.4.0. This will cause a small forcing shock at the start of this simulation.
   Initial conditions are from final 1 Jan 2019 restart from 01deg_jra55v140_iaf_cycle4.
-  Run with JRA55-do v1.5.0 interannually-varying forcing with all solid runoff
-  converted to liquid runoff with no heat transfer.
+  Run with JRA55-do v1.5.0 (2019 only) and v1.5.0.1 (1 Jan 2020 onwards) interannually-varying forcing
+  with all solid runoff converted to liquid runoff with no heat transfer.
   Spin up from 1 Jan 2019 to near-present day.
 notes: >-
   Run configuration and history: https://github.com/COSIMA/01deg_jra55_iaf/tree/01deg_jra55v140_iaf_cycle4_jra55v150_extension
@@ -32,5 +32,6 @@ keywords:
   - cosima
   - access-om2-01
   - jra55-do-v1.5.0
+  - jra55-do-v1.5.0.1
   - iaf
   - bgc
