@@ -118,8 +118,10 @@ do
                 let "post_size_scaled = 100 * ${post_size}"
                 if (( post_size_scaled > pre_size ))
                 then
-                    echo "rm ${path_file}"
-                    rm ${path_file} && rm ${lockfile}
+#                    echo "rm ${path_file}"
+#                    rm ${path_file} && rm ${lockfile}
+                    echo "mv ${path_file} ${path_file}-DELETE"
+                    mv ${path_file} ${path_file}-DELETE && rm ${lockfile}
                 else
                     echo "*** output suspiciously small - retaining ${path_file} and ${lockfile}"
                 fi
