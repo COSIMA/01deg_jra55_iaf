@@ -14,7 +14,6 @@
 umask 027
 
 dirtype=output
-# dirtype=restart  # also need to change exclude - see below
 
 #expt=01deg_jra55v140_iaf_cycle4
 #SCRIPTDIR=/home/156/aek156/payu/${expt}
@@ -32,7 +31,6 @@ SRCDIR=$(readlink -e archive)
 # for copying 01deg_jra55v140_iaf_cycle3 to ik11
 #DESTDIR=/g/data/ik11/outputs/access-om2-01/${expt}
 #exclude="--prune-empty-dirs --include=*/ --include=*passive*.nc --include=ocean-3d-*-1-daily*.nc --exclude=*"  # for dirtype=output
-# exclude=""  # for dirtype=restart
 
 # rsyncflags="-vrltoD --safe-links"
 
@@ -42,6 +40,11 @@ eval "$(grep "^rsyncflags=" ${SCRIPTDIR}/sync_data.sh)"
 eval "$(grep "^exclude=" ${SCRIPTDIR}/sync_data.sh)"
 eval "$(grep "^SYNCDIR=" ${SCRIPTDIR}/sync_data.sh)"
 DESTDIR=${SYNCDIR}
+
+# for copying restarts
+#dirtype=restart  # also need to change exclude and possibly DESTDIR
+#exclude=""  # for dirtype=restart
+#DESTDIR=/g/data/ik11/restarts/access-om2-01/${expt}  # for dirtype=restart
 
 echo "About to rsync" ${rsyncflags} ${exclude}
 echo ${SRCDIR}
