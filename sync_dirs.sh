@@ -61,7 +61,7 @@ cd ${SCRIPTDIR}
 # first delete any cice log files that only have a 105-character header and nothing else
 find ${SRCDIR}/output* -size 105c -iname "ice.log.task_*" -delete
 
-for dirpath in ${SRCDIR}/${dirtype}[0-9][0-9][0-9]
+for dirpath in ${SRCDIR}/${dirtype}[0-9][0-9]*[0-9]
     do
     (
         echo ${dirpath}
