@@ -43,6 +43,10 @@ eval "$(grep "^exclude=" ${SCRIPTDIR}/sync_data.sh)"
 eval "$(grep "^SYNCDIR=" ${SCRIPTDIR}/sync_data.sh)"
 DESTDIR=${SYNCDIR}
 
+# for copying 01deg_jra55v140_iaf_cycle4_rerun_from_2002 to 01deg_jra55v140_iaf_cycle4 on cj50
+rsyncflags="--ignore-existing ${rsyncflags}"
+DESTDIR=/g/data/cj50/access-om2/raw-output/access-om2-01/01deg_jra55v140_iaf_cycle4
+
 echo "About to rsync" ${rsyncflags} ${exclude}
 echo ${SRCDIR}
 echo ${dirtype} "to"
@@ -61,13 +65,15 @@ cd ${SCRIPTDIR}
 # first delete any cice log files that only have a 105-character header and nothing else
 find ${SRCDIR}/output* -size 105c -iname "ice.log.task_*" -delete
 
-for dirpath in ${SRCDIR}/${dirtype}[0-9][0-9][0-9]
+#for dirpath in ${SRCDIR}/${dirtype}[0-9][0-9][0-9]/ice/OUTPUT
+for dirpath in ${SRCDIR}/${dirtype}925/ice/OUTPUT
     do
     (
         echo ${dirpath}
         export dir=`basename ${dirpath}` srcdir=${SRCDIR} destdir=${DESTDIR} rsyncflags exclude
-        qsub -N Rsync-${dir} -v dir=${dir},srcdir=${srcdir},destdir=${destdir},rsyncflags="${rsyncflags}",exclude="${exclude}" ${SCRIPTDIR}/sync_dir.sh
+    #    qsub -N Rsync-${dir} -v dir=${dir},srcdir=${srcdir},destdir=${destdir},rsyncflags="${rsyncflags}",exclude="${exclude}" ${SCRIPTDIR}/sync_dir.sh
     ) &
+    break
 done
 wait
 
