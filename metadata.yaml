@@ -8,6 +8,8 @@ description: >-
   coupled biogeochemistry in the ocean and sea ice.
   This is cycle 4 of the IAF spinup, repeating from 2002 onwards to re-generate
   accidentally-deleted ice data.
+  Outputs are as for 01deg_jra55v140_iaf_cycle4, except all MOM output and 6-hourly ice output were omitted
+  (as these weren't deleted), and daily aicen, vicen and 3-hourly uvel, vvel, divu, shear were added for 2016.
   Configuration physics is identical to 01deg_jra55v140_iaf_cycle4.
   Initial conditions are from 1 Jan 2002 restart from 01deg_jra55v140_iaf_cycle4.
   Run with JRA55-do v1.4.0 interannually-varying forcing with all solid runoff 
