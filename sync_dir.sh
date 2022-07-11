@@ -23,5 +23,7 @@ function traperr
 
 trap 'traperr $LINENO' ERR
 
-
-rsync ${rsyncflags} ${exclude} ${srcdir}/${dir} ${destdir}
+chmod u+w ${destdir}/${dir}/ice/OUTPUT
+rsync ${rsyncflags} ${exclude} ${srcdir}/${dir}/ice/OUTPUT/*.nc ${destdir}/${dir}/ice/OUTPUT
+chmod u-w ${destdir}/${dir}/ice/OUTPUT/*
+chmod u-w ${destdir}/${dir}/ice/OUTPUT
