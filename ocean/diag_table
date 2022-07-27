@@ -8,6 +8,23 @@ ACCESS-OM2-01
 #########################################################################################################
 
 
+# daily 3d regional diagnostics
+
+"ocean-3d-temp-1-daily-mean-ym%4yr%2mo",  1,  "days", 1, "days", "time", 1, "months"
+"ocean_model","temp","temp","ocean-3d-temp-1-daily-mean-ym%4yr%2mo","all","average","-280.0,80.0,-81.1,-50.0,-1,-1",2
+
+"ocean-3d-salt-1-daily-mean-ym%4yr%2mo",  1,  "days", 1, "days", "time", 1, "months"
+"ocean_model","salt","salt","ocean-3d-salt-1-daily-mean-ym%4yr%2mo","all","average","-280.0,80.0,-81.1,-50.0,-1,-1",2
+
+"ocean-3d-temp_xflux_adv-1-daily-mean-ym%4yr%2mo",  1,  "days", 1, "days", "time", 1, "months"
+"ocean_model","temp_xflux_adv","temp_xflux_adv","ocean-3d-temp_xflux_adv-1-daily-mean-ym%4yr%2mo","all","average","-280.0,80.0,-81.1,-50.0,-1,-1",2
+
+"ocean-3d-passive_prydz-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
+"ocean_model", "passive_prydz", "passive_prydz", "ocean-3d-passive_prydz-1-daily-mean-ym%4yr%2mo", "all", "average", "-280.0,80.0,-81.1,-50.0,-1,-1", 2
+
+"ocean-3d-passive_prydz_xflux_adv-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
+"ocean_model", "passive_prydz_xflux_adv", "passive_prydz_xflux_adv", "ocean-3d-passive_prydz_xflux_adv-1-daily-mean-ym%4yr%2mo", "all", "average", "-280.0,80.0,-81.1,-50.0,-1,-1", 2
+
 # static 2d grid data
 
 "ocean-2d-area_t", -1, "months", 1, "days", "time"
