@@ -195,13 +195,21 @@ diag_table:
             new_file_freq_units: months  # time units for new_file_freq: years, months, days, hours, minutes, or seconds (optional; required if and only if new_file_freq specified)
         fields:
 #            passive_adelie:
-#            passive_prydz:
+            passive_prydz:
+            passive_prydz_xflux_adv:
+            passive_prydz_yflux_adv:
+            passive_prydz_zflux_adv:
+            passive_prydz_tendency:
+            passive_prydz_advection:
+            passive_prydz_vdiffuse_impl:
+            passive_prydz_nonlocal_KPP:
+            passive_prydz_submeso:
 #            passive_ross:
 #            passive_weddell:
             salt:
             temp:
-            uhrho_et:
-            vhrho_nt:
+#            uhrho_et:
+#            vhrho_nt:
 #            u:
 #            v:
 #            wt:

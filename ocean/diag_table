@@ -8,23 +8,6 @@ ACCESS-OM2-01
 #########################################################################################################
 
 
-# daily 3d regional diagnostics
-
-"ocean-3d-temp-1-daily-mean-ym%4yr%2mo",  1,  "days", 1, "days", "time", 1, "months"
-"ocean_model","temp","temp","ocean-3d-temp-1-daily-mean-ym%4yr%2mo","all","average","-280.0,80.0,-81.1,-50.0,-1,-1",2
-
-"ocean-3d-salt-1-daily-mean-ym%4yr%2mo",  1,  "days", 1, "days", "time", 1, "months"
-"ocean_model","salt","salt","ocean-3d-salt-1-daily-mean-ym%4yr%2mo","all","average","-280.0,80.0,-81.1,-50.0,-1,-1",2
-
-"ocean-3d-temp_xflux_adv-1-daily-mean-ym%4yr%2mo",  1,  "days", 1, "days", "time", 1, "months"
-"ocean_model","temp_xflux_adv","temp_xflux_adv","ocean-3d-temp_xflux_adv-1-daily-mean-ym%4yr%2mo","all","average","-280.0,80.0,-81.1,-50.0,-1,-1",2
-
-"ocean-3d-passive_prydz-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
-"ocean_model", "passive_prydz", "passive_prydz", "ocean-3d-passive_prydz-1-daily-mean-ym%4yr%2mo", "all", "average", "-280.0,80.0,-81.1,-50.0,-1,-1", 2
-
-"ocean-3d-passive_prydz_xflux_adv-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
-"ocean_model", "passive_prydz_xflux_adv", "passive_prydz_xflux_adv", "ocean-3d-passive_prydz_xflux_adv-1-daily-mean-ym%4yr%2mo", "all", "average", "-280.0,80.0,-81.1,-50.0,-1,-1", 2
-
 # static 2d grid data
 
 "ocean-2d-area_t", -1, "months", 1, "days", "time"
@@ -168,17 +151,38 @@ ACCESS-OM2-01
 
 # daily 3d fields
 
-#"ocean-3d-salt-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
-#"ocean_model", "salt", "salt", "ocean-3d-salt-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
+"ocean-3d-passive_prydz-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
+"ocean_model", "passive_prydz", "passive_prydz", "ocean-3d-passive_prydz-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
 
-#"ocean-3d-temp-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
-#"ocean_model", "temp", "temp", "ocean-3d-temp-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
+"ocean-3d-passive_prydz_xflux_adv-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
+"ocean_model", "passive_prydz_xflux_adv", "passive_prydz_xflux_adv", "ocean-3d-passive_prydz_xflux_adv-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
 
-#"ocean-3d-uhrho_et-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
-#"ocean_model", "uhrho_et", "uhrho_et", "ocean-3d-uhrho_et-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
+"ocean-3d-passive_prydz_yflux_adv-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
+"ocean_model", "passive_prydz_yflux_adv", "passive_prydz_yflux_adv", "ocean-3d-passive_prydz_yflux_adv-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
 
-#"ocean-3d-vhrho_nt-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
-#"ocean_model", "vhrho_nt", "vhrho_nt", "ocean-3d-vhrho_nt-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
+"ocean-3d-passive_prydz_zflux_adv-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
+"ocean_model", "passive_prydz_zflux_adv", "passive_prydz_zflux_adv", "ocean-3d-passive_prydz_zflux_adv-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
+
+"ocean-3d-passive_prydz_tendency-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
+"ocean_model", "passive_prydz_tendency", "passive_prydz_tendency", "ocean-3d-passive_prydz_tendency-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
+
+"ocean-3d-passive_prydz_advection-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
+"ocean_model", "passive_prydz_advection", "passive_prydz_advection", "ocean-3d-passive_prydz_advection-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
+
+"ocean-3d-passive_prydz_vdiffuse_impl-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
+"ocean_model", "passive_prydz_vdiffuse_impl", "passive_prydz_vdiffuse_impl", "ocean-3d-passive_prydz_vdiffuse_impl-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
+
+"ocean-3d-passive_prydz_nonlocal_KPP-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
+"ocean_model", "passive_prydz_nonlocal_KPP", "passive_prydz_nonlocal_KPP", "ocean-3d-passive_prydz_nonlocal_KPP-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
+
+"ocean-3d-passive_prydz_submeso-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
+"ocean_model", "passive_prydz_submeso", "passive_prydz_submeso", "ocean-3d-passive_prydz_submeso-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
+
+"ocean-3d-salt-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
+"ocean_model", "salt", "salt", "ocean-3d-salt-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
+
+"ocean-3d-temp-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
+"ocean_model", "temp", "temp", "ocean-3d-temp-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
 
 
 # 1-day mean 3d fields at the start of each month for DA ensembles
