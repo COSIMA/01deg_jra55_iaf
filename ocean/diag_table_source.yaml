@@ -139,53 +139,15 @@ diag_table:
             output_freq: 1  # integer: output sampling frequency in output_freq_units (0: every timestep; -1: only at end of run)
             output_freq_units: months  # time units for output: years, months, days, hours, minutes, or seconds
         fields:
-            age_global:
-            # aiso_bih:
-            # bih_fric_u:
-            # bih_fric_v:
-            buoyfreq2_wt:
-            diff_cbt_t:
-            dzt:  # potentially calculable from other fields - https://github.com/COSIMA/access-om2/issues/203#issuecomment-635752170
             passive_adelie:
+            passive_amundsen:
+            passive_george:
+            passive_maud:
+            passive_peninsula:
             passive_prydz:
             passive_ross:
             passive_weddell:
-            pot_rho_0:
-            pot_rho_2:
-            pot_temp:
-            salt_xflux_adv:
-            salt_yflux_adv:
-            salt:
-            temp_xflux_adv:
-            temp_yflux_adv:
-            temp:
-            # tx_trans_gm:
-            # tx_trans_nrho_submeso:
-            # tx_trans_rho_gm:
-            tx_trans_rho:
-            # tx_trans_submeso:
-            tx_trans:
-            # ty_trans_gm:
-            ty_trans_nrho_submeso:
-            # ty_trans_rho_gm:
-            ty_trans_rho:
-            ty_trans_submeso:
-            ty_trans:
-            # u_dot_grad_vert_pv:
-            u:
-            v:
-            vert_pv:
-            # vorticity_z:
-            wt:
-    'monthly 3d squared fields':  # for calculating EKE etc
-        defaults:  # these can be overridden for individual fields below
-            file_name_dimension: 3d  # descriptor for filename, e.g. 3d, 2d, scalar
-            output_freq: 1  # integer: output sampling frequency in output_freq_units (0: every timestep; -1: only at end of run)
-            output_freq_units: months  # time units for output: years, months, days, hours, minutes, or seconds
-            reduction_method: pow02  # mean, snap, rms, pow##, min, max, or diurnal##
-        fields:
-            u:
-            v:
+            passive_wilkes:
     'daily 3d fields':
         defaults:  # these can be overridden for individual fields below
             file_name_dimension: 3d  # descriptor for filename, e.g. 3d, 2d, scalar
@@ -194,8 +156,13 @@ diag_table:
             new_file_freq: 1  # optional integer: frequency (in new_file_freq_units) for closing the existing file, and creating a new file
             new_file_freq_units: months  # time units for new_file_freq: years, months, days, hours, minutes, or seconds (optional; required if and only if new_file_freq specified)
         fields:
-#            passive_adelie:
-            passive_prydz:
+            passive_adelie:
+            passive_adelie_xflux_adv:
+            passive_adelie_yflux_adv:
+            passive_adelie_zflux_adv:
+            passive_adelie_tendency:
+            passive_adelie_advection:
+#            passive_prydz:
             passive_prydz_xflux_adv:
             passive_prydz_yflux_adv:
             passive_prydz_zflux_adv:
@@ -204,195 +171,47 @@ diag_table:
             passive_prydz_vdiffuse_impl:
             passive_prydz_nonlocal_KPP:
             passive_prydz_submeso:
-#            passive_ross:
+            passive_ross:
+            passive_ross_xflux_adv:
+            passive_ross_yflux_adv:
+            passive_ross_zflux_adv:
+            passive_ross_tendency:
+            passive_ross_advection:
 #            passive_weddell:
+            passive_weddell_xflux_adv:
+            passive_weddell_yflux_adv:
+            passive_weddell_zflux_adv:
+            passive_weddell_tendency:
+            passive_weddell_advection:
+            passive_amundsen_xflux_adv:
+            passive_amundsen_yflux_adv:
+            passive_amundsen_zflux_adv:
+            passive_amundsen_tendency:
+            passive_amundsen_advection:
+            passive_george_xflux_adv:
+            passive_george_yflux_adv:
+            passive_george_zflux_adv:
+            passive_george_tendency:
+            passive_george_advection:
+            passive_maud_xflux_adv:
+            passive_maud_yflux_adv:
+            passive_maud_zflux_adv:
+            passive_maud_tendency:
+            passive_maud_advection:
+            passive_peninsula_xflux_adv:
+            passive_peninsula_yflux_adv:
+            passive_peninsula_zflux_adv:
+            passive_peninsula_tendency:
+            passive_peninsula_advection:
+            passive_wilkes_xflux_adv:
+            passive_wilkes_yflux_adv:
+            passive_wilkes_zflux_adv:
+            passive_wilkes_tendency:
+            passive_wilkes_advection:
             salt:
             temp:
-#            uhrho_et:
-#            vhrho_nt:
+            uhrho_et:
+            vhrho_nt:
 #            u:
 #            v:
 #            wt:
-    '1-day mean 3d fields at the start of each month for DA ensembles':
-        defaults:  # these can be overridden for individual fields below
-            file_name_dimension: 3d  # descriptor for filename, e.g. 3d, 2d, scalar
-            output_freq: 1  # integer: output sampling frequency in output_freq_units (0: every timestep; -1: only at end of run)
-            output_freq_units: days  # time units for output: years, months, days, hours, minutes, or seconds
-            new_file_freq: 1  # optional integer: frequency (in new_file_freq_units) for closing the existing file, and creating a new file
-            new_file_freq_units: months  # time units for new_file_freq: years, months, days, hours, minutes, or seconds (optional; required if and only if new_file_freq specified)
-            start_time: [ 1987, 1, 1, 0, 0, 0 ]  # Time to start the file for the first time. The format of this string is the same as base_date (optional; requires new_file_freq, new_file_freq_units)
-            file_duration: 1  # integer: How long file should receive data after start time (optional; requires new_file_freq, new_file_freq_units, start_time)
-            file_duration_units: days  # units for file_duration: years, months, days, hours, minutes, or seconds (optional; required if and only if file_duration specified)
-            file_name_date: "ymd%4yr%2mo%2dy"  # run date/time of file opening; format: %, 1 digit (#digits), one of (yr, mo, dy, hr, mi, sc); date/time components will be separated by _ in filename.
-        fields:
-            # salt:
-            # temp:
-            # u:
-            # v:
-    'monthly 2d fields':
-        defaults:  # these can be overridden for individual fields below
-            file_name_dimension: 2d  # descriptor for filename, e.g. 3d, 2d, scalar
-            output_freq: 1  # integer: output sampling frequency in output_freq_units (0: every timestep; -1: only at end of run)
-            output_freq_units: months  # time units for output: years, months, days, hours, minutes, or seconds
-        fields:
-            # agm:
-            # aredi:
-            bmf_u:
-            bmf_v:
-            ekman_we:
-            eta_nonbouss:
-            evap_heat:
-            evap:
-            fprec_melt_heat:
-            fprec:
-            frazil_3d_int_z:
-            lprec:
-            lw_heat:
-            melt:
-            mh_flux:
-            mld:
-            net_sfc_heating:
-            pbot_t:
-            pme_net:
-            pme_river:
-            river:
-            runoff:
-            sea_level_sq:
-            sea_level:
-            sens_heat:
-            sfc_hflux_coupler:
-            sfc_hflux_from_runoff:
-            sfc_hflux_pme:
-            sfc_salt_flux_coupler:
-            sfc_salt_flux_ice:
-            sfc_salt_flux_restore:
-            surface_pot_temp:
-            surface_salt:
-            swflx:
-            tau_x:
-            tau_y:
-            temp_int_rhodz:
-            temp_xflux_adv_int_z:
-            # temp_xflux_gm_int_z:
-            # temp_xflux_ndiffuse_int_z:
-            # temp_xflux_submeso_int_z:
-            temp_yflux_adv_int_z:
-            # temp_yflux_gm_int_z:
-            # temp_yflux_ndiffuse_int_z:
-            # temp_yflux_submeso_int_z:
-            tx_trans_int_z:
-            ty_trans_int_z:
-            wfiform:
-            wfimelt:
-    'monthly 2d fields with different reduction methods':
-        defaults:  # these can be overridden for individual fields below
-            file_name_dimension: 2d  # descriptor for filename, e.g. 3d, 2d, scalar
-            output_freq: 1  # integer: output sampling frequency in output_freq_units (0: every timestep; -1: only at end of run)
-            output_freq_units: months  # time units for output: years, months, days, hours, minutes, or seconds
-        fields:
-            mld: {reduction_method: max}  # max avoids spurious small values due to rainfall
-            surface_pot_temp: {reduction_method: min}  # min for comparison with foundation temperature
-    'daily 2d fields':
-        defaults:  # these can be overridden for individual fields below
-            file_name_dimension: 2d  # descriptor for filename, e.g. 3d, 2d, scalar
-            output_freq: 1  # integer: output sampling frequency in output_freq_units (0: every timestep; -1: only at end of run)
-            output_freq_units: days  # time units for output: years, months, days, hours, minutes, or seconds
-        fields:
-            bottom_temp:
-            frazil_3d_int_z:
-            mld:
-            pme_river:
-            sea_level:
-            sfc_hflux_coupler:
-            sfc_hflux_from_runoff:
-            sfc_hflux_pme:
-            surface_pot_temp:
-            surface_salt:
-            usurf:
-            vsurf:
-    'daily 2d maximum fields':
-        defaults:  # these can be overridden for individual fields below
-            file_name_dimension: 2d  # descriptor for filename, e.g. 3d, 2d, scalar
-            output_freq: 1  # integer: output sampling frequency in output_freq_units (0: every timestep; -1: only at end of run)
-            output_freq_units: days  # time units for output: years, months, days, hours, minutes, or seconds
-            reduction_method: max  # mean, snap, rms, pow##, min, max, or diurnal##
-        fields:
-            bottom_temp:
-            sea_level:
-            surface_pot_temp:
-    'daily 2d minimum fields':
-        defaults:  # these can be overridden for individual fields below
-            file_name_dimension: 2d  # descriptor for filename, e.g. 3d, 2d, scalar
-            output_freq: 1  # integer: output sampling frequency in output_freq_units (0: every timestep; -1: only at end of run)
-            output_freq_units: days  # time units for output: years, months, days, hours, minutes, or seconds
-            reduction_method: min  # mean, snap, rms, pow##, min, max, or diurnal##
-        fields:
-            surface_pot_temp:  # min for comparison with foundation temperature
-    'daily scalar snapshots':  # snapshots of global integrals give better parallel performance
-        defaults:  # these can be overridden for individual fields below
-            file_name_dimension: scalar  # descriptor for filename, e.g. 3d, 2d, scalar
-            file_name:  # file name (without trailing ".nc") is constructed from these components,
-            # separated by file_name_separator, as per https://github.com/COSIMA/access-om2/issues/185
-            # All these components (other than field_name) must be names that exist in global_defaults.
-                - file_name_prefix
-                - file_name_dimension
-                - output_freq
-                - output_freq_units
-                - file_name_date
-            output_freq: 1  # integer: output sampling frequency in output_freq_units (0: every timestep; -1: only at end of run)
-            output_freq_units: days  # time units for output: years, months, days, hours, minutes, or seconds
-            reduction_method: snap  # mean, snap, rms, pow##, min, max, or diurnal##
-            packing: 1  # double precision
-        fields:
-            eta_global:
-            ke_tot:
-            pe_tot:
-            rhoave:
-            salt_global_ave:
-            salt_surface_ave:
-            temp_global_ave:
-            temp_surface_ave:
-            total_net_sfc_heating:
-            total_ocean_evap_heat:
-            total_ocean_evap:
-            total_ocean_fprec_melt_heat:
-            total_ocean_fprec:
-            total_ocean_heat:
-            total_ocean_hflux_coupler:
-            total_ocean_hflux_evap:
-            total_ocean_hflux_prec:
-            total_ocean_lprec:
-            total_ocean_lw_heat:
-            total_ocean_melt:
-            total_ocean_mh_flux:
-            total_ocean_pme_river:
-            total_ocean_river_heat:
-            total_ocean_river:
-            total_ocean_runoff_heat:
-            total_ocean_runoff:
-            total_ocean_salt:
-            total_ocean_sens_heat:
-            total_ocean_sfc_salt_flux_coupler:
-            total_ocean_swflx_vis:
-            total_ocean_swflx:
-    'monthly 2d snapshots':
-        defaults:  # these can be overridden for individual fields below
-            file_name_dimension: 2d  # descriptor for filename, e.g. 3d, 2d, scalar
-            output_freq: 1  # integer: output sampling frequency in output_freq_units (0: every timestep; -1: only at end of run)
-            output_freq_units: months  # time units for output: years, months, days, hours, minutes, or seconds
-            reduction_method: snap  # mean, snap, rms, pow##, min, max, or diurnal##
-        fields:
-#            sea_level:
-    'monthly 3d snapshots':
-        defaults:  # these can be overridden for individual fields below
-            file_name_dimension: 3d  # descriptor for filename, e.g. 3d, 2d, scalar
-            output_freq: 1  # integer: output sampling frequency in output_freq_units (0: every timestep; -1: only at end of run)
-            output_freq_units: months  # time units for output: years, months, days, hours, minutes, or seconds
-            reduction_method: snap  # mean, snap, rms, pow##, min, max, or diurnal##
-        fields:
-#            salt:
-#            temp:
-#            u:
-#            v:
-#            vert_pv:
-#            vorticity_z:
