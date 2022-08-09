@@ -23,7 +23,8 @@ restart_file = ocean_age.res.nc
 min_tracer_limit=0.0
 /
 "tracer_packages","ocean_mod","ocean_passive"
-names = ross, weddell, prydz, adelie #, amundsen, george, maud, peninsula, wilkes 
+names = ross, weddell, prydz, adelie 
+#, amundsen, george, maud, peninsula, wilkes 
 const_init_tracer = .false.
 horizontal-advection-scheme = mdppm
 vertical-advection-scheme = mdppm
