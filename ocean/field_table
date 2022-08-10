@@ -23,8 +23,7 @@ restart_file = ocean_age.res.nc
 min_tracer_limit=0.0
 /
 "tracer_packages","ocean_mod","ocean_passive"
-names = ross, weddell, prydz, adelie, maud
-#, amundsen, george, maud, peninsula, wilkes 
+names = ross, weddell, prydz, adelie, amundsen, george, maud, peninsula, wilkes 
 const_init_tracer = .false.
 horizontal-advection-scheme = mdppm
 vertical-advection-scheme = mdppm
@@ -51,21 +50,21 @@ restore = .false.
 "namelists","ocean_mod","ocean_passive/adelie"
 restore = .false.
 /
-#"namelists","ocean_mod","ocean_passive/amundsen"
-#restore = .false.
-#/
-#"namelists","ocean_mod","ocean_passive/george"
-#restore = .false.
-#/
+"namelists","ocean_mod","ocean_passive/amundsen"
+restore = .false.
+/
+"namelists","ocean_mod","ocean_passive/george"
+restore = .false.
+/
 "namelists","ocean_mod","ocean_passive/maud"
 restore = .false.
 /
-#"namelists","ocean_mod","ocean_passive/peninsula"
-#restore = .false.
-#/
-#"namelists","ocean_mod","ocean_passive/wilkes"
-#restore = .false.
-#/
+"namelists","ocean_mod","ocean_passive/peninsula"
+restore = .false.
+/
+"namelists","ocean_mod","ocean_passive/wilkes"
+restore = .false.
+/
 # added by FRE: sphum must be present in atmos
 # specific humidity for moist runs
  "TRACER", "atmos_mod", "sphum"
