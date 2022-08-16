@@ -88,164 +88,155 @@ ACCESS-OM2-01
 
 # daily 3d fields
 
-"ocean-3d-passive_adelie-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
-"ocean_model", "passive_adelie", "passive_adelie", "ocean-3d-passive_adelie-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
+"passive_adelie", 1, "days", 1, "days", "time",
+"ocean_model", "passive_adelie", "passive_adelie", "passive_adelie", "all", .true.,"-280.0,80.0,-81.1,-30.0,-1,-1", 2
 
-"ocean-3d-passive_adelie_xflux_adv-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
-"ocean_model", "passive_adelie_xflux_adv", "passive_adelie_xflux_adv", "ocean-3d-passive_adelie_xflux_adv-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
+"adelie_xflux_adv", 1, "days", 1, "days", "time",
+"ocean_model", "passive_adelie_xflux_adv", "passive_adelie_xflux_adv", "adelie_xflux_adv", "all", .true.,"-280.0,80.0,-81.1,-30.0,-1,-1", 2
 
-"ocean-3d-passive_adelie_yflux_adv-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
-"ocean_model", "passive_adelie_yflux_adv", "passive_adelie_yflux_adv", "ocean-3d-passive_adelie_yflux_adv-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
+"adelie_yflux_adv", 1, "days", 1, "days", "time",
+"ocean_model", "passive_adelie_yflux_adv", "passive_adelie_yflux_adv", "adelie_yflux_adv", "all", .true.,"-280.0,80.0,-81.1,-30.0,-1,-1", 2
 
-"ocean-3d-passive_adelie_zflux_adv-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
-"ocean_model", "passive_adelie_zflux_adv", "passive_adelie_zflux_adv", "ocean-3d-passive_adelie_zflux_adv-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
+"adelie_zflux_adv", 1, "days", 1, "days", "time",
+"ocean_model", "passive_adelie_zflux_adv", "passive_adelie_zflux_adv", "adelie_zflux_adv", "all", .true.,"-280.0,80.0,-81.1,-30.0,-1,-1", 2
 
-"ocean-3d-passive_adelie_tendency-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
-"ocean_model", "passive_adelie_tendency", "passive_adelie_tendency", "ocean-3d-passive_adelie_tendency-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
+"adelie_tendency", 1, "days", 1, "days", "time",
+"ocean_model", "passive_adelie_tendency", "passive_adelie_tendency", "adelie_tendency", "all", .true.,"-280.0,80.0,-81.1,-30.0,-1,-1", 2
 
-"ocean-3d-passive_adelie_advection-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
-"ocean_model", "passive_adelie_advection", "passive_adelie_advection", "ocean-3d-passive_adelie_advection-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
+"adelie_advection", 1, "days", 1, "days", "time",
+"ocean_model", "passive_adelie_advection", "passive_adelie_advection", "adelie_advection", "all", .true.,"-280.0,80.0,-81.1,-30.0,-1,-1", 2
 
-"ocean-3d-passive_prydz_xflux_adv-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
-"ocean_model", "passive_prydz_xflux_adv", "passive_prydz_xflux_adv", "ocean-3d-passive_prydz_xflux_adv-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
+"prydz_xflux_adv", 1, "days", 1, "days", "time",
+"ocean_model", "passive_prydz_xflux_adv", "passive_prydz_xflux_adv", "prydz_xflux_adv", "all", .true.,"-280.0,80.0,-81.1,-30.0,-1,-1", 2
 
-"ocean-3d-passive_prydz_yflux_adv-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
-"ocean_model", "passive_prydz_yflux_adv", "passive_prydz_yflux_adv", "ocean-3d-passive_prydz_yflux_adv-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
+"prydz_yflux_adv", 1, "days", 1, "days", "time",
+"ocean_model", "passive_prydz_yflux_adv", "passive_prydz_yflux_adv", "prydz_yflux_adv", "all", .true.,"-280.0,80.0,-81.1,-30.0,-1,-1", 2
 
-"ocean-3d-passive_prydz_zflux_adv-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
-"ocean_model", "passive_prydz_zflux_adv", "passive_prydz_zflux_adv", "ocean-3d-passive_prydz_zflux_adv-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
+"prydz_zflux_adv", 1, "days", 1, "days", "time",
+"ocean_model", "passive_prydz_zflux_adv", "passive_prydz_zflux_adv", "prydz_zflux_adv", "all", .true.,"-280.0,80.0,-81.1,-30.0,-1,-1", 2
 
-"ocean-3d-passive_prydz_tendency-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
-"ocean_model", "passive_prydz_tendency", "passive_prydz_tendency", "ocean-3d-passive_prydz_tendency-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
+"prydz_tendency", 1, "days", 1, "days", "time",
+"ocean_model", "passive_prydz_tendency", "passive_prydz_tendency", "prydz_tendency", "all", .true.,"-280.0,80.0,-81.1,-30.0,-1,-1", 2
 
-"ocean-3d-passive_prydz_advection-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
-"ocean_model", "passive_prydz_advection", "passive_prydz_advection", "ocean-3d-passive_prydz_advection-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
+"prydz_advection", 1, "days", 1, "days", "time",
+"ocean_model", "passive_prydz_advection", "passive_prydz_advection", "prydz_advection", "all",.true.,"-280.0,80.0,-81.1,-30.0,-1,-1", 2
 
-"ocean-3d-passive_prydz_vdiffuse_impl-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
-"ocean_model", "passive_prydz_vdiffuse_impl", "passive_prydz_vdiffuse_impl", "ocean-3d-passive_prydz_vdiffuse_impl-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
+"passive_ross", 1, "days", 1, "days", "time", 1, "months"
+"ocean_model", "passive_ross", "passive_ross", "passive_ross", "all", .true.,"-280.0,80.0,-81.1,-30.0,-1,-1", 2
 
-"ocean-3d-passive_prydz_nonlocal_KPP-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
-"ocean_model", "passive_prydz_nonlocal_KPP", "passive_prydz_nonlocal_KPP", "ocean-3d-passive_prydz_nonlocal_KPP-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
+"ross_xflux_adv", 1, "days", 1, "days", "time",
+"ocean_model", "passive_ross_xflux_adv", "passive_ross_xflux_adv", "ross_xflux_adv", "all", .true.,"-280.0,80.0,-81.1,-30.0,-1,-1", 2
 
-"ocean-3d-passive_prydz_submeso-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
-"ocean_model", "passive_prydz_submeso", "passive_prydz_submeso", "ocean-3d-passive_prydz_submeso-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
+"ross_yflux_adv", 1, "days", 1, "days", "time",
+"ocean_model", "passive_ross_yflux_adv", "passive_ross_yflux_adv", "ross_yflux_adv", "all", .true.,"-280.0,80.0,-81.1,-30.0,-1,-1", 2
 
-"ocean-3d-passive_ross-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
-"ocean_model", "passive_ross", "passive_ross", "ocean-3d-passive_ross-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
+"ross_zflux_adv", 1, "days", 1, "days", "time",
+"ocean_model", "passive_ross_zflux_adv", "passive_ross_zflux_adv", "ross_zflux_adv", "all", .true.,"-280.0,80.0,-81.1,-30.0,-1,-1", 2
 
-"ocean-3d-passive_ross_xflux_adv-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
-"ocean_model", "passive_ross_xflux_adv", "passive_ross_xflux_adv", "ocean-3d-passive_ross_xflux_adv-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
+"ross_tendency", 1, "days", 1, "days", "time",
+"ocean_model", "passive_ross_tendency", "passive_ross_tendency", "ross_tendency", "all", .true.,"-280.0,80.0,-81.1,-30.0,-1,-1", 2
 
-"ocean-3d-passive_ross_yflux_adv-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
-"ocean_model", "passive_ross_yflux_adv", "passive_ross_yflux_adv", "ocean-3d-passive_ross_yflux_adv-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
+"ross_advection", 1, "days", 1, "days", "time",
+"ocean_model", "passive_ross_advection", "passive_ross_advection", "ross_advection", "all", .true.,"-280.0,80.0,-81.1,-30.0,-1,-1", 2
 
-"ocean-3d-passive_ross_zflux_adv-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
-"ocean_model", "passive_ross_zflux_adv", "passive_ross_zflux_adv", "ocean-3d-passive_ross_zflux_adv-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
+"weddell_xflux_adv", 1, "days", 1, "days", "time",
+"ocean_model", "passive_weddell_xflux_adv", "passive_weddell_xflux_adv", "weddell_xflux_adv", "all", .true.,"-280.0,80.0,-81.1,-30.0,-1,-1", 2
 
-"ocean-3d-passive_ross_tendency-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
-"ocean_model", "passive_ross_tendency", "passive_ross_tendency", "ocean-3d-passive_ross_tendency-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
+"weddell_yflux_adv", 1, "days", 1, "days", "time",
+"ocean_model", "passive_weddell_yflux_adv", "passive_weddell_yflux_adv", "weddell_yflux_adv", "all",.true.,"-280.0,80.0,-81.1,-30.0,-1,-1", 2
 
-"ocean-3d-passive_ross_advection-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
-"ocean_model", "passive_ross_advection", "passive_ross_advection", "ocean-3d-passive_ross_advection-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
+"weddell_zflux_adv", 1, "days", 1, "days", "time",
+"ocean_model", "passive_weddell_zflux_adv", "passive_weddell_zflux_adv", "weddell_zflux_adv", "all", .true.,"-280.0,80.0,-81.1,-30.0,-1,-1", 2
 
-"ocean-3d-passive_weddell_xflux_adv-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
-"ocean_model", "passive_weddell_xflux_adv", "passive_weddell_xflux_adv", "ocean-3d-passive_weddell_xflux_adv-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
+"weddell_tendency", 1, "days", 1, "days", "time",
+"ocean_model", "passive_weddell_tendency", "passive_weddell_tendency", "weddell_tendency", "all", .true.,"-280.0,80.0,-81.1,-30.0,-1,-1", 2
 
-"ocean-3d-passive_weddell_yflux_adv-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
-"ocean_model", "passive_weddell_yflux_adv", "passive_weddell_yflux_adv", "ocean-3d-passive_weddell_yflux_adv-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
+"weddell_advection", 1, "days", 1, "days", "time",
+"ocean_model", "passive_weddell_advection", "passive_weddell_advection", "weddell_advection", "all", .true.,"-280.0,80.0,-81.1,-30.0,-1,-1", 2
 
-"ocean-3d-passive_weddell_zflux_adv-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
-"ocean_model", "passive_weddell_zflux_adv", "passive_weddell_zflux_adv", "ocean-3d-passive_weddell_zflux_adv-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
+"amundsen_xflux_adv", 1, "days", 1, "days", "time",
+"ocean_model", "passive_amundsen_xflux_adv", "passive_amundsen_xflux_adv", "amundsen_xflux_adv", "all", .true.,"-280.0,80.0,-81.1,-30.0,-1,-1", 2
 
-"ocean-3d-passive_weddell_tendency-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
-"ocean_model", "passive_weddell_tendency", "passive_weddell_tendency", "ocean-3d-passive_weddell_tendency-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
+"amundsen_yflux_adv", 1, "days", 1, "days", "time",
+"ocean_model", "passive_amundsen_yflux_adv", "passive_amundsen_yflux_adv", "amundsen_yflux_adv", "all", .true.,"-280.0,80.0,-81.1,-30.0,-1,-1", 2
 
-"ocean-3d-passive_weddell_advection-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
-"ocean_model", "passive_weddell_advection", "passive_weddell_advection", "ocean-3d-passive_weddell_advection-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
+"amundsen_zflux_adv", 1, "days", 1, "days", "time",
+"ocean_model", "passive_amundsen_zflux_adv", "passive_amundsen_zflux_adv", "amundsen_zflux_adv", "all", .true.,"-280.0,80.0,-81.1,-30.0,-1,-1", 2
 
-"ocean-3d-passive_amundsen_xflux_adv-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
-"ocean_model", "passive_amundsen_xflux_adv", "passive_amundsen_xflux_adv", "ocean-3d-passive_amundsen_xflux_adv-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
+"amundsen_tendency", 1, "days", 1, "days", "time",
+"ocean_model", "passive_amundsen_tendency", "passive_amundsen_tendency", "amundsen_tendency", "all", .true.,"-280.0,80.0,-81.1,-30.0,-1,-1", 2
 
-"ocean-3d-passive_amundsen_yflux_adv-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
-"ocean_model", "passive_amundsen_yflux_adv", "passive_amundsen_yflux_adv", "ocean-3d-passive_amundsen_yflux_adv-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
+"amundsen_advection", 1, "days", 1, "days", "time",
+"ocean_model", "passive_amundsen_advection", "passive_amundsen_advection", "amundsen_advection", "all", .true.,"-280.0,80.0,-81.1,-30.0,-1,-1", 2
 
-"ocean-3d-passive_amundsen_zflux_adv-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
-"ocean_model", "passive_amundsen_zflux_adv", "passive_amundsen_zflux_adv", "ocean-3d-passive_amundsen_zflux_adv-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
+"george_xflux_adv", 1, "days", 1, "days", "time",
+"ocean_model", "passive_george_xflux_adv", "passive_george_xflux_adv", "george_xflux_adv", "all", .true.,"-280.0,80.0,-81.1,-30.0,-1,-1", 2
 
-"ocean-3d-passive_amundsen_tendency-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
-"ocean_model", "passive_amundsen_tendency", "passive_amundsen_tendency", "ocean-3d-passive_amundsen_tendency-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
+"george_yflux_adv", 1, "days", 1, "days", "time",
+"ocean_model", "passive_george_yflux_adv", "passive_george_yflux_adv", "george_yflux_adv", "all", .true.,"-280.0,80.0,-81.1,-30.0,-1,-1", 2
 
-"ocean-3d-passive_amundsen_advection-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
-"ocean_model", "passive_amundsen_advection", "passive_amundsen_advection", "ocean-3d-passive_amundsen_advection-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
+"george_zflux_adv", 1, "days", 1, "days", "time",
+"ocean_model", "passive_george_zflux_adv", "passive_george_zflux_adv", "george_zflux_adv", "all", .true.,"-280.0,80.0,-81.1,-30.0,-1,-1", 2
 
-"ocean-3d-passive_george_xflux_adv-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
-"ocean_model", "passive_george_xflux_adv", "passive_george_xflux_adv", "ocean-3d-passive_george_xflux_adv-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
+"george_tendency", 1, "days", 1, "days", "time",
+"ocean_model", "passive_george_tendency", "passive_george_tendency", "george_tendency", "all", .true.,"-280.0,80.0,-81.1,-30.0,-1,-1", 2
 
-"ocean-3d-passive_george_yflux_adv-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
-"ocean_model", "passive_george_yflux_adv", "passive_george_yflux_adv", "ocean-3d-passive_george_yflux_adv-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
+"george_advection", 1, "days", 1, "days", "time",
+"ocean_model", "passive_george_advection", "passive_george_advection", "george_advection", "all", .true.,"-280.0,80.0,-81.1,-30.0,-1,-1", 2
 
-"ocean-3d-passive_george_zflux_adv-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
-"ocean_model", "passive_george_zflux_adv", "passive_george_zflux_adv", "ocean-3d-passive_george_zflux_adv-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
+"maud_xflux_adv", 1, "days", 1, "days", "time",
+"ocean_model", "passive_maud_xflux_adv", "passive_maud_xflux_adv", "maud_xflux_adv", "all", .true.,"-280.0,80.0,-81.1,-30.0,-1,-1", 2
 
-"ocean-3d-passive_george_tendency-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
-"ocean_model", "passive_george_tendency", "passive_george_tendency", "ocean-3d-passive_george_tendency-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
+"maud_yflux_adv", 1, "days", 1, "days", "time",
+"ocean_model", "passive_maud_yflux_adv", "passive_maud_yflux_adv", "maud_yflux_adv", "all", .true.,"-280.0,80.0,-81.1,-30.0,-1,-1", 2
 
-"ocean-3d-passive_george_advection-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
-"ocean_model", "passive_george_advection", "passive_george_advection", "ocean-3d-passive_george_advection-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
+"maud_zflux_adv", 1, "days", 1, "days", "time",
+"ocean_model", "passive_maud_zflux_adv", "passive_maud_zflux_adv", "maud_zflux_adv", "all", .true.,"-280.0,80.0,-81.1,-30.0,-1,-1", 2
 
-"ocean-3d-passive_maud_xflux_adv-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
-"ocean_model", "passive_maud_xflux_adv", "passive_maud_xflux_adv", "ocean-3d-passive_maud_xflux_adv-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
+"maud_tendency", 1, "days", 1, "days", "time",
+"ocean_model", "passive_maud_tendency", "passive_maud_tendency", "maud_tendency", "all", .true.,"-280.0,80.0,-81.1,-30.0,-1,-1", 2
 
-"ocean-3d-passive_maud_yflux_adv-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
-"ocean_model", "passive_maud_yflux_adv", "passive_maud_yflux_adv", "ocean-3d-passive_maud_yflux_adv-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
+"maud_advection", 1, "days", 1, "days", "time",
+"ocean_model", "passive_maud_advection", "passive_maud_advection", "maud_advection", "all", .true.,"-280.0,80.0,-81.1,-30.0,-1,-1", 2
 
-"ocean-3d-passive_maud_zflux_adv-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
-"ocean_model", "passive_maud_zflux_adv", "passive_maud_zflux_adv", "ocean-3d-passive_maud_zflux_adv-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
+"peninsula_xflux_adv", 1, "days", 1, "days", "time",
+"ocean_model", "passive_peninsula_xflux_adv", "passive_peninsula_xflux_adv", "peninsula_xflux_adv", "all", .true.,"-280.0,80.0,-81.1,-30.0,-1,-1", 2
 
-"ocean-3d-passive_maud_tendency-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
-"ocean_model", "passive_maud_tendency", "passive_maud_tendency", "ocean-3d-passive_maud_tendency-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
+"peninsula_yflux_adv", 1, "days", 1, "days", "time",
+"ocean_model", "passive_peninsula_yflux_adv", "passive_peninsula_yflux_adv", "peninsula_yflux_adv", "all", .true.,"-280.0,80.0,-81.1,-30.0,-1,-1", 2
 
-"ocean-3d-passive_maud_advection-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
-"ocean_model", "passive_maud_advection", "passive_maud_advection", "ocean-3d-passive_maud_advection-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
+"peninsula_zflux_adv", 1, "days", 1, "days", "time",
+"ocean_model", "passive_peninsula_zflux_adv", "passive_peninsula_zflux_adv", "peninsula_zflux_adv", "all", .true.,"-280.0,80.0,-81.1,-30.0,-1,-1", 2
 
-"ocean-3d-passive_peninsula_xflux_adv-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
-"ocean_model", "passive_peninsula_xflux_adv", "passive_peninsula_xflux_adv", "ocean-3d-passive_peninsula_xflux_adv-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
+"peninsula_tendency", 1, "days", 1, "days", "time",
+"ocean_model", "passive_peninsula_tendency", "passive_peninsula_tendency", "peninsula_tendency", "all", .true.,"-280.0,80.0,-81.1,-30.0,-1,-1", 2
 
-"ocean-3d-passive_peninsula_yflux_adv-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
-"ocean_model", "passive_peninsula_yflux_adv", "passive_peninsula_yflux_adv", "ocean-3d-passive_peninsula_yflux_adv-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
+"peninsula_advection", 1, "days", 1, "days", "time",
+"ocean_model", "passive_peninsula_advection", "passive_peninsula_advection", "peninsula_advection", "all", .true.,"-280.0,80.0,-81.1,-30.0,-1,-1", 2
 
-"ocean-3d-passive_peninsula_zflux_adv-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
-"ocean_model", "passive_peninsula_zflux_adv", "passive_peninsula_zflux_adv", "ocean-3d-passive_peninsula_zflux_adv-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
+"wilkes_xflux_adv", 1, "days", 1, "days", "time",
+"ocean_model", "passive_wilkes_xflux_adv", "passive_wilkes_xflux_adv", "wilkes_xflux_adv", "all", .true.,"-280.0,80.0,-81.1,-30.0,-1,-1", 2
 
-"ocean-3d-passive_peninsula_tendency-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
-"ocean_model", "passive_peninsula_tendency", "passive_peninsula_tendency", "ocean-3d-passive_peninsula_tendency-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
+"wilkes_yflux_adv", 1, "days", 1, "days", "time",
+"ocean_model", "passive_wilkes_yflux_adv", "passive_wilkes_yflux_adv", "wilkes_yflux_adv", "all", .true.,"-280.0,80.0,-81.1,-30.0,-1,-1", 2
 
-"ocean-3d-passive_peninsula_advection-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
-"ocean_model", "passive_peninsula_advection", "passive_peninsula_advection", "ocean-3d-passive_peninsula_advection-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
+"wilkes_zflux_adv", 1, "days", 1, "days", "time",
+"ocean_model", "passive_wilkes_zflux_adv", "passive_wilkes_zflux_adv", "wilkes_zflux_adv", "all", .true.,"-280.0,80.0,-81.1,-30.0,-1,-1", 2
 
-"ocean-3d-passive_wilkes_xflux_adv-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
-"ocean_model", "passive_wilkes_xflux_adv", "passive_wilkes_xflux_adv", "ocean-3d-passive_wilkes_xflux_adv-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
+"wilkes_tendency", 1, "days", 1, "days", "time",
+"ocean_model", "passive_wilkes_tendency", "passive_wilkes_tendency", "wilkes_tendency", "all", .true.,"-280.0,80.0,-81.1,-30.0,-1,-1", 2
 
-"ocean-3d-passive_wilkes_yflux_adv-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
-"ocean_model", "passive_wilkes_yflux_adv", "passive_wilkes_yflux_adv", "ocean-3d-passive_wilkes_yflux_adv-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
+"wilkes_advection", 1, "days", 1, "days", "time",
+"ocean_model", "passive_wilkes_advection", "passive_wilkes_advection", "wilkes_advection", "all", .true.,"-280.0,80.0,-81.1,-30.0,-1,-1", 2
 
-"ocean-3d-passive_wilkes_zflux_adv-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
-"ocean_model", "passive_wilkes_zflux_adv", "passive_wilkes_zflux_adv", "ocean-3d-passive_wilkes_zflux_adv-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
+"salt", 1, "days", 1, "days", "time",
+"ocean_model", "salt", "salt", "salt", "all", .true.,"-280.0,80.0,-81.1,-30.0,-1,-1", 2
 
-"ocean-3d-passive_wilkes_tendency-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
-"ocean_model", "passive_wilkes_tendency", "passive_wilkes_tendency", "ocean-3d-passive_wilkes_tendency-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
+"temp", 1, "days", 1, "days", "time",
+"ocean_model", "temp", "temp", "temp", "all", .true.,"-280.0,80.0,-81.1,-30.0,-1,-1", 2
 
-"ocean-3d-passive_wilkes_advection-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
-"ocean_model", "passive_wilkes_advection", "passive_wilkes_advection", "ocean-3d-passive_wilkes_advection-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
+"uhrho_et", 1, "days", 1, "days", "time",
+"ocean_model", "uhrho_et", "uhrho_et", "uhrho_et", "all", .true.,"-280.0,80.0,-81.1,-30.0,-1,-1", 2
 
-"ocean-3d-salt-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
-"ocean_model", "salt", "salt", "ocean-3d-salt-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
-
-"ocean-3d-temp-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
-"ocean_model", "temp", "temp", "ocean-3d-temp-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
-
-"ocean-3d-uhrho_et-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
-"ocean_model", "uhrho_et", "uhrho_et", "ocean-3d-uhrho_et-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
-
-"ocean-3d-vhrho_nt-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
-"ocean_model", "vhrho_nt", "vhrho_nt", "ocean-3d-vhrho_nt-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
+"vhrho_nt", 1, "days", 1, "days", "time",
+"ocean_model", "vhrho_nt", "vhrho_nt", "vhrho_nt", "all", .true.,"-280.0,80.0,-81.1,-30.0,-1,-1" , 2
