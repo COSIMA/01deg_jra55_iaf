@@ -58,9 +58,9 @@ submodels:
 collate:
   restart: true
   mpi: true
-  walltime: 1:00:00
-  mem: 64GB
-  ncpus: 4
+  walltime: 4:00:00
+  mem: 20GB
+  ncpus: 10
   queue: normal
   exe: /g/data/ik11/inputs/access-om2/bin/mppnccombine-fast
 
@@ -75,6 +75,7 @@ platform:
     nodesize: 48
 # sweep and resubmit on specific errors - see https://github.com/payu-org/payu/issues/241#issuecomment-610739771
 userscripts:
+    archive: rename_regional_files.py
     error: resub.sh
     run: rm -f resubmit.count
 
