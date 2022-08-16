@@ -75,7 +75,7 @@ platform:
     nodesize: 48
 # sweep and resubmit on specific errors - see https://github.com/payu-org/payu/issues/241#issuecomment-610739771
 userscripts:
-    archive: rename_regional_files.py
+    archive: run_rename_regional.sh
     error: resub.sh
     run: rm -f resubmit.count
 

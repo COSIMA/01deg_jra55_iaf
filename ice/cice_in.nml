@@ -178,7 +178,7 @@
 /
 
 &icefields_nml
-    f_aice            = 'md'
+    f_aice            = 'm'
     f_aicen           = 'm'
     f_aisnap          = 'x'
     f_albice          = 'x'
@@ -190,21 +190,21 @@
     f_angle           = .true.
     f_anglet          = .true.
     f_bounds          = .false.
-    f_congel          = 'md'
+    f_congel          = 'm'
     f_coszen          = 'x'
-    f_daidtd          = 'md'
-    f_daidtt          = 'md'
-    f_divu            = 'md'
+    f_daidtd          = 'm'
+    f_daidtt          = 'm'
+    f_divu            = 'm'
     f_dsnow           = 'x'
-    f_dvidtd          = 'md'
-    f_dvidtt          = 'md'
+    f_dvidtd          = 'm'
+    f_dvidtt          = 'm'
     f_dxt             = .true.
     f_dxu             = .true.
     f_dyt             = .true.
     f_dyu             = .true.
     f_evap            = 'x'
     f_evap_ai         = 'x'
-    f_fcondtop_ai     = 'md'
+    f_fcondtop_ai     = 'm'
     f_fcondtopn_ai    = 'x'
     f_fhocn           = 'x'
     f_fhocn_ai        = 'x'
@@ -216,16 +216,16 @@
     f_flwup_ai        = 'x'
     f_fmeltt_ai       = 'm'
     f_fmelttn_ai      = 'x'
-    f_frazil          = 'md'
+    f_frazil          = 'm'
     f_fresh           = 'm'
     f_fresh_ai        = 'x'
     f_frz_onset       = 'x'
-    f_frzmlt          = 'md'
+    f_frzmlt          = 'm'
     f_fsalt           = 'm'
     f_fsalt_ai        = 'm'
     f_fsens           = 'x'
     f_fsens_ai        = 'x'
-    f_fsurf_ai        = 'md'
+    f_fsurf_ai        = 'm'
     f_fsurfn_ai       = 'x'
     f_fswabs          = 'x'
     f_fswabs_ai       = 'x'
@@ -234,17 +234,17 @@
     f_fswthru         = 'x'
     f_fswthru_ai      = 'x'
     f_fy              = 'x'
-    f_hi              = 'md'
+    f_hi              = 'm'
     f_hisnap          = 'x'
     f_hs              = 'md'
     f_hte             = .true.
     f_htn             = .true.
     f_iage            = 'm'
     f_icepresent      = 'x'
-    f_meltb           = 'md'
+    f_meltb           = 'm'
     f_meltl           = 'x'
-    f_melts           = 'md'
-    f_meltt           = 'md'
+    f_melts           = 'm'
+    f_meltt           = 'm'
     f_mlt_onset       = 'x'
     f_ncat            = .true.
     f_qref            = 'x'
@@ -254,8 +254,8 @@
     f_sice            = 'x'
     f_sig1            = 'x'
     f_sig2            = 'x'
-    f_sinz            = 'md'
-    f_snoice          = 'md'
+    f_sinz            = 'm'
+    f_snoice          = 'm'
     f_snow            = 'x'
     f_snow_ai         = 'x'
     f_sss             = 'x'
@@ -273,7 +273,7 @@
     f_strtlty         = 'x'
     f_tair            = 'x'
     f_tarea           = .true.
-    f_tinz            = 'md'
+    f_tinz            = 'm'
     f_tmask           = .true.
     f_tref            = 'x'
     f_trsig           = 'x'
@@ -281,13 +281,13 @@
     f_tsnz            = 'x'
     f_uarea           = .true.
     f_uocn            = 'x'
-    f_uvel            = 'md'
+    f_uvel            = 'm'
     f_vgrdb           = .false.
     f_vgrdi           = .false.
     f_vgrds           = .false.
     f_vicen           = 'm'
     f_vocn            = 'x'
-    f_vvel            = 'md'
+    f_vvel            = 'm'
 /
 
 &icefields_mechred_nml
