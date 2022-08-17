@@ -169,6 +169,15 @@ ACCESS-OM2-01
 "peninsula_advection", 1, "days", 1, "days", "time",
 "ocean_model", "passive_peninsula_advection", "passive_peninsula_advection", "peninsula_advection", "all", .true.,"-280.0,80.0,-81.1,-30.0,-1,-1", 2
 
+"peninsula_KPP", 1, "days", 1, "days", "time",
+"ocean_model", "passive_peninsula_nonlocal_KPP", "passive_peninsula_nonlocal_KPP", "peninsula_KPP", "all", .true.,"-280.0,80.0,-81.1,-30.0,-1,-1", 2
+
+"peninsula_vdiffuse", 1, "days", 1, "days", "time",
+"ocean_model", "passive_peninsula_vdiffuse_impl", "passive_peninsula_vdiffuse_impl", "peninsula_vdiffuse", "all", .true.,"-280.0,80.0,-81.1,-30.0,-1,-1", 2
+
+"peninsula_submeso", 1, "days", 1, "days", "time",
+"ocean_model", "passive_peninsula_submeso", "passive_peninsula_submeso", "peninsula_submeso", "all", .true.,"-280.0,80.0,-81.1,-30.0,-1,-1", 2
+
 "wilkes_xflux_adv", 1, "days", 1, "days", "time",
 "ocean_model", "passive_wilkes_xflux_adv", "passive_wilkes_xflux_adv", "wilkes_xflux_adv", "all", .true.,"-280.0,80.0,-81.1,-30.0,-1,-1", 2
 
@@ -183,6 +192,15 @@ ACCESS-OM2-01
 
 "wilkes_advection", 1, "days", 1, "days", "time",
 "ocean_model", "passive_wilkes_advection", "passive_wilkes_advection", "wilkes_advection", "all", .true.,"-280.0,80.0,-81.1,-30.0,-1,-1", 2
+
+"wilkes_KPP", 1, "days", 1, "days", "time",
+"ocean_model", "passive_wilkes_nonlocal_KPP", "passive_wilkes_nonlocal_KPP", "wilkes_KPP", "all", .true.,"-280.0,80.0,-81.1,-30.0,-1,-1", 2
+
+"wilkes_vdiffuse", 1, "days", 1, "days", "time",
+"ocean_model", "passive_wilkes_vdiffuse_impl", "passive_wilkes_vdiffuse_impl", "wilkes_vdiffuse", "all", .true.,"-280.0,80.0,-81.1,-30.0,-1,-1", 2
+
+"wilkes_submeso", 1, "days", 1, "days", "time",
+"ocean_model", "passive_wilkes_submeso", "passive_wilkes_submeso", "wilkes_submeso", "all", .true.,"-280.0,80.0,-81.1,-30.0,-1,-1", 2
 
 "salt", 1, "days", 1, "days", "time",
 "ocean_model", "salt", "salt", "salt", "all", .true.,"-280.0,80.0,-81.1,-30.0,-1,-1", 2
