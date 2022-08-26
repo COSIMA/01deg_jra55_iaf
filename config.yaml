@@ -9,7 +9,7 @@ project: g40
 shortpath: /scratch/v45
 
 queue: normal
-walltime: 5:00:00
+walltime: 4:00:00
 jobname: 01deg_jra55_iaf
 
 storage:
@@ -59,9 +59,9 @@ collate:
   enable: false
   restart: true
   mpi: true
-  walltime: 4:00:00
-  mem: 40GB
-  ncpus: 14
+  walltime: 6:00:00
+  mem: 80GB
+  ncpus: 20
   queue: normal
   exe: /g/data/ik11/inputs/access-om2/bin/mppnccombine-fast
 
