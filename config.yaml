@@ -59,9 +59,9 @@ collate:
   enable: false
   restart: true
   mpi: true
-  walltime: 6:00:00
-  mem: 80GB
-  ncpus: 20
+  walltime: 7:00:00
+  mem: 110GB
+  ncpus: 30
   queue: normal
   exe: /g/data/ik11/inputs/access-om2/bin/mppnccombine-fast
 
