@@ -1,7 +1,7 @@
 # 01deg_jra55_iaf
 Standard configuration for 0.1 degree [ACCESS-OM2](https://github.com/COSIMA/access-om2) experiment (ACCESS-OM2-01) with JRA55-do interannual forcing (IAF).
 
-This is the physics-only version, on the `master` branch. For the version with BGC, use the `master+bgc` branch.
+This is a physics-only version, on the `jra55v1501` branch, which uses JRA55do v1.5.0.1 - see https://github.com/COSIMA/access-om2/issues/247
 
 For usage instructions, see the [ACCESS-OM2 wiki](https://github.com/COSIMA/access-om2/wiki).
 
