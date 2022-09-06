@@ -12,7 +12,7 @@
 # but first add an experiment description - see /g/data/ik11/outputs/README
 # and make sure metadata.yaml is correct.
 # DOUBLE-CHECK SYNCDIR PATH IS UNIQUE SO YOU DON'T OVERWRITE EXISTING OUTPUT!
-SYNCDIR=/ERROR/SET/SYNCDIR/IN/sync_data.sh
+SYNCDIR=/g/data/ik11/outputs/access-om2-01/01deg_jra55v150_iaf_cycle1/
 
 exitcode=0
 help=false
