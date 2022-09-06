@@ -497,10 +497,10 @@
     hwf_diffusivity   = .false.
     hwf_min_diffusivity = 2e-06
     hwf_n0_2omega     = 20.0
-    j09_bgmax         = 1e-06
-    j09_bgmin         = 1e-06
+    j09_bgmax         = 5e-06
+    j09_bgmin         = 1e-05
     j09_diffusivity   = .true.
-    j09_lat           = 20.0
+    j09_lat           = 30.0
     use_diff_cbt_table = .false.
     vert_diff_back_via_max = .true.
     vert_mix_scheme   = 'kpp_mom4p1'
