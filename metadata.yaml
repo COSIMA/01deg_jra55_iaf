@@ -5,8 +5,9 @@ description: |-
   0.1 degree ACCESS-OM2 global model configuration under interannual forcing.
   The configuration is based on that described in Kiss et al. (2020),
   https://doi.org/10.5194/gmd-13-401-2020, but with many improvements.
+  The vertical diffusivity is different from 01deg_jra55v140_iaf.
   Initial conditions are WOA13v2 potential temperature and practical salinity.
-  Run with JRA55-do v1.4.0 interannually-varying forcing with all solid runoff
+  Run with JRA55-do v1.5.0 interannually-varying forcing with all solid runoff
   converted to liquid runoff with no heat transfer.
   Spin up starts 1 Jan 1958 and runs to 1 Jan 2019.
 notes: |-
@@ -26,5 +27,5 @@ keywords:
   - tenth
   - cosima
   - access-om2-01
-  - jra55-do-v1.4.0
+  - jra55-do-v1.5.0
   - iaf
