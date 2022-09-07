@@ -61,6 +61,9 @@ ACCESS-OM2-01
 "ocean-3d-age_global-1-monthly-mean-ym%4yr%2mo", 1, "months", 1, "days", "time", 3, "months"
 "ocean_model", "age_global", "age_global", "ocean-3d-age_global-1-monthly-mean-ym%4yr%2mo", "all", "average", "none", 2
 
+"ocean-3d-diff_cbt_t-1-monthly-mean-ym%4yr%2mo", 1, "months", 1, "days", "time", 3, "months"
+"ocean_model", "diff_cbt_t", "diff_cbt_t", "ocean-3d-diff_cbt_t-1-monthly-mean-ym%4yr%2mo", "all", "average", "none", 2
+
 "ocean-3d-dzt-1-monthly-mean-ym%4yr%2mo", 1, "months", 1, "days", "time", 3, "months"
 "ocean_model", "dzt", "dzt", "ocean-3d-dzt-1-monthly-mean-ym%4yr%2mo", "all", "average", "none", 2
 
@@ -243,17 +246,6 @@ ACCESS-OM2-01
 
 
 # daily scalar snapshots
-
-"ocean-scalar-1-daily-ym%4yr%2mo", 1, "days", 1, "days", "time", 3, "months"
-"ocean_model", "eta_global", "eta_global", "ocean-scalar-1-daily-ym%4yr%2mo", "all", "none", "none", 1
-"ocean_model", "ke_tot", "ke_tot", "ocean-scalar-1-daily-ym%4yr%2mo", "all", "none", "none", 1
-"ocean_model", "pe_tot", "pe_tot", "ocean-scalar-1-daily-ym%4yr%2mo", "all", "none", "none", 1
-"ocean_model", "salt_global_ave", "salt_global_ave", "ocean-scalar-1-daily-ym%4yr%2mo", "all", "none", "none", 1
-"ocean_model", "salt_surface_ave", "salt_surface_ave", "ocean-scalar-1-daily-ym%4yr%2mo", "all", "none", "none", 1
-"ocean_model", "temp_global_ave", "temp_global_ave", "ocean-scalar-1-daily-ym%4yr%2mo", "all", "none", "none", 1
-"ocean_model", "temp_surface_ave", "temp_surface_ave", "ocean-scalar-1-daily-ym%4yr%2mo", "all", "none", "none", 1
-"ocean_model", "total_ocean_heat", "total_ocean_heat", "ocean-scalar-1-daily-ym%4yr%2mo", "all", "none", "none", 1
-"ocean_model", "total_ocean_salt", "total_ocean_salt", "ocean-scalar-1-daily-ym%4yr%2mo", "all", "none", "none", 1
 
 
 # monthly 2d snapshots
