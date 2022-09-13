@@ -185,10 +185,10 @@ diag_table:
             new_file_freq: 1  # optional integer: frequency (in new_file_freq_units) for closing the existing file, and creating a new file
             new_file_freq_units: months  # time units for new_file_freq: years, months, days, hours, minutes, or seconds (optional; required if and only if new_file_freq specified)
         fields:
-            # salt:
-            # temp:
-            # u:
-            # v:
+            salt:
+            temp:
+            u:
+            v:
             # wt:
     'monthly 2d fields':
         defaults:  # these can be overridden for individual fields below
@@ -261,7 +261,7 @@ diag_table:
         fields:
             #bottom_temp:
             #frazil_3d_int_z:
-            #mld:
+            eta_t:
             #pme_river:
             #sea_level:
             #sfc_hflux_coupler:

@@ -103,6 +103,18 @@ ACCESS-OM2-01
 
 # daily 3d fields
 
+"ocean-3d-salt-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
+"ocean_model", "salt", "salt", "ocean-3d-salt-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
+
+"ocean-3d-temp-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
+"ocean_model", "temp", "temp", "ocean-3d-temp-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
+
+"ocean-3d-u-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
+"ocean_model", "u", "u", "ocean-3d-u-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
+
+"ocean-3d-v-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
+"ocean_model", "v", "v", "ocean-3d-v-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
+
 
 # monthly 2d fields
 
@@ -237,6 +249,9 @@ ACCESS-OM2-01
 
 
 # daily 2d fields
+
+"ocean-2d-eta_t-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 3, "months"
+"ocean_model", "eta_t", "eta_t", "ocean-2d-eta_t-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
 
 
 # daily 2d maximum fields
