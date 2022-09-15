@@ -262,15 +262,15 @@ diag_table:
             #bottom_temp:
             #frazil_3d_int_z:
             eta_t:
-            #pme_river:
+            pme_river:
             #sea_level:
             #sfc_hflux_coupler:
-            #sfc_hflux_from_runoff:
-            #sfc_hflux_pme:
-            #surface_pot_temp:
-            #surface_salt:
-            #usurf:
-            #vsurf:
+            sfc_salt_flux_restore:
+            sfc_salt_flux_ice:
+            frazil_3d_int_z:
+            net_sfc_heating:
+            tau_x:
+            tau_y:
     'daily 2d maximum fields':
         defaults:  # these can be overridden for individual fields below
             file_name_dimension: 2d  # descriptor for filename, e.g. 3d, 2d, scalar
