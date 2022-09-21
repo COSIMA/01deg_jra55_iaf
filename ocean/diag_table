@@ -103,18 +103,6 @@ ACCESS-OM2-01
 
 # daily 3d fields
 
-"ocean-3d-salt-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
-"ocean_model", "salt", "salt", "ocean-3d-salt-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
-
-"ocean-3d-temp-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
-"ocean_model", "temp", "temp", "ocean-3d-temp-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
-
-"ocean-3d-u-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
-"ocean_model", "u", "u", "ocean-3d-u-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
-
-"ocean-3d-v-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 1, "months"
-"ocean_model", "v", "v", "ocean-3d-v-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
-
 
 # monthly 2d fields
 
@@ -249,30 +237,6 @@ ACCESS-OM2-01
 
 
 # daily 2d fields
-
-"ocean-2d-eta_t-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 3, "months"
-"ocean_model", "eta_t", "eta_t", "ocean-2d-eta_t-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
-
-"ocean-2d-pme_river-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 3, "months"
-"ocean_model", "pme_river", "pme_river", "ocean-2d-pme_river-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
-
-"ocean-2d-sfc_salt_flux_restore-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 3, "months"
-"ocean_model", "sfc_salt_flux_restore", "sfc_salt_flux_restore", "ocean-2d-sfc_salt_flux_restore-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
-
-"ocean-2d-sfc_salt_flux_ice-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 3, "months"
-"ocean_model", "sfc_salt_flux_ice", "sfc_salt_flux_ice", "ocean-2d-sfc_salt_flux_ice-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
-
-"ocean-2d-frazil_3d_int_z-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 3, "months"
-"ocean_model", "frazil_3d_int_z", "frazil_3d_int_z", "ocean-2d-frazil_3d_int_z-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
-
-"ocean-2d-net_sfc_heating-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 3, "months"
-"ocean_model", "net_sfc_heating", "net_sfc_heating", "ocean-2d-net_sfc_heating-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
-
-"ocean-2d-tau_x-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 3, "months"
-"ocean_model", "tau_x", "tau_x", "ocean-2d-tau_x-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
-
-"ocean-2d-tau_y-1-daily-mean-ym%4yr%2mo", 1, "days", 1, "days", "time", 3, "months"
-"ocean_model", "tau_y", "tau_y", "ocean-2d-tau_y-1-daily-mean-ym%4yr%2mo", "all", "average", "none", 2
 
 
 # daily 2d maximum fields

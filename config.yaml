@@ -6,7 +6,7 @@ project: x77
 
 # Force payu to always find, and save, files in this scratch project directory
 # (you may need to add the corresponding PBS -l storage flag in sync_data.sh)
-#shortpath: /scratch/v45
+shortpath: /scratch/x77
 
 queue: normal
 walltime: 5:00:00
