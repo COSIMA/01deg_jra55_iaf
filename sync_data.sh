@@ -17,6 +17,7 @@ SYNCDIR=/g/data/ik11/outputs/access-om2-01/01deg_jra55v150_iaf_cycle1/
 exitcode=0
 help=false
 dirtype=output
+#dirtype=restart
 exclude="--exclude *.nc.* --exclude iceh.????-??-??.nc --exclude *-DEPRECATED --exclude *-DELETE --exclude *-IN-PROGRESS"
 rsyncflags="-vrltoD --safe-links"
 rmlocal=false
