@@ -5,6 +5,7 @@
 #PBS -l walltime=10:00:00,mem=12GB
 #PBS -l storage=gdata/hh5+gdata/ik11+gdata/cj50+scratch/v45+scratch/x77+scratch/g40
 #PBS -N sync
+#PBS -P g40
 
 # Set SYNCDIR to the path you want your data copied to.
 # This must be a unique absolute path for your set of runs.
