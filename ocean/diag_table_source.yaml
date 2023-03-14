@@ -322,7 +322,8 @@ diag_table:
             new_file_freq_units: days  # time units for new_file_freq: years, months, days, hours, minutes, or seconds (optional; required if and only if new_file_freq specified)
             file_name_date: "ym%4yr%2mo%2dy"  # run date/time of file opening; format: %, 1 digit (#digits), one of (yr, mo, dy, hr, mi, sc); date/time components will be separated by _ in filename.
         fields:
-            # sea_level:
+            sea_level:
+            mld:
     'daily scalar snapshots':  # snapshots of global integrals give better parallel performance
         defaults:  # these can be overridden for individual fields below
             file_name_dimension: scalar  # descriptor for filename, e.g. 3d, 2d, scalar

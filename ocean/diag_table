@@ -337,6 +337,12 @@ ACCESS-OM2-01
 
 # 2d fields every timestep
 
+"ocean-2d-sea_level-540-seconds-snap-ym%4yr%2mo%2dy", 540, "seconds", 1, "days", "time", 1, "days"
+"ocean_model", "sea_level", "sea_level", "ocean-2d-sea_level-540-seconds-snap-ym%4yr%2mo%2dy", "all", "none", "none", 2
+
+"ocean-2d-mld-540-seconds-snap-ym%4yr%2mo%2dy", 540, "seconds", 1, "days", "time", 1, "days"
+"ocean_model", "mld", "mld", "ocean-2d-mld-540-seconds-snap-ym%4yr%2mo%2dy", "all", "none", "none", 2
+
 
 # daily scalar snapshots
 
