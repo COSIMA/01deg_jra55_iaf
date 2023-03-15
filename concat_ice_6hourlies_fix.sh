@@ -17,7 +17,7 @@ case $yesno in
     * ) echo "Cancelled. Wait until model and concat_ice_6hourlies have finished before trying again."; exit 0;;
 esac
 
-for f in archive/output???/ice/OUTPUT/iceh*.????-??-01-00000.nc; do
+for f in archive/output[0-9][0-9]*[0-9]/ice/OUTPUT/iceh*.????-??-01-00000.nc; do
    conc=$(ls -1 `dirname $f`/iceh*.????-??-6hourly.nc | tail -n 1)
    echo "doing ncrcat -O -L 5 -7 ${conc} ${f} ${conc}"
    ncrcat -O -L 5 -7 ${conc} ${f} ${conc}
