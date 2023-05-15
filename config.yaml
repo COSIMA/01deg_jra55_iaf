@@ -75,7 +75,7 @@ submodels:
 collate:
   restart: true
   mpi: true
-  walltime: 1:30:00
+  walltime: 4:30:00
   mem: 16GB
   ncpus: 4
   queue: normal
@@ -98,4 +98,4 @@ userscripts:
     run: rm -f resubmit.count
     init: set_nextdate.sh
 # DANGER! Do not uncomment this without checking the script is syncing to the correct location!
-postscript: sync_data.sh
+#postscript: sync_data.sh
