@@ -1,20 +1,14 @@
 contact: Andrew Kiss
 email: andrew.kiss@anu.edu.au
-created: 2022-06-27
+created: 2023-08-16
 description: >-
   0.1 degree ACCESS-OM2 global model configuration under interannual forcing.
   The configuration is based on that described in Kiss et al. (2020),
   https://doi.org/10.5194/gmd-13-401-2020, but with many improvements and
   coupled biogeochemistry in the ocean and sea ice.
-  This is an extension to cycle 4 of the IAF spinup, simulating from 1 Jan 2019 to near-present day.
-  Configuration physics is identical to 01deg_jra55v140_iaf_cycle4, except forcing is JRA55-do v1.5.0 and v1.5.0.1,
-  not v1.4.0. This will cause a small forcing shock at the start of this simulation.
-  Initial conditions are from final 1 Jan 2019 restart from 01deg_jra55v140_iaf_cycle4.
-  Run with JRA55-do v1.5.0 (2019 only) and v1.5.0.1 (1 Jan 2020 onwards) interannually-varying forcing
-  with all solid runoff converted to liquid runoff with no heat transfer.
-  Spin up from 1 Jan 2019 to near-present day.
+  This is a branch of 01deg_jra55v140_iaf_cycle4_jra55v150_extension, branched at
+  1 July 2023 and forced with preliminary JRA55-do v1.5.0.1, using the same parameters.
 notes: >-
-  Run configuration and history: https://github.com/COSIMA/01deg_jra55_iaf/tree/01deg_jra55v140_iaf_cycle4_jra55v150_extension
   2d and 3d BGC data has 2, 3, or 4 decimal digits of precision - see https://github.com/COSIMA/01deg_jra55_iaf/blob/e94145d/reduce_sigfig.sh#L13-L93
   Source code: https://github.com/COSIMA/access-om2
   License: Attribution-NonCommercial-NoDerivatives 4.0 International (http://creativecommons.org/licenses/by-nc-nd/4.0/legalcode)
