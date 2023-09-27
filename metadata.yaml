@@ -1,28 +1,58 @@
-contact: Add your name here
-email: Add your email address here
-created: Add the date you started the experiment here (YYYY-MM-DD)
-description: |-
+contact: Adele Morrison
+email: adele.morrison@anu.edu.au
+created: 2022-09-06
+name: 01deg_jra55v150_iaf_cycle1
+experiment_uuid: acfc27d4-5b05-40ce-90ad-65d9c820fd1a
+model:
+  - ACCESS-OM2
+nominal_resolution:
+  - 0.1 degrees
+version: null
+description: >-
+  Cycle 1 of 0.1 degree ACCESS-OM2 global model configuration with JRA55-do
+  v1.5.0 OMIP2 interannual forcing
+long_description: >-
   0.1 degree ACCESS-OM2 global model configuration under interannual forcing.
-  The configuration is based on that described in Kiss et al. (2020),
-  https://doi.org/10.5194/gmd-13-401-2020, but with many improvements.
+  The configuration is based on that described in Kiss et al. (2020)
+  https://doi.org/10.5194/gmd-13-401-2020, but with many improvements
+  summarised by Solodoch et al. (2022) https://doi.org/10.1029/2021GL097211.
+  Further details can be found in the draft ACCESS-OM2 technical report
+  https://github.com/COSIMA/ACCESS-OM2-1-025-010deg-report and the forum
+  https://forum.access-hive.org.au/t/access-om2-control-experiments/258.
   The vertical diffusivity is different from 01deg_jra55v140_iaf.
-  Initial conditions are WOA13v2 potential temperature and practical salinity.
+  This is cycle 1 of the JRA55-do v1.5.0 IAF spinup. 
+  Initial conditions are WOA13v2 potential temperature (NB: should have been 
+  conservative temperature) and practical salinity.
   Run with JRA55-do v1.5.0 interannually-varying forcing with all solid runoff
   converted to liquid runoff with no heat transfer.
   Spin up starts 1 Jan 1958 and runs to 1 Jan 2019.
-notes: |-
+  Only a limited amount of output was saved.
+notes: >-
+  Run configuration and history: https://github.com/COSIMA/01deg_jra55_iaf/tree/01deg_jra55v150_iaf_cycle1
   Source code: https://github.com/COSIMA/access-om2
-  License: Attribution-NonCommercial-NoDerivatives 4.0 International (http://creativecommons.org/licenses/by-nc-nd/4.0/legalcode)
+  License: Attribution-NonCommercial-NoDerivatives 4.0 International (https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode)
   Conditions of use:
   We request that users of this or other ACCESS-OM2 model code or output data:
-  (a) consider citing Kiss et al. (2020) [http://doi.org/10.5194/gmd-13-401-2020]
+  (a) consider citing Kiss et al. (2020) [https://doi.org/10.5194/gmd-13-401-2020]
   (b) include an acknowledgement such as the following:
-  "The authors thank the Consortium for Ocean-Sea Ice Modelling in Australia (COSIMA; http://www.cosima.org.au)
+  "The authors thank the Consortium for Ocean-Sea Ice Modelling in Australia (COSIMA; https://www.cosima.org.au)
   for making the ACCESS-OM2 suite of models available at https://github.com/COSIMA/access-om2.
   Model runs were undertaken with the assistance of resources from the National Computational Infrastructure (NCI),
   which is supported by the Australian Government."
   (c) let us know of any publications which use these models or data so we can add them to our list:
   https://scholar.google.com/citations?hl=en&user=inVqu_4AAAAJ
+reference: >-
+  https://doi.org/10.5194/gmd-13-401-2020
+  https://doi.org/10.1029/2021GL097211
+license: Attribution-NonCommercial-NoDerivatives 4.0 International (https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode)
+url: https://github.com/COSIMA/01deg_jra55_iaf/tree/01deg_jra55v150_iaf_cycle1
+parent_experiment: null
+related_experiments:
+  - aa0b59ac-f4f8-48d9-ac94-72daef4e8141
+  - 9b346fd1-d5cc-4313-bc81-753d3b3cf96f
+  - b7852113-7a9a-4980-9bac-ed810c3be9de
+  - 61f0bbb8-80c6-4fce-895f-09727bf96170
+  - 5a2048d5-59cd-4b7e-bad4-dcd38296e4bd
 keywords:
   - tenth
   - cosima
