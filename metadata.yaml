@@ -1,33 +1,68 @@
 contact: Andrew Kiss
 email: andrew.kiss@anu.edu.au
 created: 2022-06-27
+name: 01deg_jra55v140_iaf_cycle4_jra55v150_extension
+experiment_uuid: 5a2048d5-59cd-4b7e-bad4-dcd38296e4bd
+model:
+  - ACCESS-OM2
+nominal_resolution:
+  - 0.1 degrees
+version: null
 description: >-
+  Extensions of cycle 4 of 0.1 degree ACCESS-OM2 + WOMBAT BGC global model 
+  configuration with JRA55-do v1.5.0 and v1.5.0.1 interannual forcing
+long_description: >-
   0.1 degree ACCESS-OM2 global model configuration under interannual forcing.
-  The configuration is based on that described in Kiss et al. (2020),
-  https://doi.org/10.5194/gmd-13-401-2020, but with many improvements and
-  coupled biogeochemistry in the ocean and sea ice.
-  This is an extension to cycle 4 of the IAF spinup, simulating from 1 Jan 2019 to near-present day.
-  Configuration physics is identical to 01deg_jra55v140_iaf_cycle4, except forcing is JRA55-do v1.5.0 and v1.5.0.1,
-  not v1.4.0. This will cause a small forcing shock at the start of this simulation.
-  Initial conditions are from final 1 Jan 2019 restart from 01deg_jra55v140_iaf_cycle4.
-  Run with JRA55-do v1.5.0 (2019 only) and v1.5.0.1 (1 Jan 2020 onwards) interannually-varying forcing
-  with all solid runoff converted to liquid runoff with no heat transfer.
+  The configuration is based on that described in Kiss et al. (2020)
+  https://doi.org/10.5194/gmd-13-401-2020, but with many improvements
+  summarised by Solodoch et al. (2022) https://doi.org/10.1029/2021GL097211,
+  and coupled biogeochemistry in the ocean and sea ice as described by
+  Hayashida et al. (2023) https://dx.doi.org/10.1029/2023JC019697 and
+  Menviel et al. (2023) https://doi.org/10.5194/egusphere-2023-390.
+  Further details can be found in the draft ACCESS-OM2 technical report
+  https://github.com/COSIMA/ACCESS-OM2-1-025-010deg-report and the forum
+  https://forum.access-hive.org.au/t/access-om2-control-experiments/258.
+  This is an extension to cycle 4 of the IAF spinup, simulating from 1 Jan 2019
+  to near-present day. Configuration physics is identical to
+  01deg_jra55v140_iaf_cycle4, except forcing is JRA55-do v1.5.0 and v1.5.0.1,
+  not v1.4.0. This will cause a small forcing shock at the start of this
+  simulation. Only finalised JRA55-do v1.5.0.1 data is used (not preliminary
+  near-real-time data). Initial conditions are from final 1 Jan 2019 restart
+  from 01deg_jra55v140_iaf_cycle4. Run with JRA55-do v1.5.0 (2019 only) and
+  v1.5.0.1 (1 Jan 2020 onwards) interannually-varying forcing with all solid
+  runoff converted to liquid runoff with no heat transfer.
   Spin up from 1 Jan 2019 to near-present day.
+  An overview of available output diagnostics and frequencies is given here:
+  https://cosima.org.au/index.php/2020/07/29/data-available-0-1-1958-2018-access-om2-iaf-run/
 notes: >-
   Run configuration and history: https://github.com/COSIMA/01deg_jra55_iaf/tree/01deg_jra55v140_iaf_cycle4_jra55v150_extension
   2d and 3d BGC data has 2, 3, or 4 decimal digits of precision - see https://github.com/COSIMA/01deg_jra55_iaf/blob/e94145d/reduce_sigfig.sh#L13-L93
   Source code: https://github.com/COSIMA/access-om2
-  License: Attribution-NonCommercial-NoDerivatives 4.0 International (http://creativecommons.org/licenses/by-nc-nd/4.0/legalcode)
+  License: Attribution-NonCommercial-NoDerivatives 4.0 International (https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode)
   Conditions of use:
   We request that users of this or other ACCESS-OM2 model code or output data:
-  (a) consider citing Kiss et al. (2020) [http://doi.org/10.5194/gmd-13-401-2020]
+  (a) consider citing Kiss et al. (2020) [https://doi.org/10.5194/gmd-13-401-2020]
   (b) include an acknowledgement such as the following:
-  "The authors thank the Consortium for Ocean-Sea Ice Modelling in Australia (COSIMA; http://www.cosima.org.au)
+  "The authors thank the Consortium for Ocean-Sea Ice Modelling in Australia (COSIMA; https://www.cosima.org.au)
   for making the ACCESS-OM2 suite of models available at https://github.com/COSIMA/access-om2.
   Model runs were undertaken with the assistance of resources from the National Computational Infrastructure (NCI),
   which is supported by the Australian Government."
   (c) let us know of any publications which use these models or data so we can add them to our list:
   https://scholar.google.com/citations?hl=en&user=inVqu_4AAAAJ
+reference: >-
+  https://doi.org/10.5194/gmd-13-401-2020
+  https://doi.org/10.1029/2021GL097211
+  https://dx.doi.org/10.1029/2023JC019697
+  https://doi.org/10.5194/egusphere-2023-390
+license: Attribution-NonCommercial-NoDerivatives 4.0 International (https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode)
+url: https://github.com/COSIMA/01deg_jra55_iaf/tree/01deg_jra55v140_iaf_cycle4_jra55v150_extension
+parent_experiment: 61f0bbb8-80c6-4fce-895f-09727bf96170
+related_experiments:
+  - aa0b59ac-f4f8-48d9-ac94-72daef4e8141
+  - 9b346fd1-d5cc-4313-bc81-753d3b3cf96f
+  - b7852113-7a9a-4980-9bac-ed810c3be9de
+  - 61f0bbb8-80c6-4fce-895f-09727bf96170
+  - acfc27d4-5b05-40ce-90ad-65d9c820fd1a
 keywords:
   - tenth
   - cosima
